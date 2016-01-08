@@ -1,0 +1,61 @@
+<footer class="site-footer">
+  <div class="container">
+
+    <div class="site-footer-top clearfix">
+      <div class="site-live-chat">
+        <a href="#">
+          {{ 'Live'|t }}<i></i>
+          <span>{{ 'Chat'|t }}</span>
+        </a>
+      </div>
+      <div class="contact-separator"></div>
+      <div class="cta-contact-us">
+        <a href="tel:18777638884">
+          {{ 'Contact Us'|t }}
+          <span>1.877.763.8884</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="site-footer-content clearfix">
+      <div class="row">
+        <div class="col-md-8">
+          {% if page.footer_nav %}
+            <div class="site-footer-nav">
+              {{ page.footer_nav }}
+            </div>
+          {% endif %}
+        </div>
+        <div class="col-md-4">
+          {% if page.social_media_nav %}
+            <div class="social-media-nav clearfix">
+              <h4>{{ 'Connect With Us'|t }}</h4>
+              {{ page.social_media_nav }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+    </div>
+
+    {% if page.footer_bottom_nav %}
+      <div class="footer-bottom-nav clearfix">
+        {{ page.footer_bottom_nav }}
+      </div>
+    {% endif %}
+
+    <div class="site-footer-copyright-container">
+      <div class="site-footer-copyright">
+        {{ 'Copyright &copy; @year @companyname. All rights reserved.'|t({
+          '@year': 'now'|date('Y'),
+          '@companyname': 'Acro Media Inc'
+        }) }}
+      </div>
+
+      {% if page.footer_acro_link %}
+        {{ page.footer_acro_link }}
+      {% endif %}
+    </div>
+
+  </div>
+</footer>

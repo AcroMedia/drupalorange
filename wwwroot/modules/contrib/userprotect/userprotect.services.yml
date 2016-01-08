@@ -1,0 +1,4 @@
+services:
+  plugin.manager.userprotect.user_protection:
+    class: Drupal\userprotect\Plugin\UserProtection\UserProtectionManager
+    parent: default_plugin_manager

@@ -1,0 +1,30 @@
+name: Acro Drupal Orange
+type: theme
+description: 'Custom theme for our amazing clients.'
+package: Core
+version: '1.0.0'
+core: '8.x'
+base theme: acro_framework
+
+libraries:
+  - acro_drupal_orange/global-styling
+
+regions:
+  header: 'Header'
+  header_nav: 'Header Navigation'
+  primary_nav: 'Primary Navigation'
+  social_media_nav: 'Social Media Navigation'
+  footer_nav: 'Footer Navigation'
+  footer_bottom_nav: 'Footer Bottom Navigation'
+  language_switcher: 'Language Switcher'
+  homepage_blog_posts: 'Homepage - Blog Posts'
+  breadcrumb: 'Breadcrumb'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  site_search: 'Site Search'
+  homepage_rich_media: 'Homepage Rich Media'
+  footer: 'Footer'
+  footer_acro_link: 'Footer - Acro Media Link'
+
+

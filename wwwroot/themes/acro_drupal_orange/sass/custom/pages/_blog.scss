@@ -1,0 +1,78 @@
+/**
+ * Blog
+ */
+
+/* -- Recent Blog Posts -- */
+
+.homepage-recent-blog-posts {
+
+  h2 a {
+    color: $c-primary;
+
+    &:hover {
+      color: $c-secondary;
+    }
+  }
+}
+
+.view-display-id-recent_blog_posts ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin: 0;
+    padding: 0;
+    background: none;
+  }
+}
+
+.blog-item--recent-post {
+  margin: 0 0 19px 0;
+  padding: 0 0 18px 0;
+  background: url(../gfx/bg_dotted_border_tile.png) 0 100% repeat-x;
+}
+.blog-item--image {
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 20%;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    @include transition(opacity 0.15s linear);
+  }
+
+  a:hover img {
+    opacity: 0.7;
+  }
+}
+.blog-item--content {
+  float: right;
+  margin: 0;
+  padding: 0;
+  width: 75%;
+}
+.blog-item--title {
+  margin: 0 0 2px 0;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: bold;
+}
+.blog-item--date {
+  margin: 0 0 7px 0;
+  font-size: 13px;
+}
+.blog-item--body {
+  margin: 0 0 8px 0;
+  padding: 0;
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+.blog-item--link {
+
+}

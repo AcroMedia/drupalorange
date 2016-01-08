@@ -1,0 +1,5 @@
+name: Living CSS
+description: Creates a page showcasing general site styles so the Creative department doesn't get mad at you.
+package: Acro Media Inc.
+type: module
+core: 8.x

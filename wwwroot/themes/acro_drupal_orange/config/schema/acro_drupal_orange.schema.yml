@@ -1,0 +1,5 @@
+# Schema for the configuration files of the theme.
+
+acro_drupal_orange.settings:
+  type: theme_settings
+  label: 'Acro Drupal Orange Settings'

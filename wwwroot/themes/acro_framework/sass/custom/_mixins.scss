@@ -1,0 +1,9 @@
+/**
+ * Mixins
+ */
+
+@mixin button-hide-text() {
+  text-align: left;
+  text-indent: -99999px;
+  outline: none;
+}

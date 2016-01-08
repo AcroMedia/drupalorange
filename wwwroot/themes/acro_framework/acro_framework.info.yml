@@ -1,0 +1,24 @@
+name: Acro Framework
+type: theme
+description: 'Acro Media Inc. Drupal Base Theme'
+package: Core
+version: '1.0.0'
+core: '8.x'
+base theme: false
+
+libraries:
+  - acro_framework/global-styling
+  - acro_framework/bootstrap
+
+regions:
+  header: 'Header'
+  primary_nav: 'Primary Navigation'
+  footer_nav: 'Footer Navigation'
+  breadcrumb: 'Breadcrumb'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  footer: 'Footer'
+  footer_acro_link: 'Footer - Acro Media Link'
+
+

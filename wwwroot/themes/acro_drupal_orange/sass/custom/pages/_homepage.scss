@@ -1,0 +1,375 @@
+/**
+ * Homepage
+ */
+
+/* -- Homepage CTAs -- */
+
+.homepage-cta-large {
+  position: relative;
+  margin: 0 0 30px 0;
+  padding: 0;
+  min-height: 351px;
+  border: 1px solid #ccc;
+  background: #efefef;
+  @include border-radius(5px);
+  overflow: hidden;
+
+  i {
+    position: absolute;
+    display: block;
+    opacity: 0.1;
+  }
+}
+.homepage-cta-large-content {
+  position: relative;
+  margin: 0;
+  padding: 15% 37px 0 46%;
+  color: $c-primary;
+  z-index: 1;
+
+  h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: bold;
+    color: $c-secondary;
+  }
+  p {
+    margin: 0 0 14px 0;
+    padding: 0;
+  }
+  .b-cta {
+    background: #000;
+  }
+}
+.cta-womens-fashion i {
+  bottom: -204px;
+  left: 26px;
+
+  img {
+    display: block;
+    width: 198px;
+    height: 530px;
+  }
+}
+.cta-mens-fashion i {
+  bottom: -200px;
+  left: 33px;
+
+  img {
+    display: block;
+    width: 175px;
+    height: 531px;
+  }
+}
+
+.cta-free-shipping {
+  clear: both;
+  margin: 0 0 30px 0;
+  padding: 18px 20px;
+  text-align: center;
+  background: #000;
+  @include border-radius(5px);
+
+  h3 {
+    display: inline-block;
+    margin: 0 27px 0 0;
+    padding: 0;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $c-acro-orange;
+    vertical-align: top;
+  }
+  p {
+    display: inline-block;
+    margin: 8px 23px 0 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 18px;
+    color: #fff;
+    vertical-align: top;
+  }
+  .b-cta {
+    margin: 4px 0 0 0;
+    color: #000;
+    background: $c-secondary;
+
+    &:hover {
+      color: #000;
+      background: #fff;
+    }
+  }
+}
+
+.homepage-cta-small {
+  position: relative;
+  margin: 0 0 30px 0;
+  padding: 0;
+  min-height: 190px;
+  border: 1px solid #ccc;
+  background: #efefef;
+  @include border-radius(5px);
+  overflow: hidden;
+
+  i {
+    position: absolute;
+    display: block;
+    opacity: 0.1;
+  }
+}
+.homepage-cta-small-content {
+  position: relative;
+  margin: 0;
+  padding: 7% 39px 0 36%;
+  color: $c-primary;
+  z-index: 1;
+
+  h2 {
+    margin: 0 0 7px 0;
+    padding: 0;
+    font-size: 34px;
+    line-height: 34px;
+    font-weight: bold;
+    color: $c-secondary;
+  }
+  p {
+    margin: 0 0 14px 0;
+    padding: 0;
+  }
+}
+.cta-shoe-shop i {
+  bottom: 21px;
+  left: 30px;
+
+  img {
+    display: block;
+    width: 73px;
+    height: 147px;
+  }
+}
+.cta-accessorize i {
+  bottom: 31px;
+  left: 22px;
+
+  img {
+    display: block;
+    width: 96px;
+    height: 134px;
+  }
+}
+.cta-need-help i {
+  bottom: -51px;
+  left: -30px;
+
+  img {
+    display: block;
+    width: 270px;
+    height: 219px;
+  }
+}
+
+.homepage-cta-row {
+  clear: both;
+  margin-bottom: 30px;
+}
+
+.homepage-cta-customize-user-experience {
+  margin: 0 0 30px 0;
+  padding: 0;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.homepage-newsletter-signup {
+  margin: 0 0 30px 0;
+  padding: 32px 31px;
+  min-height: 302px;
+  color: $c-secondary;
+  background: $c-primary;
+  @include border-radius(5px);
+
+  h3 {
+    margin: 0 0 12px 0;
+    padding: 0;
+    font-size: 26px;
+    line-height: 26px;
+    color: #fff;
+  }
+
+  label {
+    font-size: 15px;
+    color: #fff;
+  }
+  .form-text {
+    margin: 0;
+    padding: 5px 8px 4px;
+    width: 100%;
+    max-width: 308px;
+    height: auto;
+    font-size: 14px;
+    color: #666;
+    border: none;
+    background: #fff;
+    @include border-radius(5px);
+  }
+  .form-submit {
+    display: inline-block;
+    margin: 10px 0 0 0;
+    padding: 5px 15px;
+    width: auto;
+    height: auto;
+    color: $c-primary;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    background: $c-secondary;
+    vertical-align: top;
+    @include border-radius(5px);
+    @include transition(background-color 0.15s linear);
+
+    &:hover {
+      color: #fff;
+      background: #000;
+    }
+  }
+}
+
+.homepage-recent-videos {
+  margin: 0 0 30px 0;
+  padding: 32px 31px;
+  min-height: 302px;
+  background: $c-primary;
+  @include border-radius(5px);
+
+  h3 {
+    margin: 0 0 12px 0;
+    padding: 0;
+    font-size: 26px;
+    line-height: 26px;
+    color: #fff;
+  }
+}
+
+/* -- Homepage Rich Media -- */
+
+.homepage-rich-media {
+  clear: both;
+  margin: 0 0 30px 0;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+.homepage-rich-media-banners-slider {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1570px;
+
+  ul.slides {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: none;
+      margin: 0;
+      padding: 0;
+      background: none;
+    }
+  }
+
+  ul.flex-direction-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      position: absolute;
+      top: 40%;
+      float: none;
+      margin: 0;
+      padding: 0;
+      background: none;
+      z-index: 2;
+
+      a {
+        position: relative;
+        display: block;
+        margin: 0;
+        padding: 0;
+        width: 35px;
+        height: 68px;
+        text-align: left;
+        text-indent: -99999px;
+        outline: none;
+        overflow: hidden;
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+    li.flex-nav-prev {
+      left: 30px;
+
+      a {
+        background: url(../gfx/icons/b_rich_media_left.png) 0 0 no-repeat;
+      }
+    }
+    li.flex-nav-next {
+      right: 30px;
+
+      a {
+        background: url(../gfx/icons/b_rich_media_right.png) 0 0 no-repeat;
+      }
+    }
+  }
+
+  ol.flex-control-nav {
+    position: absolute;
+    bottom: 32px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    z-index: 2;
+
+    li {
+      display: inline-block;
+      margin: 0 5px;
+      padding: 0;
+      background: none;
+    }
+
+    a {
+      position: relative;
+      display: block;
+      width: 14px;
+      height: 14px;
+      background: #fff;
+      border-radius: 6px;
+      cursor: pointer;
+      text-align: left;
+      text-indent: -99999px;
+      outline: none;
+      overflow: hidden;
+
+      &:hover {
+        background: $c-acro-orange;
+      }
+    }
+    a.flex-active {
+      background: $c-acro-orange;
+    }
+  }
+}

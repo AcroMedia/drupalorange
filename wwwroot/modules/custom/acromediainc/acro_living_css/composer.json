@@ -1,0 +1,6 @@
+{
+  "name": "drupal/acromediainc-acro_living_css",
+  "description": "Creates a page showcasing general styles for a site.",
+  "type": "drupal-module",
+  "license": "GPL-2.0+"
+}

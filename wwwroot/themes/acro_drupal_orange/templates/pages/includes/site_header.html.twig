@@ -1,0 +1,99 @@
+<header id="site-header">
+  <div class="container">
+
+    <div id="site-header-content" class="clearfix">
+      <div id="site-header-top" class="clearfix">
+
+        <!-- User Navigation -->
+        <nav class="site-header-user-nav">
+          <ul class="menu">
+            <li>
+              {% if logged_in %}
+                <a href="{{ base_path }}user/logout">{{ 'Logout'|t }}</a>
+              {% else %}
+                <a href="{{ base_path }}user">{{ 'Login'|t }}</a>
+              {% endif %}
+            </li>
+            <li>
+              <a href="{{ base_path }}user/wishlist">{{ 'Wishlist'|t }}</a>
+            </li>
+            <li class="li-shopping-cart">
+              <a href="{{ base_path }}user/cart">{{ 'Shopping Cart'|t }} <span>0</span></a>
+            </li>
+          </ul>
+        </nav>
+        <!-- / User Navigation -->
+
+        {% if page.language_switcher %}
+          <!-- Language Switcher -->
+          <div class="language-switcher-cont">
+            <ul class="clearfix">
+              <li class="li-language-switcher-current">
+                <div class="language-switcher-current">
+                  {{ page.language_switcher }}
+                </div>
+                <div class="language-switcher-dropdown">
+                  {{ page.language_switcher }}
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- / Language Switcher -->
+        {% endif %}
+
+        {% if page.header_nav %}
+          <!-- Header Navigation -->
+          <div class="site-header-nav">
+            {{ page.header_nav }}
+          </div>
+          <!-- / Header Navigation -->
+        {% endif %}
+
+      </div>
+
+      <div class="site-header-middle clearfix">
+        <div class="site-logo">
+          <a href="{{ front_page }}">
+            <img src="{{ base_path ~ directory }}/gfx/logo_acro_hand.svg" alt="{% if site_name %}{{ site_name }}{% endif %}" />
+            <span class="site-logo-title">{{ 'Drupal Orange'|t }}</span>
+            <span class="site-logo-subtitle">{{ 'Commerce'|t }}</span>
+          </a>
+        </div>
+
+        <div class="site-header-contact-container clearfix">
+          <div class="cta-contact-us">
+            <a href="tel:18777638884">
+              {{ 'Contact Us'|t }}
+              <span>1.877.763.8884</span>
+            </a>
+          </div>
+          <div class="contact-separator"></div>
+          <div class="site-live-chat">
+            <a href="#">
+              {{ 'Live'|t }}<i></i>
+              <span>{{ 'Chat'|t }}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-pri-nav-container clearfix">
+        {% if page.primary_nav %}
+          <!-- Primary Navigation -->
+          <div class="site-pri-nav">
+            {{ page.primary_nav }}
+          </div>
+          <!-- / Primary Navigation -->
+        {% endif %}
+
+        {% if page.site_search %}
+          <div class="site-search-container">
+            {{ page.site_search }}
+          </div>
+        {% endif %}
+      </div>
+
+    </div>
+
+  </div>
+</header>
