@@ -12,11 +12,10 @@ function simplesitemap_schema() {
   $schema['simplesitemap'] = array(
     'description' => 'Holds XML sitemaps as strings for quick retrieval.',
     'fields' => array(
-      'language_code' => array(
-        'description' => 'Language code of the sitemap used as unique identifier.',
-        'type' => 'varchar',
+      'id' => array(
+        'description' => 'Sitemap chunk unique identifier.',
+        'type' => 'serial',
         'not null' => TRUE,
-        'length' => 2,
       ),
       'sitemap_string' => array(
         'description' => 'XML sitemap string.',
@@ -25,7 +24,55 @@ function simplesitemap_schema() {
         'not null' => TRUE,
       ),
     ),
-    'primary key' => array('language_code'),
+    'primary key' => array('id'),
   );
   return $schema;
+}
+
+/**
+ * Implements hook_install().
+ */
+function simplesitemap_install() {
+  $base_url = $GLOBALS['base_url'];
+  drupal_set_message(t("You can now include content into the <a href='@sitemap_url' target='_blank'>XML sitemap</a> by visiting the corresponding entity type edit pages (e.g. <a href='@content_type_url' target='_blank'>content type</a> and <a href='@taxonomy_vocabulary_url' target='_blank'>taxonomy vocabulary</a> pages.<br/>Custom links can be added on <a href='@config_url' target='_blank'>this configuration page</a>.)", array('@sitemap_url' => "$base_url/sitemap.xml", '@content_type_url' => "$base_url/admin/structure/types", '@taxonomy_vocabulary_url' => "$base_url/admin/structure/taxonomy", '@config_url' => "$base_url/admin/config/search/simplesitemap/custom")));
+}
+
+/**
+ * Update: Altering the {simplesitemap} language_code table field to hold longer strings.
+ */
+function simplesitemap_update_8101() {
+  db_change_field('simplesitemap', 'language_code', 'language_code', array(
+    'type' => 'varchar',
+    'not null' => TRUE,
+    'length' => 12,));
+}
+
+/**
+ * Changing config settings according to new config structure.
+ */
+function simplesitemap_update_8102() {
+  $entity_types = \Drupal::config('simplesitemap.settings')->get('entity_types');
+  $entity_types = is_array($entity_types) ? $entity_types : array();
+  if (isset($entity_types['node'])) {
+    $entity_types['node_type'] = $entity_types['node'];
+    unset($entity_types['node']);
+  }
+  if (isset($entity_types['taxonomy_term'])) {
+    $entity_types['taxonomy_vocabulary'] = $entity_types['taxonomy_term'];
+    unset($entity_types['taxonomy_term']);
+  }
+  \Drupal::service('config.factory')->getEditable('simplesitemap.settings')->set('entity_types', $entity_types)->save();
+}
+
+/**
+ * Modifying database structure to hold one multilingual sitemap.
+ */
+function simplesitemap_update_8103() {
+  db_truncate('simplesitemap')->execute();
+  db_drop_primary_key('simplesitemap');
+  db_change_field('simplesitemap', 'language_code', 'id', array(
+    'type' => 'serial',
+    'not null' => TRUE
+  ), array('primary key' => array('id')));
+  return t('Before the sitemap can be accessed, it must be regenerated manually or via cron run.');
 }

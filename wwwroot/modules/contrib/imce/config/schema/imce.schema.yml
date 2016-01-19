@@ -1,6 +1,6 @@
 # Imce settings
 imce.settings:
-  type: mapping
+  type: config_object
   label: 'Imce settings'
   mapping:
     abs_urls:
@@ -74,3 +74,12 @@ imce.profile_conf.folders:
           label: 'Permissions'
           sequence:
             - type: boolean
+
+# File field settings
+field.widget.third_party.imce:
+  type: mapping
+  label: 'Imce field widget settings'
+  mapping:
+    enabled:
+      type: boolean
+      label: 'Imce enabled'

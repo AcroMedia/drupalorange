@@ -635,7 +635,7 @@ class ImceFM {
    */
   public function buildRenderPage() {
     $page = $this->buildPage();
-    return \Drupal::service('bare_html_page_renderer')->renderBarePage($page, t('File manager'), 'imce_page', array('#show_messages' => FALSE));
+    return \Drupal::service('bare_html_page_renderer')->renderBarePage($page, t('File manager'), 'imce_page', array('#show_messages' => FALSE))->getContent();
   }
 
   /**
@@ -654,7 +654,7 @@ class ImceFM {
         return new JsonResponse($data);
       }
       // Build and render the main page.
-      return $this->buildRenderPage();
+      return new Response($this->buildRenderPage());
     }
   }
 

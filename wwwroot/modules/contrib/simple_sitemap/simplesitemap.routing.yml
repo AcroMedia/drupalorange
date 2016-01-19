@@ -4,3 +4,19 @@ simplesitemap.sitemap:
    _controller: '\Drupal\simplesitemap\Controller\SimplesitemapController::get_sitemap'
  requirements:
    _permission: 'access content'
+
+simplesitemap.settings:
+ path: '/admin/config/search/simplesitemap'
+ defaults:
+    _form: '\Drupal\simplesitemap\Form\SimplesitemapSettingsForm'
+    _title: 'Simple XML Sitemap Settings'
+ requirements:
+   _permission: 'administer sitemap settings'
+
+simplesitemap.settings_custom:
+  path: '/admin/config/search/simplesitemap/custom'
+  defaults:
+     _form: '\Drupal\simplesitemap\Form\SimplesitemapCustomLinksForm'
+     _title: 'Simple XML Sitemap Settings'
+  requirements:
+    _permission: 'add custom links'

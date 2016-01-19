@@ -1,0 +1,9 @@
+administer sitemap settings:
+  title: 'Administer sitemap settings'
+  description: 'Administer the sitemap settings and generate sitemap on demand.'
+  restrict access: false
+
+add custom links:
+  title: 'Add custom links'
+  description: 'Add any Drupal internal paths to the xml sitemap.'
+  restrict access: false

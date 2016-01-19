@@ -91,7 +91,7 @@
     var i;
     var selection = imce.getSelection();
     for (i in selection) {
-      if (selection.hasOwnProperty(i) && selection[i] !== Item) {
+      if (imce.owns(selection, i) && selection[i] !== Item) {
         selection[i].deselect();
       }
     }
@@ -275,7 +275,7 @@
   Item.extend = function (props) {
     if (props) {
       for (var i in props) {
-        if (!props.hasOwnProperty(i)) {
+        if (!imce.owns(props, i)) {
           continue;
         }
         this.setProperty(i, props[i]);

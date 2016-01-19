@@ -186,7 +186,7 @@
     imce.treeEl.appendChild(root.branchEl);
     // Create predefined folders.
     for (path in folders) {
-      if (folders.hasOwnProperty(path)) {
+      if (imce.owns(folders, path)) {
         imce.addFolder(path, folders[path]);
       }
     }
@@ -304,7 +304,7 @@
     var i;
     var arr = imce.getSelection();
     for (i in arr) {
-      if (arr.hasOwnProperty(i)) {
+      if (imce.owns(arr, i)) {
         arr[i].deselect();
       }
     }
@@ -444,7 +444,7 @@
     var disabled;
     var buttons = imce.toolbarButtons;
     for (i in buttons) {
-      if (!buttons.hasOwnProperty(i)) {
+      if (!imce.owns(buttons, i)) {
         continue;
       }
       Tbb = buttons[i];
@@ -555,7 +555,7 @@
     var names;
     var group = {};
     for (i in items) {
-      if (!items.hasOwnProperty(i)) {
+      if (!imce.owns(items, i)) {
         continue;
       }
       Item = items[i];
@@ -577,7 +577,7 @@
     var selected;
     var groups = imce.groupItems(items);
     for (path in groups) {
-      if (!groups.hasOwnProperty(path)) {
+      if (!imce.owns(groups, path)) {
         continue;
       }
       Folder = imce.getFolder(path);
@@ -602,7 +602,7 @@
     var Item;
     var Folder;
     for (i in items) {
-      if (!items.hasOwnProperty(i)) {
+      if (!imce.owns(items, i)) {
         continue;
       }
       Item = items[i];
@@ -632,7 +632,7 @@
    */
   imce.validateExtensions = function (items, exts) {
     for (var i in items) {
-      if (items.hasOwnProperty(i) && !imce.validateExtension(items[i].ext, exts)) {
+      if (imce.owns(items, i) && !imce.validateExtension(items[i].ext, exts)) {
         return false;
       }
     }
@@ -1344,7 +1344,7 @@
     var msgs = response.messages;
     if (msgs) {
       for (type in msgs) {
-        if (msgs.hasOwnProperty(type)) {
+        if (imce.owns(msgs, type)) {
           for (i in msgs[type]) {
             if (msgs[type].hasOwnProperty(i)) {
               imce.setMessage(msgs[type][i], type);
@@ -1623,7 +1623,7 @@
       if ((str = location.search)) {
         parts = str.substr(1).split('&');
         for (i in parts) {
-          if (parts.hasOwnProperty(i)) {
+          if (imce.owns(parts, i)) {
             part = parts[i].split('=');
             query[imce.decode(part[0])] = part[1] ? imce.decode(part[1]) : '';
           }
@@ -1740,7 +1740,7 @@
       state = true;
     }
     for (i in items) {
-      if (items.hasOwnProperty(i)) {
+      if (imce.owns(items, i)) {
         item = items[i];
         if (!prop || (item[prop] ? state : !state)) {
           return item;

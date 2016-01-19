@@ -59,7 +59,7 @@ class ImceSettingsForm extends ConfigFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $config = $this->config('imce.settings');
     // Absolute URLs
-    $config->set('abs_url', $form_state->getValue('abs_url'));
+    $config->set('abs_urls', $form_state->getValue('abs_urls'));
     // Role-profile assignments.
     $old_roles_profiles = $config->get('roles_profiles');
     $roles_profiles = $form_state->getValue('roles_profiles');
