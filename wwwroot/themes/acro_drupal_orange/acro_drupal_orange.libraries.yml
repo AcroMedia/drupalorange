@@ -4,9 +4,11 @@ global-styling:
     theme:
       css/style.css: { media: all }
   js:
+    js/contrib/jquery.sidr.min.js: {}
     js/script.js: {}
   dependencies:
     - core/jquery
+    - core/drupal
     - acro_framework/hoverintent
     - acro_framework/flexslider
 

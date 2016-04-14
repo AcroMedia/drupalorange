@@ -4,3 +4,7 @@ custom:
     priority: 1
 
 entity_types: []
+
+settings:
+  max_links: 2000
+  cron_generate: true

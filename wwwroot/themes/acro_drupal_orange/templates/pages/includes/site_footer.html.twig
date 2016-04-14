@@ -2,14 +2,14 @@
   <div class="container">
 
     <div class="site-footer-top clearfix">
-      <div class="site-live-chat">
+      <div class="site-live-chat site-live-chat--footer">
         <a href="#">
           {{ 'Live'|t }}<i></i>
           <span>{{ 'Chat'|t }}</span>
         </a>
       </div>
       <div class="contact-separator"></div>
-      <div class="cta-contact-us">
+      <div class="cta-contact-us cta-contact-us--footer">
         <a href="tel:18777638884">
           {{ 'Contact Us'|t }}
           <span>1.877.763.8884</span>
@@ -21,7 +21,7 @@
       <div class="row">
         <div class="col-md-8">
           {% if page.footer_nav %}
-            <div class="site-footer-nav">
+            <div class="site-footer-nav clearfix">
               {{ page.footer_nav }}
             </div>
           {% endif %}
@@ -46,10 +46,9 @@
 
     <div class="site-footer-copyright-container">
       <div class="site-footer-copyright">
-        {{ 'Copyright &copy; @year @companyname. All rights reserved.'|t({
-          '@year': 'now'|date('Y'),
-          '@companyname': 'Acro Media Inc'
-        }) }}
+        {{ 'Copyright &copy; @year'|t({'@year': 'now'|date('Y')}) }}
+        <a href="{{ front_page }}">{{ 'Acro Media Inc'|t }}</a>.
+        {{ 'All rights reserved.'|t }}
       </div>
 
       {% if page.footer_acro_link %}

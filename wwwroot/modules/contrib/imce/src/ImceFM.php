@@ -14,7 +14,6 @@ use Drupal\Component\Serialization\Json;
 use Drupal\Component\Render\MarkupInterface;
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Session\AccountProxyInterface;
-use Drupal\imce\Imce;
 
 /**
  * Imce File Manager.

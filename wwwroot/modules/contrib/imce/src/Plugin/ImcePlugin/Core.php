@@ -7,7 +7,6 @@
 
 namespace Drupal\imce\Plugin\ImcePlugin;
 
-use Drupal\Core\Form\FormStateInterface;
 use Drupal\imce\ImcePluginBase;
 use Drupal\imce\ImceFM;
 

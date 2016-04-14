@@ -7,12 +7,9 @@
 
 namespace Drupal\imce\Plugin\ImcePlugin;
 
-use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\file\Entity\FileInterface;
-use Drupal\imce\Imce;
 use Drupal\imce\ImcePluginBase;
 use Drupal\imce\ImceFM;
-use Drupal\imce\ImceFile;
 
 /**
  * Defines Imce Upload plugin.

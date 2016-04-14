@@ -26,6 +26,7 @@ bootstrap:
   version: 1.x
   js:
     bootstrap/js/affix.js: {}
+    bootstrap/js/alert.js: {}
     bootstrap/js/tooltip.js: {}
     bootstrap/js/modal.js: {}
     bootstrap/js/tab.js: {}
@@ -33,6 +34,7 @@ bootstrap:
     bootstrap/js/dropdown.js: {}
     bootstrap/js/carousel.js: {}
     bootstrap/js/popover.js: {}
+    bootstrap/js/scrollspy.js: {}
   dependencies:
     - core/jquery
 

@@ -1,0 +1,755 @@
+<p>{{ 'This is a general site style guide.'|t }}</p>
+
+<div class="row">
+  <div class="col-md-9">
+
+    <div class="live-css-section live-css-variables">
+      <h1 id="variables" class="h-live-css-section">{{ 'Variables'|t }}</h1>
+      <h2 id="colors">{{ 'Colors'|t }}</h2>
+
+      <div class="live-css-variables">
+        <ul class="clearfix">
+          <li class="live-css-v-primary"><i></i><strong>{{ 'Primary'|t }}:</strong> $c-primary</li>
+          <li class="live-css-v-secondary"><i></i><strong>{{ 'Secondary'|t }}:</strong> $c-secondary</li>
+          <li class="live-css-v-tertiary"><i></i><strong>{{ 'Tertiary'|t }}:</strong> $c-tertiary</li>
+          <li class="live-css-v-accent-1"><i></i><strong>{{ 'Accent 1'|t }}:</strong> $c-accent-1</li>
+          <li class="live-css-v-accent-2"><i></i><strong>{{ 'Accent 2'|t }}:</strong> $c-accent-2</li>
+          <li class="live-css-v-accent-3"><i></i><strong>{{ 'Accent 3'|t }}:</strong> $c-accent-3</li>
+          <li class="live-css-v-body"><i></i><strong>{{ 'Body Text'|t }}:</strong> $c-body</li>
+        </ul>
+
+        <ul class="clearfix">
+          <li class="live-css-v-gray-base"><i></i><strong>{{ 'Gray Base'|t }}:</strong> $gray-base</li>
+          <li class="live-css-v-gray-darker"><i></i><strong>{{ 'Gray Darker'|t }}:</strong> $gray-darker</li>
+          <li class="live-css-v-gray-dark"><i></i><strong>{{ 'Gray Dark'|t }}:</strong> $gray-dark</li>
+          <li class="live-css-v-gray"><i></i><strong>{{ 'Gray'|t }}:</strong> $gray</li>
+          <li class="live-css-v-gray-light"><i></i><strong>{{ 'Gray Light'|t }}:</strong> $gray-light</li>
+          <li class="live-css-v-gray-lighter"><i></i><strong>{{ 'Gray Lighter'|t }}:</strong> $gray-lighter</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="live-css-section">
+      <h2 id="fonts">{{ 'Fonts'|t }}</h2>
+
+      <ul class="clearfix">
+        <li class="live-css-v-f-primary"><strong>{{ 'Primary'|t }} ($f-primary):</strong> <span>Lorem ipsum dolor sit amet</span></li>
+        <li class="live-css-v-f-secondary"><strong>{{ 'Secondary'|t }} ($f-secondary):</strong> <span>Lorem ipsum dolor sit amet</span></li>
+        <li class="live-css-v-f-body"><strong>{{ 'Body'|t }} ($f-body):</strong> <span>Lorem ipsum dolor sit amet</span></li>
+      </ul>
+    </div>
+
+    <div class="live-css-section">
+      <h1 id="formatting" class="h-live-css-section">{{ 'Formatting'|t }}</h1>
+
+      <div class="field--name-body">
+        <h1>{{ 'Sample Heading (h1)'|t }}</h1>
+        <p>
+          Lorem ipsum dolor sit amet, <a href="#">{{ 'Sample inline link'|t }}</a>, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
+        </p>
+
+        <h2>{{ 'Sample Heading (h2)'|t }}</h2>
+        <p>
+          Lorem ipsum dolor sit amet, <a href="#">{{ 'Sample inline link'|t }}</a>, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
+        </p>
+
+        <h3>{{ 'Sample Heading (h3)'|t }}</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
+        </p>
+
+        <h4>{{ 'Sample Heading (h4)'|t }}</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
+        </p>
+
+        <h2>{{ 'Sample Heading (h2)'|t }}</h2>
+        <h3>{{ 'Sample Heading (h3)'|t }}</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.</p>
+
+        <ul>
+          <li>Some bulleted list items.</li>
+          <li>Some bulleted list items.</li>
+          <li>Some bulleted list items.</li>
+        </ul>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.</p>
+
+        <ol>
+          <li>Some ordered list items.</li>
+          <li>Some ordered list items.</li>
+          <li>Some ordered list items.</li>
+        </ol>
+
+        <p>
+          <img class="img-right" src="/themes/acro_framework/gfx/img_sample_content.jpg" alt="" />Content image floated right, consectetur adipiscing elit.
+          Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
+        </p>
+
+        <table>
+          <thead>
+          <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Title</th>
+            <th>Gender</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>John</td>
+            <td>250-801-1111</td>
+            <td>Web Developer</td>
+            <td>Male</td>
+          </tr>
+          <tr>
+            <td>Bob</td>
+            <td>250-801-2111</td>
+            <td>Senior Designer</td>
+            <td>Male</td>
+          </tr>
+          <tr>
+            <td>John</td>
+            <td>250-801-3111</td>
+            <td>Director</td>
+            <td>Male</td>
+          </tr>
+          <tr>
+            <td>Doe</td>
+            <td>250-801-4111</td>
+            <td>Marketing Manager</td>
+            <td>Female</td>
+          </tr>
+          </tbody>
+        </table>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.</p>
+
+        <blockquote>
+          <p>
+            {{ 'Sample Blockquote.'|t }} Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+          </p>
+        </blockquote>
+      </div>
+    </div>
+
+    <div class="live-css-section">
+      <h1 id="buttons" class="h-live-css-section">{{ 'Buttons/CTAs'|t }}</h1>
+
+      <div>
+        <a class="b-cta" href="#">{{ 'Sample CTA Button'|t }}</a>
+      </div>
+
+      <br /><br />
+
+      <div>
+        <a class="b-cta-secondary" href="#">{{ 'Secondary Button'|t }}</a>
+      </div>
+    </div>
+
+    <div class="live-css-section">
+      <h1 id="drupal-specific" class="h-live-css-section">{{ 'Drupal Specific'|t }}</h1>
+
+      <h2 id="admin-tabs">{{ 'Admin Tabs'|t }}</h2>
+
+      <ul class="tabs primary clearfix">
+        <li><a href="#">{{ 'View'|t }}</a></li>
+        <li><a href="#">{{ 'Edit'|t }}</a></li>
+        <li><a href="#">{{ 'Clone'|t }}</a></li>
+      </ul>
+    </div>
+
+    <div class="live-css-section">
+      <h2 id="drupal-messages">{{ 'Drupal Messages'|t }}</h2>
+
+      <div role="contentinfo" aria-label="Status message" class="messages messages--status">
+        <h2 class="visually-hidden">{{ 'Status Message'|t }}</h2>
+        {{ 'Status Message'|t }}
+      </div>
+      <div role="contentinfo" aria-label="Status message" class="messages messages--warning">
+        <h2 class="visually-hidden">{{ 'Warning Message'|t }}</h2>
+        {{ 'Warning Message'|t }}
+      </div>
+      <div role="contentinfo" aria-label="Status message" class="messages messages--error">
+        <h2 class="visually-hidden">{{ 'Error Message'|t }}</h2>
+        {{ 'Error Message'|t }}
+      </div>
+    </div>
+
+    <div class="live-css-section">
+      <h2 id="drupal-forms">{{ 'Forms'|t }}</h2>
+
+      {# Form Sample #}
+      <form class="contact-message-contact-us-form-form contact-message-form contact-form" data-user-info-from-browser="" data-drupal-selector="contact-message-contact-us-form-form" action="/contact/contact_us_form" method="post" id="contact-message-contact-us-form-form" accept-charset="UTF-8" data-drupal-form-fields="edit-name,edit-mail,edit-field-phone-number-optional-0-value,edit-subject-0-value,edit-message-0-value,edit-field-how-did-you-hear-about-us-,edit-submit,edit-preview">
+        <input data-drupal-selector="form-epkihvb1-6pmlyljvyxb4vycqukolrwldvefxddhqlu" type="hidden" name="form_build_id" value="form-EPkIhvb1-6PmlYlJVYxb4vycQuKoLRwLdVEFXdDhQLU">
+        <input data-drupal-selector="edit-contact-message-contact-us-form-form" type="hidden" name="form_id" value="contact_message_contact_us_form_form">
+        <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-name form-item-name">
+          <label for="edit-name" class="js-form-required form-required">Your name</label>
+          <input data-drupal-selector="edit-name" type="text" id="edit-name" name="name" value="" size="60" maxlength="255" class="form-text required" required="required" aria-required="true">
+
+        </div>
+        <div class="js-form-item form-item js-form-type-email form-type-email js-form-item-mail form-item-mail">
+          <label for="edit-mail" class="js-form-required form-required">Your email address</label>
+          <input data-drupal-selector="edit-mail" type="email" id="edit-mail" name="mail" value="" size="60" maxlength="254" class="form-email required" required="required" aria-required="true">
+
+        </div>
+        <div class="field--type-string field--name-field-phone-number-optional- field--widget-string-textfield js-form-wrapper form-wrapper" data-drupal-selector="edit-field-phone-number-optional-wrapper" id="edit-field-phone-number-optional-wrapper">      <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-field-phone-number-optional--0-value form-item-field-phone-number-optional--0-value">
+            <label for="edit-field-phone-number-optional-0-value">Phone Number (Optional)</label>
+            <input class="js-text-full text-full form-text" data-drupal-selector="edit-field-phone-number-optional-0-value" type="text" id="edit-field-phone-number-optional-0-value" name="field_phone_number_optional_[0][value]" value="" size="60" maxlength="255" placeholder="">
+
+          </div>
+
+        </div>
+        <div class="field--type-string field--name-subject field--widget-string-textfield js-form-wrapper form-wrapper" data-drupal-selector="edit-subject-wrapper" id="edit-subject-wrapper">      <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-subject-0-value form-item-subject-0-value">
+            <label for="edit-subject-0-value" class="js-form-required form-required">Subject</label>
+            <input class="js-text-full text-full form-text required" data-drupal-selector="edit-subject-0-value" type="text" id="edit-subject-0-value" name="subject[0][value]" value="" size="60" maxlength="100" placeholder="" required="required" aria-required="true">
+
+          </div>
+
+        </div>
+        <div class="field--type-string-long field--name-message field--widget-string-textarea js-form-wrapper form-wrapper" data-drupal-selector="edit-message-wrapper" id="edit-message-wrapper">      <div class="js-form-item form-item js-form-type-textarea form-type-textarea js-form-item-message-0-value form-item-message-0-value">
+            <label for="edit-message-0-value" class="js-form-required form-required">Message</label>
+            <div class="form-textarea-wrapper">
+              <textarea class="js-text-full text-full form-textarea required resize-vertical" data-drupal-selector="edit-message-0-value" id="edit-message-0-value" name="message[0][value]" rows="12" cols="60" placeholder="" required="required" aria-required="true"></textarea>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="field--type-list-string field--name-field-how-did-you-hear-about-us- field--widget-options-select js-form-wrapper form-wrapper" data-drupal-selector="edit-field-how-did-you-hear-about-us-wrapper" id="edit-field-how-did-you-hear-about-us-wrapper"><div class="js-form-item form-item js-form-type-select form-type-select js-form-item-field-how-did-you-hear-about-us- form-item-field-how-did-you-hear-about-us-">
+            <label for="edit-field-how-did-you-hear-about-us-" class="js-form-required form-required">How Did You Hear About Us?</label>
+            <select data-drupal-selector="edit-field-how-did-you-hear-about-us-" aria-describedby="edit-field-how-did-you-hear-about-us---description" id="edit-field-how-did-you-hear-about-us-" name="field_how_did_you_hear_about_us_" class="form-select required" required="required" aria-required="true"><option value="_none">- Select a value -</option><option value="Online Ad">Online Ad</option><option value="YouTube">YouTube</option><option value="Friend">Friend</option><option value="Other">Other</option></select>
+            <div id="edit-field-how-did-you-hear-about-us---description" class="description">
+              Sample field help text.
+            </div>
+          </div>
+        </div>
+        <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions">
+          <input data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Send message" class="button button--primary js-form-submit form-submit">
+          <input data-drupal-selector="edit-preview" type="submit" id="edit-preview" name="op" value="Preview" class="button js-form-submit form-submit">
+        </div>
+      </form>
+      {# / Form Sample #}
+    </div>
+
+    <div class="live-css-section">
+      <h2>{{ 'Button States'|t }}</h2>
+
+      <div class="form-actions">
+        <input data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="{{ 'Disabled Button'|t }}" class="button button--primary js-form-submit form-submit" disabled="disabled" />
+      </div>
+    </div>
+
+    <div class="live-css-section">
+      <h2 id="drupal-pagination">{{ 'Pagination'|t }}</h2>
+
+      <div>
+        {# Pagination Sample #}
+        <nav class="pager" role="navigation" aria-labelledby="pagination-heading">
+          <h4 id="pagination-heading" class="visually-hidden">Pagination</h4>
+          <ul class="pager__items js-pager__items">
+            <li class="pager__item pager__item--first">
+              <a href="?page=0" title="Go to first page">
+                <span class="visually-hidden">First page</span>
+                <span aria-hidden="true">« First</span>
+              </a>
+            </li>
+            <li class="pager__item pager__item--previous">
+              <a href="?page=0" title="Go to previous page" rel="prev">
+                <span class="visually-hidden">Previous page</span>
+                <span aria-hidden="true">‹ Previous</span>
+              </a>
+            </li>
+            <li class="pager__item">
+              <a href="?page=0" title="Go to page 1">
+            <span class="visually-hidden">
+              Page
+            </span>1</a>
+            </li>
+            <li class="pager__item is-active">
+              <a href="?page=1" title="Current page">
+            <span class="visually-hidden">
+              Current page
+            </span>2</a>
+            </li>
+            <li class="pager__item">
+              <a href="?page=2" title="Go to page 3">
+            <span class="visually-hidden">
+              Page
+            </span>3</a>
+            </li>
+            <li class="pager__item pager__item--next">
+              <a href="?page=2" title="Go to next page" rel="next">
+                <span class="visually-hidden">Next page</span>
+                <span aria-hidden="true">Next ›</span>
+              </a>
+            </li>
+            <li class="pager__item pager__item--last">
+              <a href="?page=2" title="Go to last page">
+                <span class="visually-hidden">Last page</span>
+                <span aria-hidden="true">Last »</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        {# / Pagination Sample #}
+      </div>
+    </div>
+
+    <div class="live-css-section">
+      <h1 id="rich-media" class="h-live-css-section">{{ 'Rich Media'|t }}</h1>
+
+      <h2 id="content-tabs">{{ 'Content Tabs'|t }}</h2>
+
+      <div>
+        {# Nav Tabs #}
+        <ul class="nav nav-tabs content-tabs clearfix" role="tablist">
+          <li role="presentation" class="active">
+            <a href="#description" aria-controls="{{ 'description'|t }}" role="tab" data-toggle="tab">{{ 'Description'|t }}</a>
+          </li>
+          <li role="presentation">
+            <a href="#specs" aria-controls="{{ 'specs'|t }}" role="tab" data-toggle="tab">{{ 'Specs'|t }}</a>
+          </li>
+          <li role="presentation">
+            <a href="#downloads" aria-controls="{{ 'downloads'|t }}" role="tab" data-toggle="tab">{{ 'Downloads'|t }}</a>
+          </li>
+          <li role="presentation">
+            <a href="#related" aria-controls="{{ 'related'|t }}" role="tab" data-toggle="tab">{{ 'Related'|t }}</a>
+          </li>
+        </ul>
+        {# / Nav Tabs #}
+
+        {# Tab Panes #}
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane fade in active" id="description">
+            <h2>Description</h2>
+            <p>
+              Tab 1 content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend nunc nec fringilla tristique.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend nunc nec fringilla tristique.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="specs">
+            <h2>Specifications</h2>
+            <p>
+              Tab 2 content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend nunc nec fringilla tristique.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend nunc nec fringilla tristique.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="downloads">
+            <h2>Our Downloads</h2>
+            <p>
+              Tab 3 content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend nunc nec fringilla tristique.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend nunc nec fringilla tristique.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="related">
+            <h2>Related Products</h2>
+            <p>
+              Tab 4 content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend nunc nec fringilla tristique.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend nunc nec fringilla tristique.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+        </div>
+        {# / Tab Panes #}
+      </div>
+    </div>
+
+    <div class="live-css-section">
+      <h1 id="icons" class="h-live-css-section">{{ 'Icons'|t }}</h1>
+
+      <div class="live-css-icons">
+        <ul class="clearfix">
+          <li>
+            <div class="live-css-icons__icon">
+              <i class="ico-live-chat-bubble"></i>
+            </div>
+            <div>.ico-live-chat-bubble</div>
+          </li>
+          <li>
+            <div class="live-css-icons__icon">
+              <i class="ico-search"></i>
+            </div>
+            <div>.ico-search</div>
+          </li>
+          <li>
+            <div class="live-css-icons__icon">
+              <i class="ico-social-facebook"></i>
+            </div>
+            <div>.ico-social-facebook</div>
+          </li>
+          <li>
+            <div class="live-css-icons__icon">
+              <i class="ico-social-twitter"></i>
+            </div>
+            <div>.ico-social-twitter</div>
+          </li>
+          <li>
+            <div class="live-css-icons__icon">
+              <i class="ico-social-youtube"></i>
+            </div>
+            <div>.ico-social-youtube</div>
+          </li>
+          <li>
+            <div class="live-css-icons__icon">
+              <i class="ico-social-google"></i>
+            </div>
+            <div>.ico-social-google</div>
+          </li>
+          <li>
+            <div class="live-css-icons__icon">
+              <i class="ico-social-instagram"></i>
+            </div>
+            <div>.ico-social-instagram</div>
+          </li>
+          <li>
+            <div class="live-css-icons__icon">
+              <i class="ico-social-pinterest"></i>
+            </div>
+            <div>.ico-social-pinterest</div>
+          </li>
+          <li>
+            <div class="live-css-icons__icon">
+              <i class="ico-comment-bubble"></i>
+            </div>
+            <div>.ico-comment-bubble</div>
+          </li>
+          <li>
+            <div class="live-css-icons__icon">
+              <i class="ico-comment-reply"></i>
+            </div>
+            <div>.ico-comment-reply</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="live-css-section">
+      <h1 id="components" class="h-live-css-section">{{ 'Components'|t }}</h1>
+
+      <h2 id="live-css-blog-listing">{{ 'Blog Listing'|t }}</h2>
+
+      {# Blog Sample #}
+      <div class="blog-listing-item">
+        <div class="blog-listing-item__image">
+          <a href="/blog/acro-blog-title">
+            <div class="field field--name-field-blog-image field--type-image field--label-hidden field__item">
+              <img width="827" height="360" alt="Sample" src="/sites/default/files/2016-02/blog_post_sample.jpg">
+            </div>
+          </a>
+        </div>
+        <div class="blog-listing-item__title">
+          <a href="/blog/acro-blog-title"><span class="field field--name-title field--type-string field--label-hidden">Acro Blog Title</span></a>
+        </div>
+        <div class="blog-post-meta">
+          <div class="field field--name-field-blog-date field--type-datetime field--label-hidden field__item">February 1, 2016</div>
+          <i>|</i>
+          By <a href="/blog/author/25">John Smith</a>
+        </div>
+        <div class="blog-listing-item__body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed dui in nisi tempor ultrices sit amet vel nunc. Cras id scelerisque enim.
+          Aenean condimentum arcu leo, in pellentesque lectus varius sit amet. Duis condimentum lectus vitae turpis vulputa ...
+        </div>
+        <div class="blog-listing-item__footer clearfix">
+          <div class="blog-listing-item__link">
+            <a href="/blog/acro-blog-title">Read More</a>
+          </div>
+          <div class="blog-listing-item__tags blog-post-tags">
+            <span class="blog-post-tags--label">Posted in</span>
+            <div class="field field--name-field-blog-category field--type-entity-reference field--label-hidden field__items">
+              <div class="field__item"><a hreflang="en" href="/blog/tag/drupal">Drupal</a></div>
+              <div class="field__item"><a hreflang="en" href="/blog/tag/featured">Featured</a></div>
+              <div class="field__item"><a hreflang="en" href="/blog/tag/news">News</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {# / Blog Sample #}
+
+    </div>
+
+    <div class="live-css-section">
+      <h2 id="live-css-image-gallery">{{ 'Image Gallery'|t }}</h2>
+
+      {# Image Gallery Sample #}
+      <div class="image-gallery">
+        <div class="image-gallery__slider">
+          <ul class="slides clearfix">
+            <li>
+              <div class="image-gallery__main-image-wrapper">
+                <div class="image-gallery__caption">
+                  <p>Sample caption.</p>
+                </div>
+                <div class="image-gallery__main-image">
+                  <img src="{{ base_path ~ directory }}/gfx/img_sample_image_gallery_01.jpg" alt="" />
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery__main-image-wrapper">
+                <div class="image-gallery__caption">
+                  <p>Sample caption.</p>
+                </div>
+                <div class="image-gallery__main-image">
+                  <img src="{{ base_path ~ directory }}/gfx/img_sample_image_gallery_02.jpg" alt="" />
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery__main-image-wrapper">
+                <div class="image-gallery__caption">
+                  <p>Sample caption.</p>
+                </div>
+                <div class="image-gallery__main-image">
+                  <img src="{{ base_path ~ directory }}/gfx/img_sample_image_gallery_01.jpg" alt="" />
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery__main-image-wrapper">
+                <div class="image-gallery__caption">
+                  <p>Sample caption.</p>
+                </div>
+                <div class="image-gallery__main-image">
+                  <img src="{{ base_path ~ directory }}/gfx/img_sample_image_gallery_02.jpg" alt="" />
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery__main-image-wrapper">
+                <div class="image-gallery__caption">
+                  <p>Sample caption.</p>
+                </div>
+                <div class="image-gallery__main-image">
+                  <img src="{{ base_path ~ directory }}/gfx/img_sample_image_gallery_01.jpg" alt="" />
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery__main-image-wrapper">
+                <div class="image-gallery__caption">
+                  <p>Sample caption.</p>
+                </div>
+                <div class="image-gallery__main-image">
+                  <img src="{{ base_path ~ directory }}/gfx/img_sample_image_gallery_02.jpg" alt="" />
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery__main-image-wrapper">
+                <div class="image-gallery__caption">
+                  <p>Sample caption.</p>
+                </div>
+                <div class="image-gallery__main-image">
+                  <img src="{{ base_path ~ directory }}/gfx/img_sample_image_gallery_01.jpg" alt="" />
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="image-gallery-nav">
+        <div class="image-gallery-nav__slider">
+          <ul class="slides clearfix">
+            <li>
+              <div class="image-gallery-nav__thumb">
+                <a><img src="{{ base_path ~ directory }}/gfx/img_sample_image_gallery_01.jpg" alt="" /></a>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery-nav__thumb">
+                <a><img src="{{ base_path ~ directory }}/gfx/img_sample_image_gallery_02.jpg" alt="" /></a>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery-nav__thumb">
+                <a><img src="{{ base_path ~ directory }}/gfx/img_sample_image_gallery_01.jpg" alt="" /></a>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery-nav__thumb">
+                <a><img src="{{ base_path ~ directory }}/gfx/img_sample_image_gallery_02.jpg" alt="" /></a>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery-nav__thumb">
+                <a><img src="{{ base_path ~ directory }}/gfx/img_sample_image_gallery_01.jpg" alt="" /></a>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery-nav__thumb">
+                <a><img src="{{ base_path ~ directory }}/gfx/img_sample_image_gallery_02.jpg" alt="" /></a>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery-nav__thumb">
+                <a><img src="{{ base_path ~ directory }}/gfx/img_sample_image_gallery_01.jpg" alt="" /></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      {# / Image Gallery Sample #}
+
+    </div>
+
+    <div class="live-css-section">
+      <h2 id="live-css-accordion">{{ 'Accordion'|t }}</h2>
+
+      {# Accordion Sample #}
+      <div class="base-accordion">
+        <div class="base-accordion__item">
+          <a class="base-accordion__header" href="#">{{ 'Sample Item #1'|t }}</a>
+
+          <div class="base-accordion__content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris gravida feugiat quam, at laoreet risus blandit vitae. Maecenas tristique, justo nec
+              imperdiet mollis, nulla justo vestibulum risus, in viverra nulla ligula et diam. Morbi faucibus magna ut turpis dapibus, aliquam sodales augue viverra.
+              Donec quis finibus sem, eu blandit quam. Donec vitae sem vel metus aliquet aliquam eu et libero.
+            </p>
+          </div>
+        </div>
+        <div class="base-accordion__item">
+          <a class="base-accordion__header" href="#">{{ 'Sample Item #2'|t }}</a>
+
+          <div class="base-accordion__content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris gravida feugiat quam, at laoreet risus blandit vitae. Maecenas tristique, justo nec
+              imperdiet mollis, nulla justo vestibulum risus, in viverra nulla ligula et diam. Morbi faucibus magna ut turpis dapibus, aliquam sodales augue viverra.
+              Donec quis finibus sem, eu blandit quam. Donec vitae sem vel metus aliquet aliquam eu et libero.
+            </p>
+          </div>
+        </div>
+        <div class="base-accordion__item">
+          <a class="base-accordion__header" href="#">{{ 'Sample Item #3'|t }}</a>
+
+          <div class="base-accordion__content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris gravida feugiat quam, at laoreet risus blandit vitae. Maecenas tristique, justo nec
+              imperdiet mollis, nulla justo vestibulum risus, in viverra nulla ligula et diam. Morbi faucibus magna ut turpis dapibus, aliquam sodales augue viverra.
+              Donec quis finibus sem, eu blandit quam. Donec vitae sem vel metus aliquet aliquam eu et libero.
+            </p>
+          </div>
+        </div>
+      </div>
+      {# / Accordion Sample #}
+
+    </div>
+
+  </div>
+  <div class="col-md-3 live-css-nav-col">
+
+    <nav class="live-css-nav hidden-print hidden-xs hidden-sm affix-top" role="navigation">
+      <ul class="nav">
+        <li>
+          <a href="#variables">{{ 'Variables'|t }}</a>
+          <ul class="nav">
+            <li>
+              <a href="#colors">{{ 'Colors'|t }}</a>
+            </li>
+            <li>
+              <a href="#fonts">{{ 'Fonts'|t }}</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#formatting">{{ 'Formatting'|t }}</a>
+        </li>
+        <li>
+          <a href="#buttons">{{ 'Buttons/CTAs'|t }}</a>
+        </li>
+        <li>
+          <a href="#drupal-specific">{{ 'Drupal Specific'|t }}</a>
+          <ul class="nav">
+            <li>
+              <a href="#admin-tabs">{{ 'Admin Tabs'|t }}</a>
+            </li>
+            <li>
+              <a href="#drupal-messages">{{ 'Drupal Messages'|t }}</a>
+            </li>
+            <li>
+              <a href="#drupal-forms">{{ 'Forms'|t }}</a>
+            </li>
+            <li>
+              <a href="#drupal-pagination">{{ 'Pagination'|t }}</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#rich-media">{{ 'Rich Media'|t }}</a>
+          <ul class="nav">
+            <li>
+              <a href="#content-tabs">{{ 'Content Tabs'|t }}</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#icons">{{ 'Icons'|t }}</a>
+        </li>
+        <li>
+          <a href="#components">{{ 'Components'|t }}</a>
+          <ul class="nav">
+            <li>
+              <a href="#live-css-blog-listing">{{ 'Blog Listing'|t }}</a>
+            </li>
+            <li>
+              <a href="#live-css-image-gallery">{{ 'Image Gallery'|t }}</a>
+            </li>
+            <li>
+              <a href="#live-css-accordion">{{ 'Accordion'|t }}</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+</div>
+
+
+
+
+
+

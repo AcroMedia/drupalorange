@@ -176,8 +176,8 @@
     if (path) {
       return path;
     }
-    if ((parent = this.parent)) {
-      if ((path = parent.getPath())) {
+    if (parent = this.parent) {
+      if (path = parent.getPath()) {
         return imce.joinPaths(path, this.name);
       }
     }
@@ -200,7 +200,7 @@
   Item.getUrl = function (absolute, uncached) {
     var rootUrl;
     var url = '';
-    if ((rootUrl = imce.getConf('root_url'))) {
+    if (rootUrl = imce.getConf('root_url')) {
       url = imce.joinPaths(rootUrl, encodeURIComponent(this.getPath()).replace(/%2F/g, '/'));
       if (absolute && url.charAt(0) === '/' && url.charAt(1) !== '/') {
         url = location.protocol + '//' + location.host + url;
@@ -406,7 +406,7 @@
     if (!Item[name]) {
       Item[name] = true;
       $(Item.el).addClass(name);
-      if ((el = Item.branchEl)) {
+      if (el = Item.branchEl) {
         $(el).addClass(name);
       }
     }
@@ -421,7 +421,7 @@
     if (Item[name]) {
       Item[name] = false;
       $(Item.el).removeClass(name);
-      if ((el = Item.branchEl)) {
+      if (el = Item.branchEl) {
         $(el).removeClass(name);
       }
     }

@@ -7,32 +7,54 @@
 use Drupal\Core\Template\Attribute;
 use Drupal\Core\Form\FormStateInterface;
 
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ *
+ * Adds template suggestions.
+ */
+function acro_drupal_orange_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  // Adds content type suggestions
+  if ($node = \Drupal::request()->attributes->get('node')) {
+    array_splice($suggestions, 1, 0, 'page__type__' . $node->getType());
+  }
+
+  // Adds Taxonomy Vocabulary suggestions
+  if ($term = \Drupal::request()->attributes->get('taxonomy_term')) {
+    $vocabulary_id = $term->getVocabularyId();
+    array_splice($suggestions, 1, 0, 'page__taxonomy__' . $term->getVocabularyId());
+  }
+
+  // Adds Page title suggestions
+  $request = \Drupal::request();
+  $route_match = \Drupal::routeMatch();
+  $title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+  $title_format = strtolower(urlencode($title));
+  $title_format = str_replace('+','_',$title_format);
+
+  array_splice($suggestions, 1, 0, 'page__' . $title_format);
+}
+
 /**
  * Implements hook_preprocess_HOOK() for HTML document templates.
  *
  * Adds body classes if certain regions have content.
  */
 function acro_drupal_orange_preprocess_html(&$variables) {
+  // Add Page title class
+  $request = \Drupal::request();
+  $route_match = \Drupal::routeMatch();
+  $title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+
+  $variables['attributes']['class'][] = 'page-title-' . strtolower(urlencode($title));
+
   // Add information about the number of sidebars.
-  if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
-    $variables['attributes']['class'][] = 'layout-two-sidebars';
-  }
-  elseif (!empty($variables['page']['sidebar_first'])) {
-    $variables['attributes']['class'][] = 'layout-one-sidebar';
-    $variables['attributes']['class'][] = 'layout-sidebar-first';
-  }
-  elseif (!empty($variables['page']['sidebar_second'])) {
-    $variables['attributes']['class'][] = 'layout-one-sidebar';
-    $variables['attributes']['class'][] = 'layout-sidebar-second';
+  if (!empty($variables['page']['page_sidebar'])) {
+    $variables['attributes']['class'][] = 'layout-two-column';
   }
   else {
     $variables['attributes']['class'][] = 'layout-no-sidebars';
   }
-
-  if (!empty($variables['page']['featured_top'])) {
-    $variables['attributes']['class'][] = 'has-featured-top';
-  }
-
 }
 
 /**
@@ -104,3 +126,85 @@ function acro_drupal_orange_preprocess_maintenance_page(&$variables) {
   // Theme has custom styling for the maintenance page.
   $variables['#attached']['library'][] = 'acro_drupal_orange/maintenance_page';
 }
+
+/**
+ * Implements hook__preprocess_comment_HOOK() for Comments.
+ */
+function acro_drupal_orange_preprocess_comment(&$variables) {
+  $comment = $variables['elements']['#comment'];
+
+  $variables['created'] = format_date($comment->getCreatedTime(), 'custom', 'F j, Y') . ' ' . t('at') . ' ' . format_date($comment->getCreatedTime(), 'custom', 'g:i a');
+}
+
+/**
+ * Replace first occurrence of a string
+ */
+function str_replace_first($search, $replace, $subject) {
+  $pos = strpos($subject, $search);
+  if ($pos !== false) {
+    $subject = substr_replace($subject, $replace, $pos, strlen($search));
+  }
+  return $subject;
+}
+
+/**
+ * Implements hook_preprocess_page(&$variables).
+ */
+function acro_drupal_orange_preprocess_page(&$variables) {
+  // Front Page
+  if ($variables['is_front']) {
+    $variables['views_embed_homepage_rich_media'] = views_embed_view('homepage_rich_media', 'block');
+  }
+}
+
+/**
+ * Implements hook_preprocess_node(&$variables).
+ */
+function acro_drupal_orange_preprocess_node(&$variables) {
+  $variables['base_path'] = base_path();
+
+  // Blog
+  if ($variables['node']->getType() === 'blog') {
+    $blog_author_nid = $variables['node']->field_blog_author->target_id;
+
+    // Set variables for Blog Author
+    if (!empty($blog_author_nid)) {
+      $blog_author = node_load($blog_author_nid);
+
+      $variables['blog_author_nid'] = $blog_author_nid;
+      $variables['blog_author_name'] = $blog_author->title->value;
+      $variables['blog_author'] = node_view($blog_author);
+      //$variables['blog_author_url'] = path('entity.node.canonical', {'node': $blog_author_nid});
+    }
+
+    // Blog Teaser
+    $blog_teaser_length = 250;
+    $blog_body = strip_tags($variables['node']->body->value);
+    $blog_body_length = strlen($blog_body);
+
+    if ($blog_body_length > $blog_teaser_length) {
+      $blog_teaser = substr($blog_body, 0, $blog_teaser_length) . ' ...';
+    }
+    else {
+      $blog_teaser = $blog_body;
+    }
+
+    $variables['blog_teaser'] = $blog_teaser;
+  }
+
+  // Blog Author
+  if ($variables['node']->getType() === 'blog_author') {
+    $blog_author_name = $variables['node']->getTitle();
+    $blog_author_body = $variables['node']->body->value;
+
+    $search = '<p>';
+    $replace = '<p>' . '<strong class="blog-author-name">' . $blog_author_name . '</strong> ';
+
+    // Add Blog Author's name to beginning of body
+    $blog_author_body_display = str_replace_first($search, $replace, $blog_author_body);
+
+    $variables['blog_author_body'] = $blog_author_body_display;
+  }
+}
+
+

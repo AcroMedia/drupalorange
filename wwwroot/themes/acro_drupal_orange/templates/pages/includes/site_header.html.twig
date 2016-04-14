@@ -1,3 +1,28 @@
+<a id="b-mobile-nav-close" href="#">
+  <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+</a>
+
+<div id="sidr" style="display: none;">
+  <div id="mobile-nav-cont">
+
+    <div class="site-logo site-logo--mobile-nav">
+      <a href="{{ front_page }}">
+        <img src="{{ base_path ~ directory }}/gfx/logo_acro_hand.svg" alt="{% if site_name %}{{ site_name }}{% endif %}" />
+        <span class="site-logo__title">{{ 'Drupal Orange'|t }}</span>
+        <span class="site-logo__subtitle">{{ 'Commerce'|t }}</span>
+      </a>
+    </div>
+
+    {% if page.mobile_nav %}
+      <!-- Mobile Navigation -->
+      <div class="mobile-nav">
+        {{ page.mobile_nav }}
+      </div>
+      <!-- / Mobile Navigation -->
+    {% endif %}
+  </div>
+</div>
+
 <header id="site-header">
   <div class="container">
 
@@ -18,7 +43,9 @@
               <a href="{{ base_path }}user/wishlist">{{ 'Wishlist'|t }}</a>
             </li>
             <li class="li-shopping-cart">
-              <a href="{{ base_path }}user/cart">{{ 'Shopping Cart'|t }} <span>0</span></a>
+              <a href="{{ base_path }}user/cart">
+                <span class="desktop-label">{{ 'Shopping Cart'|t }}</span><span class="mobile-label">{{ 'Cart'|t }}</span> <span class="cart-quantity">0</span>
+              </a>
             </li>
           </ul>
         </nav>
@@ -52,13 +79,26 @@
       </div>
 
       <div class="site-header-middle clearfix">
-        <div class="site-logo">
+        <div class="site-logo site-logo--header">
           <a href="{{ front_page }}">
             <img src="{{ base_path ~ directory }}/gfx/logo_acro_hand.svg" alt="{% if site_name %}{{ site_name }}{% endif %}" />
-            <span class="site-logo-title">{{ 'Drupal Orange'|t }}</span>
-            <span class="site-logo-subtitle">{{ 'Commerce'|t }}</span>
+            <span class="site-logo__title">{{ 'Drupal Orange'|t }}</span>
+            <span class="site-logo__subtitle">{{ 'Commerce'|t }}</span>
           </a>
         </div>
+
+        <!-- Mobile Navigation -->
+        <div class="site-mobile-nav">
+          <ul class="clearfix">
+            <li id="li-mobile-search-toggle">
+              <a href="#" title="{{ 'Search'|t }}"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
+            </li>
+            <li id="li-mobile-nav-toggle">
+              <a href="#" title="{{ 'Menu'|t }}"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
+            </li>
+          </ul>
+        </div>
+        <!-- / Mobile Navigation -->
 
         <div class="site-header-contact-container clearfix">
           <div class="cta-contact-us">
@@ -87,7 +127,7 @@
         {% endif %}
 
         {% if page.site_search %}
-          <div class="site-search-container">
+          <div class="site-search-cont">
             {{ page.site_search }}
           </div>
         {% endif %}
@@ -97,3 +137,15 @@
 
   </div>
 </header>
+
+{% if page.site_search %}
+  <!-- Mobile Search -->
+  <div id="mobile-search-cont" class="container">
+    <div class="mobile-search clearfix">
+      <div class="site-search-cont">
+        {{ page.site_search }}
+      </div>
+    </div>
+  </div>
+  <!-- / Mobile Search -->
+{% endif %}

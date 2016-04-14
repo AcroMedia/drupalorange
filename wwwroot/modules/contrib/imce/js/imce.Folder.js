@@ -136,7 +136,7 @@
         }
       }
       // Scroll the last item into view
-      if ((name = (fname || sname))) {
+      if (name = (fname || sname)) {
         Folder.getItem(name).scrollIntoView();
       }
     }
@@ -152,7 +152,7 @@
     if (items) {
       for (name in items) {
         // Update
-        if ((Item = this.getItem(name))) {
+        if (Item = this.getItem(name)) {
           Item.extend(items[name]);
           this.updateStatus();
         }
@@ -186,7 +186,7 @@
     // Remove the item from old parent
     Item.remove(true);
     // Remove existing item with the same name
-    if ((existing = Folder.getItem(name))) {
+    if (existing = Folder.getItem(name)) {
       existing.remove();
     }
     // Append item.
@@ -307,8 +307,8 @@
     if (conf) {
       return conf;
     }
-    if ((parent = this.parent)) {
-      if ((conf = parent.getConf())) {
+    if (parent = this.parent) {
+      if (conf = parent.getConf()) {
         if (imce.permissionInFolderConf('browse_subfolders', conf)) {
           return $.extend({inherited: true}, conf);
         }
@@ -625,7 +625,7 @@
     // Remove lazy sort flag.
     Folder.needSort = 0;
     // Check sorter
-    if ((sorter = imce.sorters[key])) {
+    if (sorter = imce.sorters[key]) {
       items.sort(sorter);
       if (desc) {
         items.reverse();
@@ -712,7 +712,7 @@
     var Folder;
     var subfolders = this.subfolders;
     for (i in subfolders) {
-      if ((Folder = subfolders[i].hasPredefinedPath())) {
+      if (Folder = subfolders[i].hasPredefinedPath()) {
         return Folder;
       }
     }

@@ -13,7 +13,6 @@ use Drupal\Core\Extension\ModuleHandlerInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\imce\Entity\ImceProfile;
-use Drupal\imce\ImceFM;
 
 /**
  * Provides a plugin manager for Imce Plugins.

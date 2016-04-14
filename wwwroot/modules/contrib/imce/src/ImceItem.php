@@ -7,9 +7,6 @@
 
 namespace Drupal\imce;
 
-use Drupal\imce\Imce;
-use Drupal\imce\ImceFM;
-
 /**
  * Imce Item.
  */

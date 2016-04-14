@@ -111,7 +111,7 @@
       if (!files.length) {
         return false;
       }
-      for (i = 0; typeof (file = files[i]) !== "undefined"; i++) {
+      for (i = 0; file = files[i]; i++) {
         if (!imce.validateFileUpload(file)) {
           return false;
         }
@@ -181,7 +181,7 @@
       doc = el.contentDocument || el.contentWindow && el.contentWindow.document;
       if (doc) {
         $body = $(doc.body);
-        if ((text = $body.find('textarea').eq(0).val())) {
+        if (text = $body.find('textarea').eq(0).val()) {
           response = $.parseJSON(text);
         }
         $body.empty();

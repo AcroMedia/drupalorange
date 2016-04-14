@@ -43,6 +43,9 @@
  * @see template_preprocess_page()
  * @see seven_preprocess_page()
  * @see html.html.twig
+
+ page.page_sidebar|striptags|trim
+
  */
 #}
 
@@ -51,28 +54,60 @@
   {% include base_path ~ directory ~ '/templates/pages/includes/site_header.html.twig' %}
 
   <div id="site-body-container">
+    {% if page.content_title %}
+      <section class="page-title-header">
+        <div class="container">
+          {{ page.content_title }}
+        </div>
+      </section>
+    {% endif %}
+
     <div class="container">
       <div class="layout-container">
         {{ page.pre_content }}
         {{ page.breadcrumb }}
-        <main class="page-content clearfix" role="main">
-          <div class="visually-hidden"><a id="main-content" tabindex="-1"></a></div>
-          {{ page.highlighted }}
-          {% if page.help %}
-            <div class="help">
-              {{ page.help }}
+
+        <div class="row">
+          {% if page.page_sidebar %}
+            <div class="col-md-3">
+              <aside class="page-sidebar" role="complementary">
+                {{ page.page_sidebar }}
+
+                <div class="blog-signup-block block">
+                  <h3>{{ "Don't Miss A Post!"|t }}</h3>
+                  <h4>{{ "Subscribe To Our Blog"|t }}</h4>
+
+                  <div class="blog-signup-block__form">
+                    <input type="text" value="" placeholder="{{ 'Email Address...'|t }}" class="form-text" />
+                    <input type="submit" value="{{ 'Subscribe'|t }}" class="form-submit" />
+                  </div>
+                </div>
+              </aside>
             </div>
           {% endif %}
-          {{ page.pre_content }}
-          {{ page.content }}
-          {{ page.post_content }}
-        </main>
 
-        {% if page.sidebar_first %}
-          <aside class="layout-sidebar-first" role="complementary">
-            {{ page.sidebar_first }}
-          </aside>
-        {% endif %}
+          {% if page.page_sidebar %}
+            <div class="col-md-9">
+          {% else %}
+            <div class="col-md-12">
+          {% endif %}
+
+              <main class="page-content clearfix" role="main">
+                <div class="visually-hidden"><a id="main-content" tabindex="-1"></a></div>
+                {{ page.highlighted }}
+                {% if page.help %}
+                  <div class="help">
+                    {{ page.help }}
+                  </div>
+                {% endif %}
+                {{ page.pre_content }}
+                {{ page.content }}
+                {{ page.post_content }}
+              </main>
+
+          </div>
+        </div>
+
       </div>
     </div>
   </div>

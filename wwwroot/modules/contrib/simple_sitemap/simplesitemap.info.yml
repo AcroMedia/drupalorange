@@ -5,8 +5,8 @@ configure: simplesitemap.settings
 package: SEO
 # core: 8.x
 
-# Information added by Drupal.org packaging script on 2016-01-12
-version: '8.x-1.6'
+# Information added by Drupal.org packaging script on 2016-02-11
+version: '8.x-1.11'
 core: '8.x'
 project: 'simple_sitemap'
-datestamp: 1452561247
+datestamp: 1455214440

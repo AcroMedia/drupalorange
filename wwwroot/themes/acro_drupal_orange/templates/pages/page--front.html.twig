@@ -50,9 +50,9 @@
 
   {% include base_path ~ directory ~ '/templates/pages/includes/site_header.html.twig' %}
 
-  {% if page.homepage_rich_media %}
+  {% if views_embed_homepage_rich_media %}
     <div class="homepage-rich-media clearfix">
-      {{ page.homepage_rich_media }}
+      {{ views_embed_homepage_rich_media }}
     </div>
   {% endif %}
 
@@ -165,6 +165,7 @@
           {% if page.homepage_blog_posts %}
             <div class="row">
               <div class="col-md-8">
+                <h1 class="page-title">{{ node.label }}</h1>
                 {{ page.content }}
               </div>
               <div class="col-md-4">

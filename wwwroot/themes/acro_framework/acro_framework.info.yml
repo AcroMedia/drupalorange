@@ -7,8 +7,8 @@ core: '8.x'
 base theme: false
 
 libraries:
-  - acro_framework/global-styling
   - acro_framework/bootstrap
+  - acro_framework/global-styling
 
 regions:
   header: 'Header'

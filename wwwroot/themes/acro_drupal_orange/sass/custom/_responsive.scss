@@ -2,22 +2,213 @@
  * Responsive - Variables From Bootstrap
  */
 
-/* -- Mobile - Extra Small -- */
-@media screen and (min-width: $screen-xs-min) {
-
-}
-
-/* -- Mobile -- */
-@media screen and (min-width: $screen-sm-min) {
+/* -- Large Devices -- */
+@media screen and (max-width: $screen-lg-min) {
 
 }
 
 /* -- Medium Devices -- */
-@media screen and (min-width: $screen-md-min) {
+@media screen and (max-width: $screen-md-min) {
+  /* -- Site Header -- */
+  .site-logo--header {
+    margin-top: 9px;
+  }
 
+  .site-pri-nav ul.menu li {
+    margin-right: 22px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  /* -- Site Footer -- */
+  .site-footer-nav {
+    margin: 0 0 30px 0;
+  }
 }
 
-/* -- Large Devices -- */
-@media screen and (min-width: $screen-lg-min) {
+/* -- Mobile - Above -- */
+@media screen and (min-width: $screen-sm-min) {
+  #mobile-search-cont {
+    display: none !important;
+  }
+}
 
+/* -- Mobile -- */
+@media screen and (max-width: $screen-sm-min) {
+  /* -- Homepage -- */
+  .homepage-rich-media-banners-slider ol.flex-control-nav {
+    bottom: 8px;
+  }
+  .homepage-rich-media-banners-slider ul.flex-direction-nav li.flex-nav-prev {
+    display: none;
+  }
+  .homepage-rich-media-banners-slider ul.flex-direction-nav li.flex-nav-next {
+    display: none;
+  }
+
+  .homepage-recent-blog-posts {
+    padding-top: 20px;
+  }
+
+  .homepage-cta-large-content {
+    padding-left: 40%;
+  }
+
+  /* -- Mobile Navigation -- */
+  .site-mobile-nav {
+    display: block;
+  }
+  .site-pri-nav-container {
+    display: none;
+  }
+  .site-header-contact-container {
+    display: none;
+  }
+  .site-header-nav {
+    display: none;
+  }
+  .language-switcher-cont {
+    display: none;
+  }
+
+  #site-header {
+    margin: 0 0 20px 0;
+  }
+  .site-header-user-nav {
+    margin: 0 0 15px 0;
+  }
+
+  .site-header-user-nav li.li-shopping-cart span.cart-quantity {
+    padding: 2px 9px;
+    min-width: 0;
+  }
+  .site-header-user-nav li.li-shopping-cart span.desktop-label {
+    display: none;
+  }
+  .site-header-user-nav li.li-shopping-cart span.mobile-label {
+    display: inline-block;
+  }
+
+
+  .site-logo--header {
+    margin-top: 0;
+    padding: 3px 0 0 58px;
+    min-height: 0;
+
+    img {
+      width: 46px;
+      height: auto;
+    }
+    .site-logo__title {
+      font-size: 15px;
+    }
+    .site-logo__subtitle {
+      font-size: 22px;
+      letter-spacing: normal;
+    }
+  }
+
+  .page-title-header {
+    padding-top: 23px;
+  }
+
+  /* -- Site Footer -- */
+  .site-footer-nav ul.menu li {
+    margin: 0 0 20px 0;
+    width: 50%;
+  }
+
+  /* -- Nav Tabs -- */
+  .nav-tabs {
+    border: none;
+
+    > li {
+      float: none;
+      clear: both;
+      margin: 0 0 2px 0;
+
+      // Actual tabs (as links)
+      > a {
+        border: none;
+        background: #f7f7f7;
+
+        &:hover {
+          color: #7d7d7d;
+          background: #f7f7f7;
+        }
+      }
+
+      // Active state, and its :hover to override normal :hover
+      &.active > a {
+        &,
+        &:hover,
+        &:focus {
+          color: #fff;
+          background: $c-primary;
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+/* -- Mobile - Extra Small -- */
+@media screen and (max-width: $screen-xs-min) {
+  .site-logo--header {
+    padding: 5px 0 0 55px;
+
+    .site-logo__title {
+      font-size: 12px;
+    }
+    .site-logo__subtitle {
+      font-size: 16px;
+    }
+  }
+
+  /* -- Homepage -- */
+  .homepage-rich-media {
+    display: none;
+  }
+  .homepage-cta-large {
+    min-height: 291px;
+  }
+  .homepage-cta-large-content {
+    padding-left: 10%;
+  }
+  .homepage-cta-large-content h2 {
+    font-size: 47px;
+    line-height: 46px;
+  }
+
+  .homepage-cta-small-content {
+    padding: 7% 10% 0 10%;
+  }
+
+  .cta-free-shipping h3 {
+    display: block;
+    margin: 0;
+    font-size: 25px;
+    line-height: 31px;
+  }
+  .cta-free-shipping p {
+    display: block;
+    margin: 8px 0 12px 0;
+  }
+  .cta-free-shipping .b-cta {
+    margin-bottom: 5px;
+  }
+
+  /* -- Site Footer -- */
+  .site-live-chat--footer a {
+    min-width: 67px;
+  }
+  .site-live-chat a span {
+    font-size: 20px;
+  }
+  .cta-contact-us--footer a span {
+    font-size: 20px;
+  }
+  .site-footer-nav ul.menu li {
+    width: 100%;
+  }
 }

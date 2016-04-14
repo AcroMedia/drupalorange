@@ -58,7 +58,7 @@
           }
           File = selection[i];
           if (File.width) {
-            lines.push('<img src="' + File.getUrl() + '" style="width:' + File.width + 'px;height:' + File.height + 'px;" alt="' + File.formatName() + '" />');
+            lines.push('<img src="' + File.getUrl() + '" width="' + File.width + '" height="' + File.height + '" alt="' + File.formatName() + '" />');
           }
         }
         editor.insertHtml(lines.join('<br />'));

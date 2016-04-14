@@ -63,32 +63,99 @@
  *   in different view modes.
  */
 #}
-<article{{ attributes }}>
 
-  {% for blog_category in content.field_blog_category['#items'] %}
+{% if not page %}
 
-  {% endfor %}
-
-  {{ title_prefix }}
-  {% if not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
-
-  {% if display_submitted %}
-    <footer>
-      {{ author_picture }}
-      <div{{ author_attributes }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
+  <div class="blog-listing-item">
+    <div class="blog-listing-item__image">
+      <a href="{{ url }}">{{ content.field_blog_image }}</a>
+    </div>
+    <div class="blog-listing-item__title">
+      <a href="{{ url }}">{{ label }}</a>
+    </div>
+    <div class="blog-post-meta">
+      {{ content.field_blog_date }}
+      {% if blog_author %}
+        <i>|</i>
+        {{ 'By'|t }} <a href="{{ base_path }}blog/author/{{ blog_author_nid }}">{{ blog_author_name }}</a>
+      {% endif %}
+    </div>
+    <div class="blog-listing-item__body">
+      {{ blog_teaser }}
+    </div>
+    <div class="blog-listing-item__footer clearfix">
+      <div class="blog-listing-item__link">
+        <a href="{{ url }}">{{ 'Read More'|t }}</a>
       </div>
-    </footer>
-  {% endif %}
-
-  <div{{ content_attributes }}>
-    {{ content }}
+      <div class="blog-listing-item__tags blog-post-tags">
+        <span class="blog-post-tags--label">{{ 'Posted in'|t }}</span> {{ content.field_blog_category }}
+      </div>
+    </div>
   </div>
 
-</article>
+{% else %}
+
+  <article{{ attributes }}>
+    {% if content.field_blog_image %}
+      <div class="blog-post-image">
+        {{ content.field_blog_image }}
+      </div>
+    {% endif %}
+
+    <div class="blog-post-social-media blog-post-social-media--header">
+      <span class='st_sharethis_hcount' displayText='ShareThis'></span>
+      <span class='st_facebook_hcount' displayText='Facebook'></span>
+      <span class='st_twitter_hcount' displayText='Tweet'></span>
+      <span class='st_email_hcount' displayText='Email'></span>
+    </div>
+
+    {{ title_prefix }}
+    <h1 {{ title_attributes.addClass('page-title--blog-post') }}>{{ label }}</h1>
+    {{ title_suffix }}
+
+    <div class="blog-post-meta blog-post-meta--node">
+      {{ content.field_blog_date }}
+      {% if blog_author %}
+        <i>|</i>
+        {{ 'By'|t }} <a href="{{ base_path }}blog/author/{{ blog_author_nid }}">{{ blog_author_name }}</a>
+      {% endif %}
+    </div>
+
+    <div class="blog-post-tags blog-post-tags--header">
+      <span class="blog-post-tags--label">{{ 'Posted in'|t }}</span> {{ content.field_blog_category }}
+    </div>
+
+    <div{{ content_attributes }}>
+      {{ content.body }}
+    </div>
+
+    <div class="blog-post-footer">
+      <div class="blog-post-social-media blog-post-social-media--footer">
+        <span class='st_sharethis_hcount' displayText='ShareThis'></span>
+        <span class='st_facebook_hcount' displayText='Facebook'></span>
+        <span class='st_twitter_hcount' displayText='Tweet'></span>
+        <span class='st_email_hcount' displayText='Email'></span>
+      </div>
+
+      <div class="blog-post-tags">
+        {{ 'Posted in'|t }} {{ content.field_blog_category }}
+      </div>
+    </div>
+
+    {% if blog_author %}
+      {{ blog_author }}
+    {% endif %}
+
+    <div class="blog-post-comments">
+      {{ content.field_blog_comments }}
+    </div>
+  </article>
+
+  <script type="text/javascript">var switchTo5x=true;</script>
+  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+  <script type="text/javascript">stLight.options({publisher: "d499c001-cbf1-42e3-92c3-d73d5bcc5538", doNotHash: true, doNotCopy: true, hashAddressBar: false, onhover: false});</script>
+
+
+{% endif %}
+
+

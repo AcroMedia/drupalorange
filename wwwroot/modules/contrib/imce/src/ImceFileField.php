@@ -9,8 +9,6 @@ namespace Drupal\imce;
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Field\WidgetInterface;
-use Drupal\file\Entity\File;
-use Drupal\imce\Imce;
 
 /**
  * Defines methods for integrating Imce into file field widgets.

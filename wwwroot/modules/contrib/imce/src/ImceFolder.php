@@ -7,9 +7,6 @@
 
 namespace Drupal\imce;
 
-use Drupal\imce\ImceFM;
-use Drupal\imce\ImceItem;
-
 /**
  * Imce Folder.
  */

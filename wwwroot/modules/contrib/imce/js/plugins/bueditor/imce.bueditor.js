@@ -35,7 +35,7 @@
     sendtoField: function (File, win) {
       var field;
       var id = win.imce.getQuery('field_id');
-      if ((field = BUE.imce.fields[id])) {
+      if (field = BUE.imce.fields[id]) {
         // Set field value
         field.value = File.getUrl();
         // Check other fields
@@ -44,8 +44,8 @@
         var value;
         var values = {width: File.width, height: File.height, alt: File.formatName()};
         for (name in values) {
-          if ((value = values[name])) {
-            if ((input = field.form.elements[name])) {
+          if (value = values[name]) {
+            if (input = field.form.elements[name]) {
               input.value = value;
             }
           }

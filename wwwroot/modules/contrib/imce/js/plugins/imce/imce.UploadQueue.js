@@ -42,7 +42,7 @@
       el = Uq.el = imce.createEl('<div class="imce-uq"><span class="imce-uq-button imce-ficon imce-ficon-plus"><span class="imce-uq-label">' + Drupal.t('Add file') + '</span><input type="file" class="imce-uq-input" multiple /></span><div class="imce-uq-items"></div></div>');
       inputEl = Uq.inputEl = el.firstChild.lastChild;
       inputEl.onchange = imce.eUqInputChange;
-      if ((accept = Uq.conf.accept)) {
+      if (accept = Uq.conf.accept) {
         inputEl.accept = accept;
       }
       Uq.itemsEl = el.lastChild;
@@ -83,7 +83,7 @@
     var i;
     var Item;
     var queue = this.queue.slice(0);
-    for (i = 0; typeof (Item = queue[i]) !== "undefined"; i++) {
+    for (i = 0; Item = queue[i]; i++) {
       // Remove completed items from the queue.
       if (Item.completed) {
         Item.remove();
@@ -105,7 +105,7 @@
     var Item;
     var ret;
     var path = imce.activeFolder.getPath();
-    for (i = 0; typeof (file = list[i]) !== "undefined"; i++) {
+    for (i = 0; file = list[i]; i++) {
       if (imce.validateFileUpload(file)) {
         Item = new imce.UploadQueueItem(file, path);
         if (this.addItem(Item)) {
@@ -137,7 +137,7 @@
     var Uq = this;
     var id = Item.id;
     // Check existing
-    if ((existing = Uq.getItem(id))) {
+    if (existing = Uq.getItem(id)) {
       existing.remove(true);
     }
     Item.Uq = Uq;
@@ -185,7 +185,7 @@
     // Prepare form data
     data = $(Uq.inputEl.form).serializeArray().concat([{name: 'active_path', value: dest}], Item.formData || []);
     formData = new FormData();
-    for (i = 0; typeof (field = data[i]) !== "undefined"; i++) {
+    for (i = 0; field = data[i]; i++) {
       if (field.name) {
         formData.append(field.name, field.value);
       }
@@ -271,7 +271,7 @@
     var Uq = Item.Uq;
     if (Uq && !Item.active && !Item.completed) {
       // Get ajax options
-      if ((opt = Uq.ajaxPrepare(Item))) {
+      if (opt = Uq.ajaxPrepare(Item)) {
         Item.active = true;
         $(Item.el).addClass('active');
         Item.xhr = $.ajax(opt);

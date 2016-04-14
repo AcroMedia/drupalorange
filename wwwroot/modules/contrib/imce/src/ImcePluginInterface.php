@@ -11,7 +11,6 @@ use Drupal\Component\Plugin\PluginInspectionInterface;
 use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\imce\Entity\ImceProfile;
-use Drupal\imce\ImceFM;
 
 /**
  * Defines an interface for Imce plugins.

@@ -779,34 +779,13 @@ ul.links a.is-active {
  * Visual styles for menu.
  */
 
-ul.menu {
-  list-style: none outside;
-  margin-left: 1em; /* LTR */
-  padding: 0;
-  text-align: left; /* LTR */
-}
 [dir="rtl"] ul.menu {
   margin-left: 0;
   margin-right: 1em;
   text-align: right;
 }
-.menu-item--expanded {
-  list-style-image: url(../gfx/icons/menu-expanded.png);
-  list-style-type: circle;
-}
-.menu-item--collapsed {
-  list-style-image: url(../gfx/icons/menu-collapsed.png); /* LTR */
-  list-style-type: disc;
-}
 [dir="rtl"] .menu-item--collapsed {
   list-style-image: url(../gfx/icons/menu-collapsed-rtl.png);
-}
-.menu-item {
-  padding-top: 0.2em;
-  margin: 0;
-}
-ul.menu a.is-active {
-
 }
 
 /**
@@ -815,11 +794,12 @@ ul.menu a.is-active {
  */
 
 .messages {
+  margin: 0 0 20px 0;
+  padding: 15px 20px 15px 35px; /* LTR */
   background: no-repeat 10px 17px;  /* LTR */
   border: 1px solid;
   border-width: 1px 1px 1px 0;  /* LTR */
   border-radius: 2px;
-  padding: 15px 20px 15px 35px; /* LTR */
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
@@ -1057,14 +1037,14 @@ td.is-active {
 div.tabs {
   margin: 1em 0;
 }
-ul.tabs {
-  list-style: none;
-  margin: 0 0 0.5em;
+ul.drupal-tabs {
+  margin: 0 0 15px 0;
   padding: 0;
+  list-style: none;
 }
 .tabs > li {
   display: inline-block;
-  margin-right: 0.3em; /* LTR */
+  margin: 0 0.3em 0.3em 0;
 }
 [dir="rtl"] .tabs > li {
   margin-left: 0.3em;
@@ -1074,13 +1054,18 @@ ul.tabs {
   display: block;
   padding: 0.2em 1em;
   text-decoration: none;
+  color: #333;
+  background: #f5f5f5;
+  @include border-radius(5px);
 }
 .tabs a.is-active {
-  background-color: #eee;
+  color: #fff;
+  background-color: #666;
 }
 .tabs a:focus,
 .tabs a:hover {
-  background-color: #f5f5f5;
+  color: #333;
+  background-color: #e0e0e0;
 }
 
 /**

@@ -19,7 +19,7 @@
       var i;
       var button;
       var $buttons = $('.imce-filefield-button', context).not('.iff-processed').addClass('iff-processed');
-      for (i = 0; typeof (button = $buttons[i]) !== "undefined"; i++) {
+      for (i = 0; button = $buttons[i]; i++) {
         imceFileField.processButton(button);
       }
     }

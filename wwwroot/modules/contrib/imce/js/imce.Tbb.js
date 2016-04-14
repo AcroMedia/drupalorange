@@ -50,7 +50,7 @@
     var icon;
     if (!el) {
       el = Tbb.el = imce.createEl('<span class="imce-tbb imce-ficon" role="button"><span class="imce-tbb-title"></span></span>');
-      if ((icon = Tbb.icon)) {
+      if (icon = Tbb.icon) {
         el.className += ' imce-ficon-' + icon;
       }
       el.className += ' imce-tbb--' + Tbb.id;

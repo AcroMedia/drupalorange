@@ -9,7 +9,6 @@ namespace Drupal\imce;
 
 use Symfony\Component\HttpFoundation\Request;
 use Drupal\Core\Session\AccountProxyInterface;
-use Drupal\imce\ImceFM;
 
 /**
  * Imce container class for helper methods.
