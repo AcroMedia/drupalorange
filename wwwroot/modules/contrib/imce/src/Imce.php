@@ -52,7 +52,7 @@ class Imce {
         $imce_settings = \Drupal::config('imce.settings');
         $roles_profiles = $imce_settings->get('roles_profiles', array());
         $user_roles = array_flip($user->getRoles());
-        $storage = \Drupal::entityManager()->getStorage('imce_profile');
+        $storage = \Drupal::entityTypeManager()->getStorage('imce_profile');
         foreach ($roles_profiles as $rid => $profiles) {
           if (isset($user_roles[$rid]) && !empty($profiles[$scheme])) {
             if ($profile = $storage->load($profiles[$scheme])) {
@@ -275,7 +275,7 @@ class Imce {
    */
   public static function getFileEntity($uri, $create = FALSE, $save = FALSE) {
     $file = FALSE;
-    if ($files = \Drupal::entityManager()->getStorage('file')->loadByProperties(array('uri' => $uri))) {
+    if ($files = \Drupal::entityTypeManager()->getStorage('file')->loadByProperties(array('uri' => $uri))) {
       $file = reset($files);
     }
     elseif ($create) {
@@ -296,7 +296,7 @@ class Imce {
       'filename' => \Drupal::service('file_system')->basename($uri),
       'filemime' => \Drupal::service('file.mime_type.guesser')->guess($uri),
     );
-    $file = \Drupal::entityManager()->getStorage('file')->create($values);
+    $file = \Drupal::entityTypeManager()->getStorage('file')->create($values);
     if ($save) {
       $file->save();
     }

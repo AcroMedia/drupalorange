@@ -36,6 +36,10 @@ class Imce extends CKEditorPluginBase {
         'label' => t('Insert images using Imce File Manager'),
         'image' => $this->imageIcon(),
       ),
+      'ImceLink' => array(
+        'label' => t('Insert file links using Imce File Manager'),
+        'image' => $this->linkIcon(),
+      ),
     );
   }
 
@@ -43,15 +47,26 @@ class Imce extends CKEditorPluginBase {
    * {@inheritdoc}
    */
   public function getConfig(Editor $editor) {
-    return array('ImceImageIcon' => file_create_url($this->imageIcon()));
+    return array(
+      'ImceImageIcon' => file_create_url($this->imageIcon()),
+      'ImceLinkIcon' => file_create_url($this->linkIcon()),
+    );
   }
 
   /**
    * Returns image icon path.
-   * Use the icon from drupalimage plugin.
+   * Uses the icon from drupalimage plugin.
    */
   public function imageIcon() {
-    return drupal_get_path('module', 'ckeditor') . '/js/plugins/drupalimage/image.png';
+    return drupal_get_path('module', 'imce') . '/js/plugins/ckeditor/icons/imceimage.png';
+  }
+
+  /**
+   * Returns link icon path.
+   * Uses the icon from drupallink plugin.
+   */
+  public function linkIcon() {
+    return drupal_get_path('module', 'imce') . '/js/plugins/ckeditor/icons/imcelink.png';
   }
 
 }

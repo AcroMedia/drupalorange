@@ -88,7 +88,7 @@ class ImceSettingsForm extends ConfigFormBase {
     $wrappers = \Drupal::service('stream_wrapper_manager')->getNames(StreamWrapperInterface::WRITE_VISIBLE);
     // Prepare profile options
     $options = array('' => '-' . $this->t('None') . '-');
-    foreach (\Drupal::entityManager()->getStorage('imce_profile')->loadMultiple() as $pid => $profile) {
+    foreach (\Drupal::entityTypeManager()->getStorage('imce_profile')->loadMultiple() as $pid => $profile) {
       $options[$pid] = $profile->label();
     }
     // Build header
