@@ -29,10 +29,13 @@ function acro_drupal_orange_theme_suggestions_page_alter(array &$suggestions, ar
   $request = \Drupal::request();
   $route_match = \Drupal::routeMatch();
   $title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
-  $title_format = strtolower(urlencode($title));
-  $title_format = str_replace('+','_',$title_format);
 
-  array_splice($suggestions, 1, 0, 'page__' . $title_format);
+  if (!is_array($title)) {
+    $title_format = strtolower(urlencode($title));
+    $title_format = str_replace('+','_',$title_format);
+
+    array_splice($suggestions, 1, 0, 'page__' . $title_format);
+  }
 }
 
 /**
