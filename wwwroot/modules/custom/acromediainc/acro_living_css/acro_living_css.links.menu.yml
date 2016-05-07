@@ -1,6 +1,0 @@
-acro_living_css.admin:
-  title: 'Acro Living CSS'
-  description: 'Acro Living CSS admin settings page link'
-  parent: system.admin_config_development
-  route_name: acro_living_css.content
-  weight: 100

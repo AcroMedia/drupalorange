@@ -1,0 +1,314 @@
+/**
+ * General
+ */
+
+html,
+body {
+  color: $c-body;
+  background: $c-site-bg;
+}
+
+a {
+  color: $c-link;
+  text-decoration: none;
+}
+a:hover {
+  color: $c-link-hover;
+  text-decoration: none;
+}
+
+/**
+ * Site Structure
+ */
+
+.site-wrapper {
+  clear: both;
+  position: relative;
+}
+
+/**
+ * Site Header
+ */
+
+.site-header {
+  background: #333;
+
+  .container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+.site-logo {
+  float: left;
+  margin: 0;
+  padding: 0;
+
+  img {
+    display: block;
+    width: 80px;
+    height: 89px;
+  }
+}
+
+/* -- Primary Navigation -- */
+
+.site-header-content {
+  clear: both;
+  margin: 0;
+  padding: 20px 0;
+}
+
+.site-pri-nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      float: left;
+      margin: 0 25px 0 0;
+      padding: 0;
+      font-size: 16px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+/* -- Header Navigation -- */
+
+.site-header-nav {
+  float: right;
+  margin: 0;
+  padding: 0;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      float: left;
+      margin: 0 25px 0 0;
+      padding: 0;
+      font-size: 16px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+/**
+ * Site Footer
+ */
+
+.site-footer {
+  background: #333;
+
+  .container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+/* -- Footer Navigation -- */
+
+.site-footer-nav {
+  margin: 0 0 50px 0;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      float: left;
+      margin: 0 25px 0 0;
+      padding: 0;
+      font-size: 16px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+/* -- Footer Copyright -- */
+
+.site-footer-copyright {
+  clear: both;
+  font-size: 10px;
+}
+
+/**
+ * Site Search
+ */
+
+.site-search {
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Site Body
+ */
+
+#site-body {
+  clear: both;
+
+  > .container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+/**
+ * Primary Mobile Navigation
+ */
+
+/* -- Mobile Nav Toggle -- */
+
+.site-mobile-toggle-nav {
+  display: none;
+  float: right;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      float: left;
+      margin: 0 0 25px 0;
+      padding: 0;
+      background: none;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    .glyphicon {
+      font-size: 36px;
+    }
+  }
+}
+
+/* -- Mobile Sidr -- */
+
+#mobile-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.6;
+  z-index: 100;
+  @include transition(opacity 0.15s linear);
+}
+.sidr-open #mobile-overlay {
+  display: block;
+}
+
+.mobile-nav-close {
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+.b-mobile-nav-close {
+  color: #ccc;
+  text-decoration: none;
+  outline: none;
+
+  &:hover {
+    color: #666;
+  }
+  .glyphicon {
+    font-size: 25px;
+  }
+}
+
+.sidr {
+  display: block;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 245px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #fff;
+  z-index: 999999;
+
+  #mobile-sidr-content {
+    padding: 12px 20px 20px 20px;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: none;
+    background: none;
+
+    li {
+      position: relative;
+      float: none;
+      display: block;
+      margin: 0 0 12px 0;
+      padding: 0 0 4px 0;
+      line-height: 18px;
+      border: none;
+      border-bottom: 1px solid #efede9;
+      background: none;
+
+      /* -- 2nd Level -- */
+      ul {
+        margin: 0 0 0 10px;
+
+        li {
+          margin: 0;
+
+          &:last-child {
+            border: none;
+          }
+        }
+        a {
+          padding: 4px 0 0 0;
+          font-size: 12px;
+        }
+      }
+    }
+    a {
+      display: block;
+      margin: 0;
+      padding: 4px 0;
+      font-size: 15px;
+      line-height: 18px;
+      font-weight: bold;
+      text-decoration: none;
+
+      &:hover,
+      &.active-trail,
+      &.active {
+        color: #000;
+        text-decoration: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+      }
+    }
+  }
+}
+.sidr.right {
+  left: auto;
+  right: -245px;
+}
+.sidr.left {
+  left: -245px;
+  right: auto;
+}

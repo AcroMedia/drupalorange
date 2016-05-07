@@ -2,12 +2,6 @@
  * Mixins
  */
 
-// Usage: .box { @include border-radius(10px); }
-/*
-@include transition(opacity 0.15s linear);
-@include border-radius(5px);
-*/
-
 @mixin button-hide-text() {
   text-align: left;
   text-indent: -99999px;

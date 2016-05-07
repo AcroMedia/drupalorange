@@ -1,0 +1,66 @@
+{% if page.mobile_nav %}
+  <!-- Mobile Navigation -->
+  <div id="sidr" style="display: none;">
+    <div id="mobile-sidr-content">
+      <div class="mobile-nav-close">
+        <a class="b-mobile-nav-close" href="#">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div class="site-mobile-nav">
+        {{ page.mobile_nav }}
+      </div>
+    </div>
+  </div>
+  <!-- / Mobile Navigation -->
+{% endif %}
+
+<header class="site-header">
+  <div class="container">
+
+    <div class="site-logo">
+      <a href="{{ front_page }}">
+        <img src="{{ base_path ~ directory }}/gfx/logo.svg" alt="{% if site_name %}{{ site_name }}{% endif %}" />
+      </a>
+    </div>
+
+    {% if page.mobile_nav %}
+      <!-- Mobile Navigation Toggle -->
+      <nav class="site-mobile-toggle-nav visible-xs-block">
+        <ul class="clearfix">
+          <li>
+            <a class="b-mobile-nav-toggle" href="#" title="{{ 'Menu'|t }}"><span aria-hidden="true" class="glyphicon glyphicon-menu-hamburger"></span></a>
+          </li>
+        </ul>
+      </nav>
+      <!-- / Mobile Navigation Toggle -->
+    {% endif %}
+
+    {% if page.header_nav %}
+      <!-- Header Navigation -->
+      <nav class="site-header-nav hidden-xs clearfix">
+        {{ page.header_nav }}
+      </nav>
+      <!-- / Header Navigation -->
+    {% endif %}
+
+    <div class="site-header-content hidden-xs clearfix">
+      {% if page.primary_nav %}
+        <!-- Primary Navigation -->
+        <nav class="site-pri-nav clearfix">
+          {{ page.primary_nav }}
+        </nav>
+        <!-- / Primary Navigation -->
+      {% endif %}
+
+      {% if page.site_search %}
+        <!-- Site Search -->
+        <div class="site-search">
+          {{ page.site_search }}
+        </div>
+        <!-- / Site Search -->
+      {% endif %}
+    </div>
+  </div>
+</header>

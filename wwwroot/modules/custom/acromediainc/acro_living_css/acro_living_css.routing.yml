@@ -1,7 +1,0 @@
-acro_living_css.content:
-  path: '/livecss'
-  defaults:
-    _controller: '\Drupal\acro_living_css\Controller\LivingCSSController::content'
-    _title: 'Living CSS'
-  requirements:
-    _permission: 'access content'

@@ -1,0 +1,54 @@
+/**
+ * Variables
+ */
+
+// Colors
+$c-acro-orange: #ff9900;
+
+$c-site-bg: #fff;
+
+$c-primary: #333;
+$c-secondary: $c-acro-orange;
+$c-tertiary: #0d58a6;
+
+$c-accent-1: #2419b2;
+$c-accent-2: #00aa72;
+$c-accent-3: #ff5600;
+
+$c-body: #666;
+
+$c-link: #028ced;
+$c-link-hover: #38adff;
+
+$gray-base:              #000 !default;
+$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:              lighten($gray-base, 20%) !default;   // #333
+$gray:                   lighten($gray-base, 33.5%) !default; // #555
+$gray-light:             lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
+
+// Fonts
+$f-primary: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$f-secondary: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+$f-body: Helvetica, Arial, sans-serif;
+
+// Extra small screen / phone
+$screen-xs: 480px !default;
+$screen-xs-min: $screen-xs !default;
+
+// Small screen / tablet
+$screen-sm: 768px !default;
+$screen-sm-min: $screen-sm !default;
+
+// Medium screen / desktop
+$screen-md: 992px !default;
+$screen-md-min: $screen-md !default;
+
+// Large screen / wide desktop
+$screen-lg: 1200px !default;
+$screen-lg-min: $screen-lg !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max: ($screen-sm-min - 1) !default;
+$screen-sm-max: ($screen-md-min - 1) !default;
+$screen-md-max: ($screen-lg-min - 1) !default;

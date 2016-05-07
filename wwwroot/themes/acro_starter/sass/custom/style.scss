@@ -1,0 +1,15 @@
+// Global
+@import '_variables.scss';
+@import '_mixins.scss';
+
+// General
+@import '_general.scss';
+
+// Pages
+@import 'pages/_homepage.scss';
+@import 'pages/_blog.scss';
+
+// Responsive
+@import '_responsive.scss';
+
+

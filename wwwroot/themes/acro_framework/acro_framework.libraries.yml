@@ -4,9 +4,10 @@ global-styling:
     theme:
       css/style.css: { media: all }
   js:
-    js/script.js: {}
+    js/custom/script.js: {}
   dependencies:
     - core/jquery
+    - acro_framework/flexslider
 
 flexslider:
   version: 1.x

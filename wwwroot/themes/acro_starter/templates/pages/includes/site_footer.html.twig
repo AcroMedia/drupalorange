@@ -1,0 +1,19 @@
+<footer class="site-footer">
+  <div class="container">
+
+    {% if page.footer_nav %}
+      <!-- Footer Navigation -->
+      <nav class="site-footer-nav">
+        {{ page.footer_nav }}
+      </nav>
+      <!-- / Footer Navigation -->
+    {% endif %}
+
+    <div class="site-footer-copyright">
+      {{ 'Copyright &copy; @year'|t({'@year': 'now'|date('Y')}) }}
+      <a href="{{ front_page }}">{{ 'Acro Media Inc'|t }}</a>.
+      {{ 'All rights reserved.'|t }}
+    </div>
+
+  </div>
+</footer>
