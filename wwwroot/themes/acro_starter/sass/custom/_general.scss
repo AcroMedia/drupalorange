@@ -25,29 +25,3 @@ a:hover {
   clear: both;
   position: relative;
 }
-
-
-
-/**
- * Site Search
- */
-
-.site-search {
-  float: right;
-  margin: 0;
-  padding: 0;
-}
-
-/**
- * Site Body
- */
-
-.content {
-  clear: both;
-
-  > .container {
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
-}
-

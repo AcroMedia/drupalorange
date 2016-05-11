@@ -2,6 +2,11 @@
  * Content Styles
  */
 .content {
+  > .container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
   .content__sidebar {
 
   }
