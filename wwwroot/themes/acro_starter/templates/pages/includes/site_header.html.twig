@@ -17,7 +17,7 @@
 {% endif %}
 
 <header class="site-header">
-  <div class="container">
+  <div class="top-header container">
 
     <div class="site-logo">
       <a href="{{ front_page }}">
@@ -44,8 +44,10 @@
       </nav>
       <!-- / Header Navigation -->
     {% endif %}
+  </div>
 
-    <div class="site-header-content hidden-xs clearfix">
+  <div class="desktop-pri-nav-wrapper hidden-xs clearfix">
+    <div class="container">
       {% if page.primary_nav %}
         <!-- Primary Navigation -->
         <nav class="site-pri-nav clearfix">
