@@ -1,10 +1,18 @@
 /**
- * Primary Mobile Navigation
+ * Navigation Styles
+ *
+ * This file is for base navigation styles and mobile navigation styles.
+ * Any styles for a specific menu should go in the partial that makes most
+ * sense for that menu. Example: Footer navigation styles go in _footer.scss,
+ * sidebar navigation styles go in _content.scss, etc.
+ *
  */
 
-/* -- Mobile Nav Toggle -- */
+/*-- Mobile Navigation Styles --*/
 
-.site-mobile-toggle-nav {
+//Mobile Toggle
+
+.header__mobile-toggle {
   display: none;
   float: right;
 
@@ -29,7 +37,7 @@
   }
 }
 
-/* -- Mobile Sidr -- */
+//Sidr
 
 #mobile-overlay {
   display: none;
@@ -43,6 +51,7 @@
   z-index: 100;
   @include transition(opacity 0.15s linear);
 }
+
 .sidr-open #mobile-overlay {
   display: block;
 }
@@ -51,6 +60,7 @@
   margin: 0 0 20px 0;
   padding: 0;
 }
+
 .b-mobile-nav-close {
   color: #ccc;
   text-decoration: none;
@@ -134,18 +144,18 @@
     }
   }
 }
+
 .sidr.right {
   left: auto;
   right: -245px;
 }
+
 .sidr.left {
   left: -245px;
   right: auto;
 }
 
-/**
- * Base Navigation Styles
- */
+/*-- General Navigation Styles --*/
 
 .menu {
   //Offset padding on li a
@@ -168,7 +178,7 @@
 
 //Dropdown Menu
 .menu {
-  .dropdown {
+  .menu__dropdown {
     display: none;
     position: absolute;
     left: 0;
@@ -193,36 +203,12 @@
     }
   }
 
-  .dropdown-parent:hover .dropdown {
+  .menu__dropdown-parent:hover .dropdown {
     display: block;
   }
 
   //Down Arrow
-  .dropdown-parent span {
+  .menu__dropdown-parent span {
     color: $c-secondary;
   }
-}
-
-/**
- * Primary Navigation
- */
-
-.site-pri-nav {
-
-}
-
-/**
- * Header Navigation
- */
-
-.site-header-nav {
-  float: right;
-}
-
-/**
- * Footer Navigation
- */
-
-.site-footer-nav {
-  margin-bottom: 50px;
 }

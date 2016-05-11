@@ -26,46 +26,7 @@ a:hover {
   position: relative;
 }
 
-/**
- * Site Header
- */
 
-.site-header {
-  background: #333;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.site-logo {
-  float: left;
-  margin: 0;
-  padding: 0;
-
-  img {
-    display: block;
-    width: 80px;
-    height: 89px;
-  }
-}
-
-/**
- * Site Footer
- */
-
-.site-footer {
-  background: #333;
-
-  .container {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-}
-
-/* -- Footer Copyright -- */
-
-.site-footer-copyright {
-  clear: both;
-  font-size: 10px;
-}
 
 /**
  * Site Search
@@ -81,7 +42,7 @@ a:hover {
  * Site Body
  */
 
-#site-body {
+.content {
   clear: both;
 
   > .container {

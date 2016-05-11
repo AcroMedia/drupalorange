@@ -16,10 +16,10 @@
   <!-- / Mobile Navigation -->
 {% endif %}
 
-<header class="site-header">
-  <div class="top-header container">
+<header class="header">
+  <div class="container">
 
-    <div class="site-logo">
+    <div class="header__logo">
       <a href="{{ front_page }}">
         <img src="{{ base_path ~ directory }}/gfx/logo.svg" alt="{% if site_name %}{{ site_name }}{% endif %}" />
       </a>
@@ -27,7 +27,7 @@
 
     {% if page.mobile_nav %}
       <!-- Mobile Navigation Toggle -->
-      <nav class="site-mobile-toggle-nav visible-xs-block">
+      <nav class="header__mobile-toggle visible-xs-block">
         <ul class="clearfix">
           <li>
             <a class="b-mobile-nav-toggle" href="#" title="{{ 'Menu'|t }}"><span aria-hidden="true" class="glyphicon glyphicon-menu-hamburger"></span></a>
@@ -39,26 +39,26 @@
 
     {% if page.header_nav %}
       <!-- Header Navigation -->
-      <nav class="site-header-nav hidden-xs clearfix">
+      <nav class="header__top-navigation hidden-xs">
         {{ page.header_nav }}
       </nav>
       <!-- / Header Navigation -->
     {% endif %}
   </div>
 
-  <div class="desktop-pri-nav-wrapper hidden-xs clearfix">
+  <div class="header__main-navigation-wrapper hidden-xs">
     <div class="container">
       {% if page.primary_nav %}
-        <!-- Primary Navigation -->
-        <nav class="site-pri-nav clearfix">
+        <!-- Main Navigation -->
+        <nav class="header__main-navigation">
           {{ page.primary_nav }}
         </nav>
-        <!-- / Primary Navigation -->
+        <!-- / Main Navigation -->
       {% endif %}
 
       {% if page.site_search %}
         <!-- Site Search -->
-        <div class="site-search">
+        <div class="header__search-bar">
           {{ page.site_search }}
         </div>
         <!-- / Site Search -->
