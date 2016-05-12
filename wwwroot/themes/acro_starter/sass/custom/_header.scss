@@ -5,10 +5,10 @@
 .header {
   background: #333;
 
-  .header__top-content {
+  .header__top {
 
     //Logo
-    .header__logo {
+    .header__top-logo {
       float: left;
       margin: 15px 0;
       padding: 0;
@@ -27,7 +27,7 @@
   }
 
   //Main Navigation
-  .header__main-navigation-wrapper {
+  .header__bottom {
     background-color: $gray-darker;
 
     .menu__dropdown {

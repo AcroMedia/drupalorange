@@ -5,7 +5,7 @@
 (function ($, Drupal) {
 
   // Mobile Navigation
-  $('.b-mobile-nav-toggle').sidr({
+  $('.header__top-mobile-toggle').sidr({
     name: 'sidr',
     side: 'right',
     onOpen: function(name) {
@@ -16,7 +16,7 @@
     }
   });
 
-  $('.b-mobile-nav-close, #mobile-overlay').click(function() {
+  $('.sidr__content-close-btn, #mobile-overlay').click(function() {
     $.sidr('close', 'sidr');
   });
 

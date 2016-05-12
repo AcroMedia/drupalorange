@@ -1,14 +1,14 @@
 {% if page.mobile_nav %}
   <!-- Mobile Navigation -->
   <div id="sidr" style="display: none;">
-    <div id="mobile-sidr-content">
-      <div class="mobile-nav-close">
-        <a class="b-mobile-nav-close" href="#">
+    <div id="sidr__content">
+      <div class="sidr__content-close">
+        <a class="sidr__content-close-btn" href="#">
           <span aria-hidden="true" class="glyphicon glyphicon-menu-hamburger"></span>
         </a>
       </div>
 
-      <div class="site-mobile-nav">
+      <div class="sidr__content-menu">
         {{ page.mobile_nav }}
       </div>
     </div>
@@ -17,9 +17,9 @@
 {% endif %}
 
 <header class="header">
-  <div class="header__top-content container">
+  <div class="header__top container">
 
-    <div class="header__logo">
+    <div class="header__top-logo">
       <a href="{{ front_page }}">
         <img src="{{ base_path ~ directory }}/gfx/logo.svg" alt="{% if site_name %}{{ site_name }}{% endif %}" />
       </a>
@@ -27,13 +27,7 @@
 
     {% if page.mobile_nav %}
       <!-- Mobile Navigation Toggle -->
-      <nav class="header__mobile-toggle visible-xs-block">
-        <ul class="clearfix">
-          <li>
-            <a class="b-mobile-nav-toggle" href="#" title="{{ 'Menu'|t }}"><span aria-hidden="true" class="glyphicon glyphicon-menu-hamburger"></span></a>
-          </li>
-        </ul>
-      </nav>
+      <a class="header__top-mobile-toggle" href="#" title="{{ 'Menu'|t }}"><span aria-hidden="true" class="glyphicon glyphicon-menu-hamburger"></span></a>
       <!-- / Mobile Navigation Toggle -->
     {% endif %}
 
@@ -46,11 +40,11 @@
     {% endif %}
   </div>
 
-  <div class="header__main-navigation-wrapper hidden-xs">
+  <div class="header__bottom hidden-xs">
     <div class="container">
       {% if page.primary_nav %}
         <!-- Main Navigation -->
-        <nav class="header__main-navigation">
+        <nav class="header__bottom-navigation">
           {{ page.primary_nav }}
         </nav>
         <!-- / Main Navigation -->
@@ -58,7 +52,7 @@
 
       {% if page.site_search %}
         <!-- Site Search -->
-        <div class="header__search-bar">
+        <div class="header__bottom-search">
           {{ page.site_search }}
         </div>
         <!-- / Site Search -->
