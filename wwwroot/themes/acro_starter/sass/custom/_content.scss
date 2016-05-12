@@ -2,10 +2,7 @@
  * Content Styles
  */
 .content {
-  > .container {
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
+  padding: 50px 0;
 
   .content__sidebar {
 
@@ -13,5 +10,9 @@
 
   .content__main-content {
 
+  }
+
+  .page-title {
+    margin-top: 0;
   }
 }

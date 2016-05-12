@@ -5,22 +5,34 @@
 .header {
   background: #333;
 
-  //Logo
-  .header__logo {
-    float: left;
-    margin: 0;
-    padding: 0;
+  .header__top-content {
 
-    img {
-      display: block;
-      width: 80px;
-      height: 89px;
+    //Logo
+    .header__logo {
+      float: left;
+      margin: 15px 0;
+      padding: 0;
+
+      img {
+        display: block;
+        width: 80px;
+        height: 89px;
+      }
+    }
+
+    //Top Navigation
+    .header__top-navigation {
+      float: right;
     }
   }
 
-  //Top Navigation
-  .header__top-navigation {
-    float: right;
+  //Main Navigation
+  .header__main-navigation-wrapper {
+    background-color: $gray-darker;
+
+    .menu__dropdown {
+      background-color: $gray-darker;
+    }
   }
 }
 
