@@ -1,7 +1,8 @@
 /**
  * Navigation Styles
  *
- * This file is for base navigation styles and mobile navigation styles.
+ * NOTE:
+ * This file is for base navigation, mobile navigation, and social media navigation styles.
  * Any styles for a specific menu should go in the partial that makes most
  * sense for that menu. Example: Footer navigation styles go in _footer.scss,
  * sidebar navigation styles go in _content.scss, etc.
@@ -210,5 +211,41 @@
   //Down Arrow
   .menu__dropdown-parent span {
     color: $c-secondary;
+  }
+}
+
+/*-- Social Media Navigation Styles --*/
+.social-media-navigation {
+  float: right;
+
+  .menu.menu--social-media {
+    padding: 15px 0;
+    //To offset margin of li a below
+    margin: 0 -5px;
+
+    li a {
+      padding: 0;
+      margin: 0 5px;
+      font-size: 0;
+    }
+
+    li a:before {
+      font-family: FontAwesome;
+      color: $c-secondary;
+      font-size: 18px;
+    }
+
+    li.facebook a:before { content: "\f09a"; }
+    li.twitter a:before { content: "\f099"; }
+    li.instagram a:before { content: "\f16d"; }
+    li.google-plus a:before { content: "\f0d5"; }
+    li.pinterest a:before { content: "\f0d2"; }
+    li.linkedin a:before { content: "\f0e1"; }
+    li.youtube a:before { content: "\f16a"; }
+    li.vimeo a:before { content: "\f27d"; }
+    li.snapchat a:before { content: "\f2ab"; }
+    li.vine a:before { content: "\f1ca"; }
+    li.yelp a:before { content: "\f1e9"; }
+    li.trip-advisor a:before { content: "\f262"; }
   }
 }

@@ -1,6 +1,15 @@
 <footer class="footer">
   <div class="container">
 
+    {% if page.social_nav %}
+      <!-- Social Media Navigation  -->
+      <!-- Not named with BEM to be easily moved -->
+      <nav class="social-media-navigation">
+        {{ page.social_nav }}
+      </nav>
+      <!-- / Social Media Navigation -->
+    {% endif %}
+
     {% if page.footer_nav %}
       <!-- Footer Navigation -->
       <nav class="footer__navigation">
