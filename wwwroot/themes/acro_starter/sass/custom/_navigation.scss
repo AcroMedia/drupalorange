@@ -205,7 +205,10 @@
 
 /*-- Social Media Navigation Styles --*/
 .social-media-navigation {
-  float: right;
+
+  @media(min-width: 768px) {
+    float: right;
+  }
 
   .menu.menu--social-media {
     padding: 15px 0;

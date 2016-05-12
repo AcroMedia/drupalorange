@@ -7,6 +7,10 @@
   padding-top: 40px;
   padding-bottom: 40px;
 
+  @media(max-width: 767px) {
+    text-align: center;
+  }
+
   //Footer Navigation
   .footer__navigation {
     margin-bottom: 50px;
@@ -18,4 +22,3 @@
     font-size: 10px;
   }
 }
-

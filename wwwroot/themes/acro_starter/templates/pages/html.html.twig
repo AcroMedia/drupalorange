@@ -41,17 +41,15 @@
   </head>
   <body{{ attributes.addClass(body_classes) }}>
 
-    <div id="site-wrapper">
-      <div id="mobile-overlay"></div>
+    <div id="mobile-overlay"></div>
 
-      <a href="#main-content" class="visually-hidden focusable skip-link">
-        {{ 'Skip to main content'|t }}
-      </a>
-      {{ page_top }}
-      {{ page }}
-      {{ page_bottom }}
-      <js-bottom-placeholder token="{{ placeholder_token|raw }}">
-    </div>
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      {{ 'Skip to main content'|t }}
+    </a>
+    {{ page_top }}
+    {{ page }}
+    {{ page_bottom }}
+    <js-bottom-placeholder token="{{ placeholder_token|raw }}">
 
   </body>
 </html>

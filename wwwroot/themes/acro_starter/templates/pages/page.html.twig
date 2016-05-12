@@ -49,42 +49,40 @@
  */
 #}
 
-<div id="site-container">
-  {# Site Header #}
-  {% include base_path ~ directory ~ '/templates/pages/includes/site_header.html.twig' %}
-  {# / Site Header #}
+{# Site Header #}
+{% include base_path ~ directory ~ '/templates/pages/includes/site_header.html.twig' %}
+{# / Site Header #}
 
-  <!-- Main Content -->
-  <div class="content">
-    <div class="container">
-      <!-- Row -->
-      <div class="row">
-        {% if page.page_sidebar %}
-          <div class="col-md-3">
-            <aside class="content__sidebar" role="complementary">
-              {{ page.page_sidebar }}
-            </aside>
-          </div>
-        {% endif %}
+<!-- Main Content -->
+<div class="content">
+  <div class="container">
+    <!-- Row -->
+    <div class="row">
+      {% if page.page_sidebar %}
+        <div class="col-md-3">
+          <aside class="content__sidebar" role="complementary">
+            {{ page.page_sidebar }}
+          </aside>
+        </div>
+      {% endif %}
 
-        {% if page.page_sidebar %}
-          <div class="col-md-9">
-        {% else %}
-          <div class="col-md-12">
-        {% endif %}
-            <main class="content__main-content clearfix" role="main">
-              <div class="visually-hidden"><a id="main-content" tabindex="-1"></a></div>
-              {{ page.highlighted }}
-              {{ page.content }}
-            </main>
-          </div>
-      </div>
-      <!-- / Row -->
+      {% if page.page_sidebar %}
+        <div class="col-md-9">
+      {% else %}
+        <div class="col-md-12">
+      {% endif %}
+          <main class="content__main-content clearfix" role="main">
+            <div class="visually-hidden"><a id="main-content" tabindex="-1"></a></div>
+            {{ page.highlighted }}
+            {{ page.content }}
+          </main>
+        </div>
     </div>
+    <!-- / Row -->
   </div>
-  <!-- / Main Content -->
-
-  {# Site Footer #}
-  {% include base_path ~ directory ~ '/templates/pages/includes/site_footer.html.twig' %}
-  {# / Site Footer #}
 </div>
+<!-- / Main Content -->
+
+{# Site Footer #}
+{% include base_path ~ directory ~ '/templates/pages/includes/site_footer.html.twig' %}
+{# / Site Footer #}
