@@ -5,6 +5,7 @@
 .header {
   background: #333;
 
+  //Top
   .header__top {
 
     //Logo
@@ -26,12 +27,23 @@
     }
   }
 
-  //Main Navigation
+  //Bottom
   .header__bottom {
     background-color: $gray-darker;
 
-    .menu__dropdown {
-      background-color: $gray-darker;
+    .header__bottom-navigation, .header__bottom-search {
+      display: inline-block;
+    }
+
+    .header__bottom-navigation {
+      .menu__dropdown {
+        background-color: $gray-darker;
+      }
+    }
+
+    .header__bottom-search {
+      float: right;
+      margin: 13px 0;
     }
   }
 }
