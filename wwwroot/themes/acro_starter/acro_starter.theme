@@ -65,3 +65,13 @@ function acro_starter_preprocess_comment(&$variables) {
   $comment = $variables['elements']['#comment'];
   $variables['created'] = format_date($comment->getCreatedTime(), 'custom', 'F j, Y') . ' ' . t('at') . ' ' . format_date($comment->getCreatedTime(), 'custom', 'g:i a');
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function acro_starter_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'search_block_form') {
+    $form['keys']['#attributes']['class'][] = 'form-control';
+    $form['actions']['submit']['#attributes']['class'][] = 'btn btn-primary';
+  }
+}

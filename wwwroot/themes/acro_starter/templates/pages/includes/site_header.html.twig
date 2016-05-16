@@ -29,6 +29,8 @@
       <!-- Mobile Navigation Toggle -->
       <a class="header__top-mobile-toggle visible-xs-block" href="#" title="{{ 'Menu'|t }}"><span aria-hidden="true" class="glyphicon glyphicon-menu-hamburger"></span></a>
       <!-- / Mobile Navigation Toggle -->
+      <!-- / Mobile Navigation Toggle -->
+
     {% endif %}
 
     {% if page.header_nav %}
@@ -40,11 +42,11 @@
     {% endif %}
   </div>
 
-  <div class="header__bottom hidden-xs">
+  <div class="header__bottom">
     <div class="container">
       {% if page.primary_nav %}
         <!-- Main Navigation -->
-        <nav class="header__bottom-navigation">
+        <nav class="header__bottom-navigation hidden-xs">
           {{ page.primary_nav }}
         </nav>
         <!-- / Main Navigation -->

@@ -41,9 +41,20 @@
       }
     }
 
+    //Desktop Search Bar
     .header__bottom-search {
-      float: right;
-      margin: 13px 0;
+      margin: 10px 0;
+
+      @media(min-width: 768px) {
+        float: right;
+      }
+
+      input {
+        display: inline-block;
+        width: auto;
+        height: 34px;
+        vertical-align: middle;
+      }
     }
   }
 }
