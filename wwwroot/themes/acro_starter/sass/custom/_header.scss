@@ -31,6 +31,7 @@
   .header__bottom {
     background-color: $gray-darker;
 
+    //Main Navigation
     .header__bottom-navigation, .header__bottom-search {
       display: inline-block;
     }
@@ -41,7 +42,7 @@
       }
     }
 
-    //Desktop Search Bar
+    //Search Bar
     .header__bottom-search {
       margin: 10px 0;
 
@@ -58,5 +59,3 @@
     }
   }
 }
-
-
