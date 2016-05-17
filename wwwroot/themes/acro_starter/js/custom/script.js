@@ -27,4 +27,7 @@
   }
   $(window).resize(checkWidth);
 
+  //Double Tap parent of dropdown on touch devices
+  $('.menu__dropdown-parent').doubleTapToGo();
+
 })(jQuery, Drupal);
