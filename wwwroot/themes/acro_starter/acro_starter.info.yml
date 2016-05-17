@@ -11,6 +11,7 @@ libraries:
 
 regions:
   header: 'Header'
+  carousel: 'Carousel'
   highlighted: 'Highlighted'
   content: 'Content'
   page_sidebar: 'Page - Sidebar'

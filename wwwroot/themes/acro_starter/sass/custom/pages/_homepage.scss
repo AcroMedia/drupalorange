@@ -1,0 +1,22 @@
+//Carousel
+.region-carousel {
+  background: #F5F5F5;
+
+  .carousel {
+    width: 1600px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .carousel-indicators {
+    bottom: 0;
+  }
+
+  .carousel-caption {
+    padding-bottom: 20px;
+
+    a {
+      margin: 0 0 10px;
+    }
+  }
+}
