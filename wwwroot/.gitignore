@@ -39,3 +39,4 @@ sites/simpletest
 # simpletest
 
 /themes/acro_starter/config.rb
+/themes/acro_framework/config.rb
