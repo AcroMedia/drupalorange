@@ -54,7 +54,9 @@
 {# / Site Header #}
 
 {#Carousel#}
-{{ page.carousel }}
+{% if page.carousel %}
+  {{ page.carousel }}
+{% endif %}
 {#/ Carousel#}
 
 <!-- Main Content -->
