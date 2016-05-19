@@ -7,20 +7,23 @@
 
     <div class="live-css-section live-css-variables">
       <h1 id="variables" class="h-live-css-section">{{ 'Variables'|t }}</h1>
-      <h2 id="colors">{{ 'Colors'|t }}</h2>
+      <h2 id="colors" class="sub-header">{{ 'Colors'|t }}</h2>
 
       <div class="live-css-variables">
-        <ul class="clearfix">
+        <ul class="list-inline">
           <li class="live-css-v-primary"><i></i><strong>{{ 'Primary'|t }}:</strong> $c-primary</li>
           <li class="live-css-v-secondary"><i></i><strong>{{ 'Secondary'|t }}:</strong> $c-secondary</li>
           <li class="live-css-v-tertiary"><i></i><strong>{{ 'Tertiary'|t }}:</strong> $c-tertiary</li>
+        </ul>
+
+        <ul class="list-inline">
           <li class="live-css-v-accent-1"><i></i><strong>{{ 'Accent 1'|t }}:</strong> $c-accent-1</li>
           <li class="live-css-v-accent-2"><i></i><strong>{{ 'Accent 2'|t }}:</strong> $c-accent-2</li>
           <li class="live-css-v-accent-3"><i></i><strong>{{ 'Accent 3'|t }}:</strong> $c-accent-3</li>
           <li class="live-css-v-body"><i></i><strong>{{ 'Body Text'|t }}:</strong> $c-body</li>
         </ul>
 
-        <ul class="clearfix">
+        <ul class="list-inline">
           <li class="live-css-v-gray-base"><i></i><strong>{{ 'Gray Base'|t }}:</strong> $gray-base</li>
           <li class="live-css-v-gray-darker"><i></i><strong>{{ 'Gray Darker'|t }}:</strong> $gray-darker</li>
           <li class="live-css-v-gray-dark"><i></i><strong>{{ 'Gray Dark'|t }}:</strong> $gray-dark</li>
@@ -32,139 +35,124 @@
     </div>
 
     <div class="live-css-section">
-      <h2 id="fonts">{{ 'Fonts'|t }}</h2>
+      <h2 id="fonts" class="sub-header">{{ 'Fonts'|t }}</h2>
 
       <ul class="clearfix">
-        <li class="live-css-v-f-primary"><strong>{{ 'Primary'|t }} ($f-primary):</strong> <span>Lorem ipsum dolor sit amet</span></li>
-        <li class="live-css-v-f-secondary"><strong>{{ 'Secondary'|t }} ($f-secondary):</strong> <span>Lorem ipsum dolor sit amet</span></li>
-        <li class="live-css-v-f-body"><strong>{{ 'Body'|t }} ($f-body):</strong> <span>Lorem ipsum dolor sit amet</span></li>
+        <li class="live-css-v-f-primary"><strong>{{ 'Primary'|t }} ($f-primary):</strong> Lorem ipsum dolor sit amet</li>
+        <li class="live-css-v-f-secondary"><strong>{{ 'Secondary'|t }} ($f-secondary):</strong> Lorem ipsum dolor sit amet</li>
+        <li class="live-css-v-f-body"><strong>{{ 'Body'|t }} ($f-body):</strong> Lorem ipsum dolor sit amet</li>
       </ul>
     </div>
 
     <div class="live-css-section">
-      <h1 id="formatting" class="h-live-css-section">{{ 'Formatting'|t }}</h1>
+      <h1 id="typography" class="h-live-css-section">{{ 'Typography'|t }}</h1>
 
-      <div class="field--name-body">
-        <h1>{{ 'Sample Heading (h1)'|t }}</h1>
+      <h2 id="headings" class="sub-header">{{ 'Headings'|t }}</h2>
+
+      <h1>{{ 'Sample Heading (h1)'|t }}</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales diam ac arcu blandit venenatis.
+      </p>
+
+      <h2>{{ 'Sample Heading (h2)'|t }}</h2>
+      <p>
+        Lorem ipsum dolor sit amet, <a href="#">{{ 'Sample inline link'|t }}</a>, Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+
+      <h3>{{ 'Sample Heading (h3)'|t }}</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+
+      <h4>{{ 'Sample Heading (h4)'|t }}</h4>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+
+      <h5>{{ 'Sample Heading (h5)'|t }}</h5>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+
+      <h6>{{ 'Sample Heading (h6)'|t }}</h6>
+    </div>
+
+    <div class="live-css-section">
+      <h2 id="paragraphs" class="sub-header">{{ 'Paragraphs'|t }}</h2>
+      <p class="lead">Lead paragraph, consectetur adipiscing elit. Pellentesque sodales diam ac arcu blandit venenatis. Fusce efficitur dolor elit, in dictum dui consectetur vel.</p>
+
+      <p><img class="img-right" src="{{ module_path }}/gfx/img_sample_content.jpg" alt="" />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales diam ac arcu blandit venenatis. Fusce efficitur dolor elit, in dictum dui consectetur vel. Praesent in risus non nunc feugiat consequat nec quis enim. Suspendisse rhoncus turpis in libero posuere molestie. Vestibulum viverra metus a mauris dapibus euismod.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales diam ac arcu blandit venenatis. Fusce efficitur dolor elit, in dictum dui consectetur vel. Praesent in risus non nunc feugiat consequat nec quis enim. Suspendisse rhoncus turpis in libero posuere molestie. Vestibulum viverra metus a mauris dapibus euismod.</p>
+
+      <blockquote>
         <p>
-          Lorem ipsum dolor sit amet, <a href="#">{{ 'Sample inline link'|t }}</a>, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
+          {{ 'Sample Blockquote.'|t }} Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
         </p>
+      </blockquote>
+    </div>
 
-        <h2>{{ 'Sample Heading (h2)'|t }}</h2>
-        <p>
-          Lorem ipsum dolor sit amet, <a href="#">{{ 'Sample inline link'|t }}</a>, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
-        </p>
+    <div class="live-css-section">
+      <h2 id="lists" class="sub-header">{{ 'Lists'|t }}</h2>
+      <ul>
+        <li>Some bulleted list items.</li>
+        <li>Some bulleted list items.</li>
+        <li>Some bulleted list items.</li>
+      </ul>
 
-        <h3>{{ 'Sample Heading (h3)'|t }}</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
-        </p>
+      <ol>
+        <li>Some ordered list items.</li>
+        <li>Some ordered list items.</li>
+        <li>Some ordered list items.</li>
+      </ol>
+    </div>
 
-        <h4>{{ 'Sample Heading (h4)'|t }}</h4>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
-        </p>
-
-        <h2>{{ 'Sample Heading (h2)'|t }}</h2>
-        <h3>{{ 'Sample Heading (h3)'|t }}</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.</p>
-
-        <ul>
-          <li>Some bulleted list items.</li>
-          <li>Some bulleted list items.</li>
-          <li>Some bulleted list items.</li>
-        </ul>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.</p>
-
-        <ol>
-          <li>Some ordered list items.</li>
-          <li>Some ordered list items.</li>
-          <li>Some ordered list items.</li>
-        </ol>
-
-        <p>
-          <img class="img-right" src="{{ module_path }}/gfx/img_sample_content.jpg" alt="" />Content image floated right, consectetur adipiscing elit.
-          Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.
-        </p>
-
-        <table class="table">
-          <thead>
-          <tr>
-            <th>Name</th>
-            <th>Phone</th>
-            <th>Title</th>
-            <th>Gender</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td>John</td>
-            <td>250-801-1111</td>
-            <td>Web Developer</td>
-            <td>Male</td>
-          </tr>
-          <tr>
-            <td>Bob</td>
-            <td>250-801-2111</td>
-            <td>Senior Designer</td>
-            <td>Male</td>
-          </tr>
-          <tr>
-            <td>John</td>
-            <td>250-801-3111</td>
-            <td>Director</td>
-            <td>Male</td>
-          </tr>
-          <tr>
-            <td>Doe</td>
-            <td>250-801-4111</td>
-            <td>Marketing Manager</td>
-            <td>Female</td>
-          </tr>
-          </tbody>
-        </table>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur elit in elit mattis aliquam. Ut tempus sagittis ante quis ornare.</p>
-
-        <blockquote>
-          <p>
-            {{ 'Sample Blockquote.'|t }} Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
-          </p>
-        </blockquote>
-      </div>
+    <div class="live-css-section">
+      <h1 id="tables" class="h-live-css-section">{{ 'Tables'|t }}</h1>
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Title</th>
+          <th>Gender</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>John</td>
+          <td>250-801-1111</td>
+          <td>Web Developer</td>
+          <td>Male</td>
+        </tr>
+        <tr>
+          <td>Bob</td>
+          <td>250-801-2111</td>
+          <td>Senior Designer</td>
+          <td>Male</td>
+        </tr>
+        <tr>
+          <td>John</td>
+          <td>250-801-3111</td>
+          <td>Director</td>
+          <td>Male</td>
+        </tr>
+        <tr>
+          <td>Doe</td>
+          <td>250-801-4111</td>
+          <td>Marketing Manager</td>
+          <td>Female</td>
+        </tr>
+        </tbody>
+      </table>
     </div>
 
     <div class="live-css-section">
       <h1 id="buttons" class="h-live-css-section">{{ 'Buttons/CTAs'|t }}</h1>
 
-      <h2>{{ 'Button Sizes'|t }}</h2>
+      <h2 class="sub-header">{{ 'Button Sizes'|t }}</h2>
       <p>
         <button type="button" class="btn btn-primary btn-lg">Large button</button>
         <button type="button" class="btn btn-default btn-lg">Large button</button>
@@ -184,7 +172,7 @@
     </div>
 
     <div class="live-css-section">
-      <h2>{{ 'Button Colours'|t }}</h2>
+      <h2 class="sub-header">{{ 'Button Colours'|t }}</h2>
       <p>
         <button type="button" class="btn btn-default">Default</button>
         <button type="button" class="btn btn-primary">Primary</button>
@@ -197,7 +185,7 @@
     </div>
 
     <div class="live-css-section">
-      <h2>{{ 'Button States'|t }}</h2>
+      <h2 class="sub-header">{{ 'Button States'|t }}</h2>
 
       <div class="form-actions">
         <button type="button" class="btn btn-lg btn-primary" disabled="disabled">{{ 'Disabled Button'|t }}</button>
@@ -207,7 +195,7 @@
     <div class="live-css-section">
       <h1 id="drupal-specific" class="h-live-css-section">{{ 'Drupal Specific'|t }}</h1>
 
-      <h2 id="admin-tabs">{{ 'Admin Tabs'|t }}</h2>
+      <h2 id="admin-tabs" class="sub-header">{{ 'Admin Tabs'|t }}</h2>
 
       <ul class="tabs primary clearfix">
         <li><a href="#">{{ 'View'|t }}</a></li>
@@ -217,7 +205,7 @@
     </div>
 
     <div class="live-css-section">
-      <h2 id="drupal-messages">{{ 'Drupal Messages'|t }}</h2>
+      <h2 id="drupal-messages" class="sub-header">{{ 'Drupal Messages'|t }}</h2>
 
       <div role="contentinfo" aria-label="Status message" class="messages messages--status">
         <h2 class="visually-hidden">{{ 'Status Message'|t }}</h2>
@@ -234,7 +222,7 @@
     </div>
 
     <div class="live-css-section">
-      <h2 id="drupal-forms">{{ 'Forms'|t }}</h2>
+      <h2 id="drupal-forms" class="sub-header">{{ 'Forms'|t }}</h2>
 
       {# Bootstrap Form #}
       <form>
@@ -314,7 +302,7 @@
     </div>
 
     <div class="live-css-section">
-      <h2 id="drupal-pagination">{{ 'Pagination'|t }}</h2>
+      <h2 id="drupal-pagination" class="sub-header">{{ 'Pagination'|t }}</h2>
 
       <div>
         {# Pagination Sample #}
@@ -372,7 +360,7 @@
     <div class="live-css-section">
       <h1 id="rich-media" class="h-live-css-section">{{ 'Rich Media'|t }}</h1>
 
-      <h2 id="content-tabs">{{ 'Content Tabs'|t }}</h2>
+      <h2 id="content-tabs" class="sub-header">{{ 'Content Tabs'|t }}</h2>
 
       <div>
         {# Nav Tabs #}
@@ -519,7 +507,7 @@
     <div class="live-css-section">
       <h1 id="components" class="h-live-css-section">{{ 'Components'|t }}</h1>
 
-      <h2 id="live-css-blog-listing">{{ 'Blog Listing'|t }}</h2>
+      <h2 id="live-css-blog-listing" class="sub-header">{{ 'Blog Listing'|t }}</h2>
 
       {# Blog Sample #}
       <div class="blog-listing-item">
@@ -561,7 +549,7 @@
     </div>
 
     <div class="live-css-section">
-      <h2 id="live-css-image-gallery">{{ 'Image Gallery'|t }}</h2>
+      <h2 id="live-css-image-gallery" class="sub-header">{{ 'Image Gallery'|t }}</h2>
 
       {# Image Gallery Sample #}
       <div class="image-gallery">
@@ -687,7 +675,7 @@
     </div>
 
     <div class="live-css-section">
-      <h2 id="live-css-accordion">{{ 'Accordion'|t }}</h2>
+      <h2 id="live-css-accordion" class="sub-header">{{ 'Accordion'|t }}</h2>
 
       {# Accordion Sample #}
       <div class="base-accordion">
@@ -730,7 +718,7 @@
     </div>
 
     <div class="live-css-section">
-      <h2 id="live-css-cards">{{ 'Cards'|t }}</h2>
+      <h2 id="live-css-cards" class="sub-header">{{ 'Cards'|t }}</h2>
 
       <div class="row">
         <div class="col-sm-4">
@@ -774,7 +762,7 @@
     </div>
 
     <div class="live-css-section">
-      <h2 id="live-css-modals">{{ 'Modals'|t }}</h2>
+      <h2 id="live-css-modals" class="sub-header">{{ 'Modals'|t }}</h2>
 
       {# Modal Sample #}
       <div class="modal-wrapper">
@@ -822,7 +810,21 @@
           </ul>
         </li>
         <li>
-          <a href="#formatting">{{ 'Formatting'|t }}</a>
+          <a href="#typography">{{ 'Typography'|t }}</a>
+          <ul class="nav">
+            <li>
+              <a href="#headings">{{ 'Headings'|t }}</a>
+            </li>
+            <li>
+              <a href="#paragraphs">{{ 'Paragraphs'|t }}</a>
+            </li>
+            <li>
+              <a href="#lists">{{ 'Lists'|t }}</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#tables">{{ 'Tables'|t }}</a>
         </li>
         <li>
           <a href="#buttons">{{ 'Buttons/CTAs'|t }}</a>

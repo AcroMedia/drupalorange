@@ -3,7 +3,7 @@
  */
 
 .header {
-  background: #333;
+  background: $gray-darker;
 
   //Top
   .header__top {
@@ -29,7 +29,7 @@
 
   //Bottom
   .header__bottom {
-    background-color: $gray-darker;
+    background-color: $gray-base;
 
     //Main Navigation
     .header__bottom-navigation, .header__bottom-search {
@@ -38,7 +38,7 @@
 
     .header__bottom-navigation {
       .menu__dropdown {
-        background-color: $gray-darker;
+        background-color: $gray-base;
       }
     }
 

@@ -1,4 +1,4 @@
-/**
+ /**
  * Live CSS
  */
 
@@ -19,9 +19,9 @@
 .live-css-v-gray-light i { background-color: $gray-light; }
 .live-css-v-gray-lighter i { background-color: $gray-lighter; }
 
-.live-css-v-f-primary span { font-family: $f-primary; }
-.live-css-v-f-secondary span { font-family: $f-secondary; }
-.live-css-v-f-body span { font-family: $f-body; }
+.live-css-v-f-primary { font-family: $f-primary; }
+.live-css-v-f-secondary { font-family: $f-secondary; }
+.live-css-v-f-body { font-family: $f-body; }
 
 .ico-live-chat-bubble {
   width: 30px;
