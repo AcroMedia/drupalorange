@@ -39,3 +39,4 @@ sites/simpletest
 # simpletest
 
 */config.rb
+*/services.yml
