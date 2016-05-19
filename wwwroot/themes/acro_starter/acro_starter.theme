@@ -75,3 +75,18 @@ function acro_starter_form_alter(&$form, &$form_state, $form_id) {
     $form['actions']['submit']['#attributes']['class'][] = 'btn btn-primary';
   }
 }
+
+/**
+* Implements hook_preprocess_node(&$variables).
+*/
+function acro_starter_preprocess_node(&$variables) {
+ // Homepage Carousel
+ if ($variables['node']->getType() === 'homepage_carousel') {
+   $variables['carousel_title'] = $variables['node']->field_carousel_caption_title->value;
+   $variables['carousel_text'] = $variables['node']->field_carousel_caption_text->value;
+   $variables['carousel_image'] = $variables['node']->field_carousel_image->entity->url();
+   $variables['carousel_image_alt'] = $variables['node']->field_carousel_image->alt;
+   $variables['carousel_link'] = $variables['node']->field_carousel_link->uri;
+   $variables['carousel_btn_text'] = $variables['node']->field_carousel_link->title;
+ }
+}

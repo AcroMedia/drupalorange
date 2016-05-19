@@ -64,17 +64,30 @@
  */
 #}
 
-{% set caption_title  =  content.field_carousel_caption_title|render %}
-{% set caption_text   =  content.field_carousel_caption_text|render %}
-{% set image          =  content.field_carousel_image|render %}
-{% set link           =  content.field_carousel_link|render %}
-{% set button_text    =  content.field_carousel_link|render %}
-
-{{ content.field_carousel_image }}
-{% if caption_title or caption_text %}
-<div class="carousel-caption">
-  <h1>{{ content.field_carousel_caption_title }}</h1>
-  <p>{{ content.field_carousel_caption_text }}</p>
-</div>
+{#Check to see if there is a link and no link title, this will make the whole slide clickable#}
+{% if carousel_link and not carousel_btn_text %}
+<a href="{{ carousel_link }}">
 {% endif %}
 
+  {#Slide Image#}
+  <img src="{{ carousel_image }}" alt="{{ carousel_image_alt }}">
+
+  {#Add a caption if there is a title, text, or link title added#}
+  {% if carousel_title or carousel_text or carousel_btn_text %}
+  <div class="carousel-caption">
+    <h1>{{ carousel_title }}</h1>
+    <p>{{ carousel_text }}</p>
+
+    {#Check for both a link and link title, and add a button#}
+    {% if carousel_link and carousel_btn_text %}
+      <a href="{{ carousel_link }}" class="btn btn-primary">
+        {{ carousel_btn_text }}
+      </a>
+    {% endif %}
+  </div>
+  {% endif %}
+
+{#End link if whole slide is clickable#}
+{% if carousel_link and not carousel_btn_text %}
+</a>
+{% endif %}
