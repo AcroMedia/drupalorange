@@ -64,21 +64,23 @@
  */
 #}
 
-{#Check to see if there is a link and no link title, this will make the whole slide clickable#}
+{#
+Check if there is a link and no link title
+Open whole carousel link
+#}
 {% if carousel_link and not carousel_btn_text %}
 <a href="{{ carousel_link }}">
 {% endif %}
 
-  {#Slide Image#}
   <img src="{{ carousel_image }}" alt="{{ carousel_image_alt }}">
 
-  {#Add a caption if there is a title, text, or link title added#}
+  {# Add a caption if there is a title, text, or link title added #}
   {% if carousel_title or carousel_text or carousel_btn_text %}
   <div class="carousel-caption">
     <h1>{{ carousel_title }}</h1>
     <p>{{ carousel_text }}</p>
 
-    {#Check for both a link and link title, and add a button#}
+    {# Check for both a link and link title, and add a button #}
     {% if carousel_link and carousel_btn_text %}
       <a href="{{ carousel_link }}" class="btn btn-primary">
         {{ carousel_btn_text }}
@@ -87,7 +89,7 @@
   </div>
   {% endif %}
 
-{#End link if whole slide is clickable#}
+{# Close whole carousel link #}
 {% if carousel_link and not carousel_btn_text %}
 </a>
 {% endif %}
