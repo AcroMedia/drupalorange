@@ -39,7 +39,6 @@
       display: block;
       margin: 0 10px 0 0;
       padding: 7px 31px 5px;
-      color: $c-primary;
       font-weight: bold;
       text-decoration: none;
       border: 1px solid #999;
@@ -57,7 +56,6 @@
       &,
       &:hover,
       &:focus {
-        color: $c-primary;
         background-color: #fff;
         border: 1px solid #999;
         border-bottom-color: transparent;
