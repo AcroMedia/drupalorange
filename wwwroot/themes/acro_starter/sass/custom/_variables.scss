@@ -9,14 +9,14 @@ $c-primary: #ff9900;
 $c-secondary: #304772;
 $c-tertiary: #7e8aa2;
 
-$c-accent-1: #f95d10;
-$c-accent-2: #99cc66;
-$c-accent-3: #becdec;
+$c-accent-1: #ccc;
+$c-accent-2: #ccc;
+$c-accent-3: #ccc;
 
 $c-body: #666;
 
-$c-link: #028ced;
-$c-link-hover: #38adff;
+$c-link: #ff9900;
+$c-link-hover: darken($c-link, 5%);
 
 $gray-base:              #151515 !default;
 $gray-darker:            #353535;

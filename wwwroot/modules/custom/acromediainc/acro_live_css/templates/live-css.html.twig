@@ -21,6 +21,8 @@
           <li class="live-css-v-accent-2"><i></i><strong>{{ 'Accent 2'|t }}:</strong> $c-accent-2</li>
           <li class="live-css-v-accent-3"><i></i><strong>{{ 'Accent 3'|t }}:</strong> $c-accent-3</li>
           <li class="live-css-v-body"><i></i><strong>{{ 'Body Text'|t }}:</strong> $c-body</li>
+          <li class="live-css-v-link"><i></i><strong>{{ 'Link'|t }}:</strong> $c-link</li>
+          <li class="live-css-v-link-hover"><i></i><strong>{{ 'Link Hover'|t }}:</strong> $c-link-hover</li>
         </ul>
 
         <ul class="list-inline">
@@ -79,7 +81,7 @@
 
     <div class="live-css-section">
       <h2 id="paragraphs" class="sub-header">{{ 'Paragraphs'|t }}</h2>
-      <p class="lead">Lead paragraph, consectetur adipiscing elit. Pellentesque sodales diam ac arcu blandit venenatis. Fusce efficitur dolor elit, in dictum dui consectetur vel.</p>
+      <p class="lead">Lead paragraph - class name "lead", consectetur adipiscing elit. Pellentesque sodales diam ac arcu blandit venenatis. Fusce efficitur dolor elit, in dictum dui consectetur vel.</p>
 
       <p><img class="img-right" src="{{ module_path }}/gfx/img_sample_content.jpg" alt="" />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales diam ac arcu blandit venenatis. Fusce efficitur dolor elit, in dictum dui consectetur vel. Praesent in risus non nunc feugiat consequat nec quis enim. Suspendisse rhoncus turpis in libero posuere molestie. Vestibulum viverra metus a mauris dapibus euismod.</p>
 
@@ -111,6 +113,8 @@
 
     <div class="live-css-section">
       <h1 id="tables" class="h-live-css-section">{{ 'Tables'|t }}</h1>
+
+      <h2 id="basic-tables" class="sub-header">{{ 'Basic Table'|t }}</h2>
       <table class="table">
         <thead>
         <tr>
@@ -139,20 +143,82 @@
           <td>Director</td>
           <td>Male</td>
         </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="live-css-section">
+      <h2 id="striped-tables" class="sub-header">{{ 'Striped Table'|t }}</h2>
+
+      <table class="table table-striped">
+        <thead>
         <tr>
-          <td>Doe</td>
-          <td>250-801-4111</td>
-          <td>Marketing Manager</td>
-          <td>Female</td>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Title</th>
+          <th>Gender</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>John</td>
+          <td>250-801-1111</td>
+          <td>Web Developer</td>
+          <td>Male</td>
+        </tr>
+        <tr>
+          <td>Bob</td>
+          <td>250-801-2111</td>
+          <td>Senior Designer</td>
+          <td>Male</td>
+        </tr>
+        <tr>
+          <td>John</td>
+          <td>250-801-3111</td>
+          <td>Director</td>
+          <td>Male</td>
         </tr>
         </tbody>
       </table>
     </div>
 
     <div class="live-css-section">
-      <h1 id="buttons" class="h-live-css-section">{{ 'Buttons/CTAs'|t }}</h1>
+      <h2 id="bordered-tables" class="sub-header">{{ 'Bordered Table'|t }}</h2>
 
-      <h2 class="sub-header">{{ 'Button Sizes'|t }}</h2>
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Title</th>
+          <th>Gender</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>John</td>
+          <td>250-801-1111</td>
+          <td>Web Developer</td>
+          <td>Male</td>
+        </tr>
+        <tr>
+          <td>Bob</td>
+          <td>250-801-2111</td>
+          <td>Senior Designer</td>
+          <td>Male</td>
+        </tr>
+        <tr>
+          <td>John</td>
+          <td>250-801-3111</td>
+          <td>Director</td>
+          <td>Male</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="live-css-section">
+      <h1 id="buttons" class="h-live-css-section">{{ 'Buttons'|t }}</h1>
       <p>
         <button type="button" class="btn btn-primary btn-lg">Large button</button>
         <button type="button" class="btn btn-default btn-lg">Large button</button>
@@ -161,35 +227,6 @@
         <button type="button" class="btn btn-primary">Default button</button>
         <button type="button" class="btn btn-default">Default button</button>
       </p>
-      <p>
-        <button type="button" class="btn btn-primary btn-sm">Small button</button>
-        <button type="button" class="btn btn-default btn-sm">Small button</button>
-      </p>
-      <p>
-        <button type="button" class="btn btn-primary btn-xs">Extra small button</button>
-        <button type="button" class="btn btn-default btn-xs">Extra small button</button>
-      </p>
-    </div>
-
-    <div class="live-css-section">
-      <h2 class="sub-header">{{ 'Button Colours'|t }}</h2>
-      <p>
-        <button type="button" class="btn btn-default">Default</button>
-        <button type="button" class="btn btn-primary">Primary</button>
-        <button type="button" class="btn btn-success">Success</button>
-        <button type="button" class="btn btn-info">Info</button>
-        <button type="button" class="btn btn-warning">Warning</button>
-        <button type="button" class="btn btn-danger">Danger</button>
-        <button type="button" class="btn btn-link">Link</button>
-      </p>
-    </div>
-
-    <div class="live-css-section">
-      <h2 class="sub-header">{{ 'Button States'|t }}</h2>
-
-      <div class="form-actions">
-        <button type="button" class="btn btn-lg btn-primary" disabled="disabled">{{ 'Disabled Button'|t }}</button>
-      </div>
     </div>
 
     <div class="live-css-section">
@@ -226,25 +263,73 @@
 
       {# Bootstrap Form #}
       <form>
+        <!-- Text input-->
         <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+          <label class="control-label" for="textinput">Text Input</label>
+          <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md" required="">
+          <span class="help-block">help text</span>
         </div>
+
+        <!-- Select Basic -->
         <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <label class="control-label" for="dropdown">Dropdown</label>
+          <select id="dropdown" name="dropdown" class="form-control">
+            <option value="1">Option one</option>
+            <option value="2">Option two</option>
+          </select>
         </div>
+
+        <!-- Multiple Checkboxes -->
         <div class="form-group">
-          <label for="exampleInputFile">File input</label>
-          <input type="file" id="exampleInputFile">
-          <p class="help-block">Example block-level help text here.</p>
+          <label class="control-label" for="checkboxes">Checkboxes</label>
+          <div class="checkbox">
+            <label for="checkboxes-0">
+              <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+              Option one
+            </label>
+          </div>
+          <div class="checkbox">
+            <label for="checkboxes-1">
+              <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
+              Option two
+            </label>
+          </div>
         </div>
-        <div class="checkbox">
-          <label>
-            <input type="checkbox"> Check me out
-          </label>
+
+        <!-- Multiple Radios -->
+        <div class="form-group">
+          <label class="control-label" for="radios">Radio Buttons</label>
+          <div class="radio">
+            <label for="radios-0">
+              <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+              Option one
+            </label>
+          </div>
+          <div class="radio">
+            <label for="radios-1">
+              <input type="radio" name="radios" id="radios-1" value="2">
+              Option two
+            </label>
+          </div>
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+
+        <!-- File Button -->
+        <div class="form-group">
+          <label class="control-label" for="fileupload">File Upload</label>
+          <input id="fileupload" name="fileupload" class="input-file" type="file">
+        </div>
+
+        <!-- Textarea -->
+        <div class="form-group">
+          <label class="control-label" for="textarea">Text Area</label>
+          <textarea rows="5" class="form-control" id="textarea" name="textarea"></textarea>
+        </div>
+
+        <!-- Button -->
+        <div class="form-group">
+          <button id="singlebutton" name="singlebutton" class="btn btn-primary">Primary Button</button>
+        </div>
+
       </form>
       {# / Bootstrap Form #}
 
@@ -431,7 +516,7 @@
       </div>
     </div>
 
-    <div class="live-css-section">
+    <!-- <div class="live-css-section">
       <h1 id="icons" class="h-live-css-section">{{ 'Icons'|t }}</h1>
 
       <div class="live-css-icons">
@@ -439,7 +524,7 @@
 
 
 
-        <!-- <ul class="clearfix">
+        <ul class="clearfix">
           <li>
             <div class="live-css-icons__icon">
               <i class="ico-live-chat-bubble"></i>
@@ -500,9 +585,9 @@
             </div>
             <div>.ico-comment-reply</div>
           </li>
-        </ul> -->
+        </ul>
       </div>
-    </div>
+    </div> -->
 
     <div class="live-css-section">
       <h1 id="components" class="h-live-css-section">{{ 'Components'|t }}</h1>
@@ -522,18 +607,16 @@
           <a href="/blog/acro-blog-title"><span class="field field--name-title field--type-string field--label-hidden">Acro Blog Title</span></a>
         </div>
         <div class="blog-post-meta">
-          <div class="field field--name-field-blog-date field--type-datetime field--label-hidden field__item">February 1, 2016</div>
+          <div class="field field--name-field-blog-date field--type-datetime field--label-hidden field__item"><span class="fa fa-calendar-o" aria-hidden="true"></span> February 1, 2016</div>
           <i>|</i>
-          By <a href="/blog/author/25">John Smith</a>
+          <span class="fa fa-user" aria-hidden="true"></span> By <a href="/blog/author/25">John Smith</a>
         </div>
         <div class="blog-listing-item__body">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed dui in nisi tempor ultrices sit amet vel nunc. Cras id scelerisque enim.
           Aenean condimentum arcu leo, in pellentesque lectus varius sit amet. Duis condimentum lectus vitae turpis vulputa ...
         </div>
         <div class="blog-listing-item__footer clearfix">
-          <div class="blog-listing-item__link">
-            <a href="/blog/acro-blog-title">Read More</a>
-          </div>
+          <a class="btn btn-primary" href="/blog/acro-blog-title">Read More</a>
           <div class="blog-listing-item__tags blog-post-tags">
             <span class="blog-post-tags--label">Posted in</span>
             <div class="field field--name-field-blog-category field--type-entity-reference field--label-hidden field__items">
@@ -738,10 +821,10 @@
         <div class="col-sm-4">
           {# Card Sample #}
           <div class="card">
+            <div class="card__image">
+              <img src="https://unsplash.it/300/150/?random" alt="Image description here">
+            </div>
             <div class="card__text-wrapper">
-              <div class="card__image">
-                <img src="https://unsplash.it/300/150/?random" alt="Image description here">
-              </div>
               <h3>Card Title</h3>
               <p>Card Description text lorme ipsum bla bla self-contained unit of a discourse in writing </p>
             </div>
@@ -827,7 +910,7 @@
           <a href="#tables">{{ 'Tables'|t }}</a>
         </li>
         <li>
-          <a href="#buttons">{{ 'Buttons/CTAs'|t }}</a>
+          <a href="#buttons">{{ 'Buttons'|t }}</a>
         </li>
         <li>
           <a href="#drupal-specific">{{ 'Drupal Specific'|t }}</a>
@@ -853,9 +936,6 @@
               <a href="#content-tabs">{{ 'Content Tabs'|t }}</a>
             </li>
           </ul>
-        </li>
-        <li>
-          <a href="#icons">{{ 'Icons'|t }}</a>
         </li>
         <li>
           <a href="#components">{{ 'Components'|t }}</a>
