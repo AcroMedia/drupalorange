@@ -2,75 +2,6 @@
  * Components
  */
 
-
-/* -- Tabs -- */
-
-// Hide tabbable panes to start, show them when `.active`
-.tab-content {
-  clear: both;
-  margin: 0;
-  padding: 0;
-
-  > .tab-pane {
-    display: none;
-    margin: 0;
-    padding: 0 0 0 22px;
-  }
-  > .active {
-    display: block;
-  }
-}
-
-// Give the tabs something to sit on
-.nav-tabs {
-  margin: 0 0 36px 0;
-  padding: 0;
-  list-style: none;
-  border-bottom: 1px solid #999;
-
-  > li {
-    float: left;
-    // Make the list-items overlay the bottom border
-    margin-bottom: -1px;
-    outline: none;
-
-    // Actual tabs (as links)
-    > a {
-      display: block;
-      margin: 0 10px 0 0;
-      padding: 7px 31px 5px;
-      font-weight: bold;
-      text-decoration: none;
-      border: 1px solid #999;
-      outline: none;
-      background: #f7f7f7;
-      -webkit-border-radius: 9px 9px 0 0;
-      border-radius: 9px 9px 0 0;
-      &:hover {
-        color: #7d7d7d;
-      }
-    }
-
-    // Active state, and its :hover to override normal :hover
-    &.active > a {
-      &,
-      &:hover,
-      &:focus {
-        background-color: #fff;
-        border: 1px solid #999;
-        border-bottom-color: transparent;
-        cursor: default;
-      }
-    }
-  }
-  // pulling this in mainly for less shorthand
-  &.nav-justified {
-    // @extend .nav-justified;
-    // @extend .nav-tabs-justified;
-  }
-}
-
-
 /* -- Image Gallery -- */
 
 .image-gallery {
@@ -172,24 +103,10 @@
 /* -- Accordion -- */
 
 .base-accordion {
-  clear: both;
-  margin: 0 0 28px 0;
-  padding: 0;
+
 }
-.base-accordion__item {
-  clear: both;
-}
-.base-accordion__header,
-.base-accordion__header:focus {
-  display: block;
-  margin: 0;
-  padding: 12px 0;
-  font-size: 18px;
-  line-height: 18px;
-  border-bottom: 1px solid #cdcdcd;
-  text-decoration: none;
-  outline: none;
-}
+
+
 .base-accordion__header:hover {
 
 }
@@ -206,3 +123,33 @@
     padding: 0;
   }
 }
+
+/**
+ * Accordion
+ */
+
+.base-accordion {
+  clear: both;
+  margin: 0 0 28px 0;
+  padding: 0;
+
+  .base-accordion__item {
+    clear: both;
+  }
+
+  .base-accordion__header {
+    display: block;
+    margin: 0;
+    padding: 12px 0;
+    font-size: 20px;
+    line-height: 1.0;
+    text-decoration: none;
+    outline: none;
+  }
+
+  .base-accordion__content {
+    padding: 20px;
+  }
+}
+
+

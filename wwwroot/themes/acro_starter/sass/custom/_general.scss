@@ -109,6 +109,7 @@ a {
 .btn {
   font-family: $f-secondary;
   font-size: 18px;
+  @include transition(all .2s ease-in-out);
 }
 
 //Primary Button
@@ -135,8 +136,7 @@ a {
 
 //Default Button
 .btn-default {
-  background-color: $gray-lighter;
-  border-color: darken($gray-lighter, 15%);
+  border-color: $gray-light;
 }
 
 .btn-default:hover,
@@ -151,8 +151,8 @@ a {
 .open>.btn-default.dropdown-toggle:hover,
 .open>.btn-default.dropdown-toggle:focus,
 .open>.btn-default.dropdown-toggle.focus {
-  background-color: darken($gray-lighter, 5%);
-  border-color: darken($gray-lighter, 15%);
+  background-color: $gray-lighter;
+  border-color: $gray-light;
 }
 
 //Link Button

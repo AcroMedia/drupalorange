@@ -47,6 +47,16 @@
     </div>
 
     <div class="live-css-section">
+      <h2 id="other-variables" class="sub-header">{{ 'Other Variables'|t }}</h2>
+      <p>The border radius variable is applied to buttons, form fields, pagination links, cards, and modals.</p>
+      <div class="live-css-variables">
+        <ul class="list-inline">
+          <li class="live-css-v-o-border-radius"><i></i><strong>{{ 'Border Radius'|t }}:</strong> $border-radius</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="live-css-section">
       <h1 id="typography" class="h-live-css-section">{{ 'Typography'|t }}</h1>
 
       <h2 id="headings" class="sub-header">{{ 'Headings'|t }}</h2>
@@ -265,14 +275,14 @@
       <form>
         <!-- Text input-->
         <div class="form-group">
-          <label class="control-label" for="textinput">Text Input</label>
+          <label class="control-label" for="textinput">Text Input <span class="form-required" title="This field is required.">*</span></label>
           <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md" required="">
           <span class="help-block">help text</span>
         </div>
 
         <!-- Select Basic -->
         <div class="form-group">
-          <label class="control-label" for="dropdown">Dropdown</label>
+          <label class="control-label" for="dropdown">Dropdown <span class="form-optional" title="This field is optional.">- Optional</span></label>
           <select id="dropdown" name="dropdown" class="form-control">
             <option value="1">Option one</option>
             <option value="2">Option two</option>
@@ -281,7 +291,7 @@
 
         <!-- Multiple Checkboxes -->
         <div class="form-group">
-          <label class="control-label" for="checkboxes">Checkboxes</label>
+          <label class="control-label" for="checkboxes">Checkboxes <span class="form-optional" title="This field is optional.">- Optional</span></label>
           <div class="checkbox">
             <label for="checkboxes-0">
               <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
@@ -298,7 +308,7 @@
 
         <!-- Multiple Radios -->
         <div class="form-group">
-          <label class="control-label" for="radios">Radio Buttons</label>
+          <label class="control-label" for="radios">Radio Buttons <span class="form-optional" title="This field is optional.">- Optional</span></label>
           <div class="radio">
             <label for="radios-0">
               <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
@@ -315,13 +325,13 @@
 
         <!-- File Button -->
         <div class="form-group">
-          <label class="control-label" for="fileupload">File Upload</label>
+          <label class="control-label" for="fileupload">File Upload <span class="form-optional" title="This field is optional.">- Optional</span></label>
           <input id="fileupload" name="fileupload" class="input-file" type="file">
         </div>
 
         <!-- Textarea -->
         <div class="form-group">
-          <label class="control-label" for="textarea">Text Area</label>
+          <label class="control-label" for="textarea">Text Area <span class="form-required" title="This field is required.">*</span></label>
           <textarea rows="5" class="form-control" id="textarea" name="textarea"></textarea>
         </div>
 
@@ -604,7 +614,7 @@
           </a>
         </div>
         <div class="blog-listing-item__title">
-          <a href="/blog/acro-blog-title"><span class="field field--name-title field--type-string field--label-hidden">Acro Blog Title</span></a>
+          <a href="/blog/acro-blog-title"><h3 class="field field--name-title field--type-string field--label-hidden">Acro Blog Title</h3></a>
         </div>
         <div class="blog-post-meta">
           <div class="field field--name-field-blog-date field--type-datetime field--label-hidden field__item"><span class="fa fa-calendar-o" aria-hidden="true"></span> February 1, 2016</div>
@@ -644,7 +654,7 @@
                   <p>Sample caption.</p>
                 </div>
                 <div class="image-gallery__main-image">
-                  <img src="{{ module_path }}/gfx/img_sample_banner.jpg" alt="" />
+                  <img src="https://unsplash.it/900/500/?random" alt="">
                 </div>
               </div>
             </li>
@@ -654,7 +664,7 @@
                   <p>Sample caption.</p>
                 </div>
                 <div class="image-gallery__main-image">
-                  <img src="{{ module_path }}/gfx/img_sample_banner.jpg" alt="" />
+                  <img src="https://unsplash.it/900/500/?random" alt="">
                 </div>
               </div>
             </li>
@@ -664,7 +674,7 @@
                   <p>Sample caption.</p>
                 </div>
                 <div class="image-gallery__main-image">
-                  <img src="{{ module_path }}/gfx/img_sample_banner.jpg" alt="" />
+                  <img src="https://unsplash.it/900/500/?random" alt="">
                 </div>
               </div>
             </li>
@@ -674,7 +684,7 @@
                   <p>Sample caption.</p>
                 </div>
                 <div class="image-gallery__main-image">
-                  <img src="{{ module_path }}/gfx/img_sample_banner.jpg" alt="" />
+                  <img src="https://unsplash.it/900/500/?random" alt="">
                 </div>
               </div>
             </li>
@@ -684,7 +694,7 @@
                   <p>Sample caption.</p>
                 </div>
                 <div class="image-gallery__main-image">
-                  <img src="{{ module_path }}/gfx/img_sample_banner.jpg" alt="" />
+                  <img src="https://unsplash.it/900/500/?random" alt="">
                 </div>
               </div>
             </li>
@@ -694,7 +704,7 @@
                   <p>Sample caption.</p>
                 </div>
                 <div class="image-gallery__main-image">
-                  <img src="{{ module_path }}/gfx/img_sample_banner.jpg" alt="" />
+                  <img src="https://unsplash.it/900/500/?random" alt="">
                 </div>
               </div>
             </li>
@@ -704,7 +714,57 @@
                   <p>Sample caption.</p>
                 </div>
                 <div class="image-gallery__main-image">
-                  <img src="{{ module_path }}/gfx/img_sample_banner.jpg" alt="" />
+                  <img src="https://unsplash.it/900/500/?random" alt="">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery__main-image-wrapper">
+                <div class="image-gallery__caption">
+                  <p>Sample caption.</p>
+                </div>
+                <div class="image-gallery__main-image">
+                  <img src="https://unsplash.it/900/500/?random" alt="">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery__main-image-wrapper">
+                <div class="image-gallery__caption">
+                  <p>Sample caption.</p>
+                </div>
+                <div class="image-gallery__main-image">
+                  <img src="https://unsplash.it/900/500/?random" alt="">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery__main-image-wrapper">
+                <div class="image-gallery__caption">
+                  <p>Sample caption.</p>
+                </div>
+                <div class="image-gallery__main-image">
+                  <img src="https://unsplash.it/900/500/?random" alt="">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery__main-image-wrapper">
+                <div class="image-gallery__caption">
+                  <p>Sample caption.</p>
+                </div>
+                <div class="image-gallery__main-image">
+                  <img src="https://unsplash.it/900/500/?random" alt="">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery__main-image-wrapper">
+                <div class="image-gallery__caption">
+                  <p>Sample caption.</p>
+                </div>
+                <div class="image-gallery__main-image">
+                  <img src="https://unsplash.it/900/500/?random" alt="">
                 </div>
               </div>
             </li>
@@ -717,37 +777,62 @@
           <ul class="slides clearfix">
             <li>
               <div class="image-gallery-nav__thumb">
-                <a><img src="{{ module_path }}/gfx/img_sample_banner.jpg" alt="" /></a>
+                <a><img src="https://unsplash.it/900/500/?random" alt=""></a>
               </div>
             </li>
             <li>
               <div class="image-gallery-nav__thumb">
-                <a><img src="{{ module_path }}/gfx/img_sample_banner.jpg" alt="" /></a>
+                <a><img src="https://unsplash.it/900/500/?random" alt=""></a>
               </div>
             </li>
             <li>
               <div class="image-gallery-nav__thumb">
-                <a><img src="{{ module_path }}/gfx/img_sample_banner.jpg" alt="" /></a>
+                <a><img src="https://unsplash.it/900/500/?random" alt=""></a>
               </div>
             </li>
             <li>
               <div class="image-gallery-nav__thumb">
-                <a><img src="{{ module_path }}/gfx/img_sample_banner.jpg" alt="" /></a>
+                <a><img src="https://unsplash.it/900/500/?random" alt=""></a>
               </div>
             </li>
             <li>
               <div class="image-gallery-nav__thumb">
-                <a><img src="{{ module_path }}/gfx/img_sample_banner.jpg" alt="" /></a>
+                <a><img src="https://unsplash.it/900/500/?random" alt=""></a>
               </div>
             </li>
             <li>
               <div class="image-gallery-nav__thumb">
-                <a><img src="{{ module_path }}/gfx/img_sample_banner.jpg" alt="" /></a>
+                <a><img src="https://unsplash.it/900/500/?random" alt=""></a>
               </div>
             </li>
             <li>
               <div class="image-gallery-nav__thumb">
-                <a><img src="{{ module_path }}/gfx/img_sample_banner.jpg" alt="" /></a>
+                <a><img src="https://unsplash.it/900/500/?random" alt=""></a>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery-nav__thumb">
+                <a><img src="https://unsplash.it/900/500/?random" alt=""></a>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery-nav__thumb">
+                <a><img src="https://unsplash.it/900/500/?random" alt=""></a>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery-nav__thumb">
+                <a><img src="https://unsplash.it/900/500/?random" alt=""></a>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery-nav__thumb">
+                <a><img src="https://unsplash.it/900/500/?random" alt=""></a>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery-nav__thumb">
+                <a><img src="https://unsplash.it/900/500/?random" alt=""></a>
               </div>
             </li>
           </ul>
@@ -839,6 +924,46 @@
               <p>Card Description text lorme ipsum bla bla self-contained unit of a discourse in writing </p>
             </div>
           </div>
+          {# / Card Sample #}
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-4">
+          {# Card Sample #}
+          <a class="card" href="#">
+            <div class="card__image">
+              <img src="https://unsplash.it/300/150/?random" alt="Image description here">
+            </div>
+            <div class="card__text-wrapper">
+              <h3>Card Title</h3>
+              <p>Card Description text lorme ipsum bla bla self-contained unit of a discourse in writing </p>
+              <button class="btn btn-block btn-primary">Read More</button>
+            </div>
+          </a>
+          {# / Card Sample #}
+        </div>
+        <div class="col-sm-4">
+          {# Card Sample #}
+          <a class="card" href="#">
+            <div class="card__image">
+              <img src="https://unsplash.it/300/150/?random" alt="Image description here">
+            </div>
+            <div class="card__text-wrapper">
+              <h3>Card Title</h3>
+              <p>Card Description text lorme ipsum bla bla self-contained unit of a discourse in writing </p>
+            </div>
+          </a>
+          {# / Card Sample #}
+        </div>
+        <div class="col-sm-4">
+          {# Card Sample #}
+          <a class="card" href="#">
+            <div class="card__text-wrapper">
+              <h3>Card Title</h3>
+              <p>Card Description text lorme ipsum bla bla self-contained unit of a discourse in writing </p>
+            </div>
+          </a>
           {# / Card Sample #}
         </div>
       </div>
