@@ -22,3 +22,22 @@
     font-size: 10px;
   }
 }
+
+//Sticky Footer
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header, footer {
+  flex: none;
+}
+
+.content {
+  flex: 1 0 auto;
+}

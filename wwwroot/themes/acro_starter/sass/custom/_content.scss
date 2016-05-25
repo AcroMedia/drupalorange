@@ -1,6 +1,7 @@
 /**
  * Content Styles
  */
+
 .content {
   padding: 50px 0;
 
@@ -22,3 +23,87 @@
     height: auto;
   }
 }
+
+/**
+ * Forms
+ */
+
+.form-control {
+  max-width: 100%;
+  width: 450px;
+}
+
+.radio,
+.checkbox {
+  margin-top: 0;
+}
+
+.help-block {
+  font-size: 90%;
+  font-style: italic;
+  color: #9C9C9C;
+}
+
+/**
+ * Accordion
+ */
+
+.base-accordion {
+  .active .base-accordion__header {
+    color: $c-secondary;
+  }
+
+  .base-accordion__header {
+    font-family: $f-secondary;
+  }
+
+  .base-accordion__content {
+    background-color: #f7f5f5;
+  }
+}
+
+/**
+ * Cards
+ */
+
+.card {
+  background: #f7f5f5;
+  border: 1px solid #cccccc;
+  text-align: center;
+  -webkit-box-shadow: 0 4px 0 0 #ededed;
+  box-shadow: 0 4px 0 0 #ededed;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0;
+  }
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .btn {
+    margin: 20px 0 0 0;
+  }
+
+  .card__text-wrapper {
+    padding: 20px;
+  }
+}
+
+/**
+ * Image Gallery
+ */
+.image-gallery-nav {
+  .image-gallery-nav__thumb {
+    height: auto;
+  }
+}
+
+/**
+ * Table
+ */
