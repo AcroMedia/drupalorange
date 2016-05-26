@@ -103,7 +103,6 @@
 
 .card {
   display: block;
-  margin-bottom: 30px;
   border: 1px solid #cccccc;
   background: #f7f5f5;
   color: $c-body;
@@ -121,16 +120,12 @@
     margin-top: 0;
   }
 
-  p:last-of-type {
-    margin-bottom: 0;
+  .card__text-wrapper {
+    padding: 20px 20px 0;
   }
 
   .btn {
-    margin: 20px 0 0 0;
-  }
-
-  .card__text-wrapper {
-    padding: 20px;
+    margin: 0 0 20px 0;
   }
 }
 
@@ -156,6 +151,8 @@ a.card:hover {
     .flex-nav-prev,
     .flex-nav-next {
       position: absolute;
+      font-family: FontAwesome;
+      font-size: 24px;
       -moz-transform: translateY(-50%);
       -webkit-transform: translateY(-50%);
       -o-transform: translateY(-50%);
@@ -224,5 +221,27 @@ a.card:hover {
     top: 50%;
     left: 50%;
     margin: 0;
+  }
+}
+
+/**
+ * Sidebar
+ */
+.content__sidebar {
+  .menu {
+    margin: 0;
+  }
+
+  .menu>li {
+    display: block;
+  }
+
+  .menu>li>a {
+    padding: 10px 15px;
+    border-bottom: 1px solid $gray-lighter;
+
+    &:hover {
+      background-color: $gray-lighter;
+    }
   }
 }

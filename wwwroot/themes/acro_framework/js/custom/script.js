@@ -19,6 +19,8 @@
     $('.image-gallery-nav__slider').flexslider({
       animation: "slide",
       controlNav: false,
+      prevText: "&#xf053;",
+      nextText: "&#xf054;",
       animationLoop: false,
       slideshow: false,
       itemWidth: 90,
@@ -31,6 +33,8 @@
     $('.image-gallery__slider').flexslider({
       animation: "fade",
       controlNav: false,
+      prevText: "&#xf053;",
+      nextText: "&#xf054;",
       directionNav: false,
       animationLoop: false,
       slideshow: false,

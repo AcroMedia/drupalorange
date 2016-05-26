@@ -63,27 +63,11 @@
 <div class="content">
   <div class="container">
     <!-- Row -->
-    <div class="row">
-      {% if page.page_sidebar %}
-        <div class="col-md-3">
-          <aside class="content__sidebar" role="complementary">
-            {{ page.page_sidebar }}
-          </aside>
-        </div>
-      {% endif %}
-
-      {% if page.page_sidebar %}
-        <div class="col-md-9">
-      {% else %}
-        <div class="col-md-12">
-      {% endif %}
-          <main class="content__main-content clearfix" role="main">
-            <div class="visually-hidden"><a id="main-content" tabindex="-1"></a></div>
-            {{ page.highlighted }}
-            {{ page.content }}
-          </main>
-        </div>
-    </div>
+      <main class="content__main-content clearfix" role="main">
+        <div class="visually-hidden"><a id="main-content" tabindex="-1"></a></div>
+        {{ page.highlighted }}
+        {{ page.content }}
+      </main>
     <!-- / Row -->
   </div>
 </div>

@@ -64,13 +64,7 @@ h1.h-live-css-section {
   color: #666;
   text-decoration: none;
 }
-.live-css-nav ul a:hover {
-  color: #ff9900;
-  text-decoration: none;
-}
-.live-css-nav ul .active > a {
-  color: #ff9900;
-}
+
 
 .live-css-variables {
 
@@ -127,4 +121,8 @@ h1.h-live-css-section {
 }
 .live-css-icons__icon {
   min-height: 50px;
+}
+
+.card {
+  margin-bottom: 30px;
 }

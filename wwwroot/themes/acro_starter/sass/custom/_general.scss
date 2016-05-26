@@ -6,6 +6,7 @@ html,
 body {
   color: $c-body;
   background: $c-site-bg;
+  font-family: $f-body;
 }
 
 body {
@@ -87,7 +88,8 @@ blockquote {
   @include border-radius($border-radius);
 }
 
-.card .card__image img {
+.card .card__image img,
+.nav-tabs>li>a {
   @include border-top-radius($border-radius);
 }
 
