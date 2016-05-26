@@ -19,4 +19,16 @@
       margin: 0 0 20px;
     }
   }
+
+  .item a img {
+    @include transition(all .25s ease-in-out);
+
+    &:hover {
+      -moz-transform: scale(1.05);
+      -webkit-transform: scale(1.05);
+      -o-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+      transform: scale(1.05);
+    }
+  }
 }
