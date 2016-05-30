@@ -74,18 +74,16 @@
     <a href="{{ url }}">{{ label }}</a>
   </div>
   <div class="blog-post-meta">
-    {{ content.field_blog_date }}
-    {% if blog_author %}
+    {{ node.createdtime | date('F d, Y') }}
       <i>|</i>
-      {{ 'By'|t }} <a href="{{ base_path }}blog/author/{{ blog_author_nid }}">{{ blog_author_name }}</a>
-    {% endif %}
+      {{ 'By'|t }} <a href="{{ base_path }}blog/author/{{ blog_author_nid }}">{{ author_name }}</a>
   </div>
   <div class="blog-listing-item__body">
-    {{ blog_teaser }}
+    {{ content.body }}
   </div>
   <div class="blog-listing-item__footer clearfix">
     <div class="blog-listing-item__link">
-      <a href="{{ url }}">{{ 'Read More'|t }}</a>
+      <a class="btn btn-primary" href="{{ url }}">{{ 'Read More'|t }}</a>
     </div>
     <div class="blog-listing-item__tags blog-post-tags">
       <span class="blog-post-tags--label">{{ 'Posted in'|t }}</span> {{ content.field_blog_category }}
@@ -107,11 +105,9 @@
   {{ title_suffix }}
 
   <div class="blog-post-meta blog-post-meta--node">
-    {{ content.field_blog_date }}
-    {% if blog_author %}
+    {{ node.createdtime | date('F d, Y') }}
       <i>|</i>
-      {{ 'By'|t }} <a href="{{ base_path }}blog/author/{{ blog_author_nid }}">{{ blog_author_name }}</a>
-    {% endif %}
+      {{ 'By'|t }} <a href="{{ base_path }}blog/author/{{ blog_author_nid }}">{{ author_name }}</a>
   </div>
 
   <div class="blog-post-social-media blog-post-social-media--header">
