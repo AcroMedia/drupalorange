@@ -3,10 +3,29 @@
  */
 
 .content {
-  padding: 50px 0;
+  padding: 20px 0;
+
+  @media(min-width: 768px) {
+    padding: 50px 0;
+  }
 
   .content__sidebar {
+    .menu {
+      margin: 0;
+    }
 
+    .menu>li {
+      display: block;
+    }
+
+    .menu>li>a {
+      padding: 10px 15px;
+      border-bottom: 1px solid $gray-lighter;
+
+      &:hover {
+        background-color: $gray-lighter;
+      }
+    }
   }
 
   .content__main-content {
@@ -32,7 +51,7 @@
   margin-bottom: 25px;
 }
 
-.form-control {
+.form-control, .form-textarea-wrapper textarea {
   max-width: 100%;
   width: 350px;
 }
@@ -221,27 +240,5 @@ a.card:hover {
     top: 50%;
     left: 50%;
     margin: 0;
-  }
-}
-
-/**
- * Sidebar
- */
-.content__sidebar {
-  .menu {
-    margin: 0;
-  }
-
-  .menu>li {
-    display: block;
-  }
-
-  .menu>li>a {
-    padding: 10px 15px;
-    border-bottom: 1px solid $gray-lighter;
-
-    &:hover {
-      background-color: $gray-lighter;
-    }
   }
 }
