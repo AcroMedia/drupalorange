@@ -70,21 +70,26 @@
   <div class="blog-listing-item__image">
     <a href="{{ url }}">{{ content.field_blog_header_image }}</a>
   </div>
-  <div class="blog-listing-item__title">
+  <h3 class="blog-listing-item__title">
     <a href="{{ url }}">{{ label }}</a>
-  </div>
+  </h3>
   <div class="blog-post-meta">
-    {{ node.createdtime | date('F d, Y') }}
-      <i>|</i>
+    <div class="blog-post-meta__date">
+      <span class="fa fa-calendar-o" aria-hidden="true"></span>
+      {{ node.createdtime | date('F d, Y') }}
+    </div>
+    <i>|</i>
+     <div class="blog-post-meta__author">
+      <span class="fa fa-user" aria-hidden="true"></span>
       {{ 'By'|t }} <a href="{{ base_path }}blog/author/{{ blog_author_nid }}">{{ author_name }}</a>
+    </div>
   </div>
   <div class="blog-listing-item__body">
     {{ content.body }}
   </div>
   <div class="blog-listing-item__footer clearfix">
-    <div class="blog-listing-item__link">
-      <a class="btn btn-primary" href="{{ url }}">{{ 'Read More'|t }}</a>
-    </div>
+    <a class="btn btn-primary" href="{{ url }}">{{ 'Read More'|t }}</a>
+
     <div class="blog-listing-item__tags blog-post-tags">
       <span class="blog-post-tags--label">{{ 'Posted in'|t }}</span> {{ content.field_blog_category }}
     </div>
@@ -104,21 +109,12 @@
   <h1 {{ title_attributes.addClass('page-title--blog-post') }}>{{ label }}</h1>
   {{ title_suffix }}
 
-  <div class="blog-post-meta blog-post-meta--node">
+  <div class="blog-post-meta blog-post-meta-node">
+    <span class="fa fa-calendar-o" aria-hidden="true"></span>
     {{ node.createdtime | date('F d, Y') }}
-      <i>|</i>
-      {{ 'By'|t }} <a href="{{ base_path }}blog/author/{{ blog_author_nid }}">{{ author_name }}</a>
-  </div>
-
-  <div class="blog-post-social-media blog-post-social-media--header">
-    <span class='st_sharethis_hcount' displayText='ShareThis'></span>
-    <span class='st_facebook_hcount' displayText='Facebook'></span>
-    <span class='st_twitter_hcount' displayText='Tweet'></span>
-    <span class='st_email_hcount' displayText='Email'></span>
-  </div>
-
-  <div class="blog-post-tags blog-post-tags--header">
-    <span class="blog-post-tags--label">{{ 'Posted in'|t }}</span> {{ content.field_blog_category }}
+    <i>|</i>
+    <span class="fa fa-user" aria-hidden="true"></span>
+    {{ 'By'|t }} <a href="{{ base_path }}blog/author/{{ blog_author_nid }}">{{ author_name }}</a>
   </div>
 
   <div{{ content_attributes }}>
@@ -126,6 +122,13 @@
   </div>
 
   <div class="blog-post-footer">
+    <div class="blog-post-social-media">
+      <span class='st_sharethis_hcount' displayText='ShareThis'></span>
+      <span class='st_facebook_hcount' displayText='Facebook'></span>
+      <span class='st_twitter_hcount' displayText='Tweet'></span>
+      <span class='st_email_hcount' displayText='Email'></span>
+    </div>
+
     <div class="blog-post-tags">
       {{ 'Posted in'|t }} {{ content.field_blog_category }}
     </div>

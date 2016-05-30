@@ -15,6 +15,7 @@ regions:
   highlighted: 'Highlighted'
   content: 'Content'
   page_sidebar: 'Page - Sidebar'
+  blog_sidebar: 'Blog - Sidebar'
   site_search: 'Site Search'
   footer: 'Footer'
   # Navigation
