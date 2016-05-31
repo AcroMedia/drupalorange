@@ -116,8 +116,8 @@ a {
 
 //Primary Button
 .btn-primary {
-  background-color: $c-link;
-  border-color: $c-link;
+  background-color: $c-primary;
+  border-color: $c-primary;
 }
 
 .btn-primary:hover,
@@ -132,8 +132,8 @@ a {
 .open>.btn-primary.dropdown-toggle:hover,
 .open>.btn-primary.dropdown-toggle:focus,
 .open>.btn-primary.dropdown-toggle.focus {
-  background-color: $c-link-hover;
-  border-color: $c-link-hover;
+  background-color: darken($c-primary, 10%);
+  border-color: darken($c-primary, 10%);
 }
 
 //Default Button
