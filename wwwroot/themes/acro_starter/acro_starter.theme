@@ -5,6 +5,7 @@
  */
 
 use Drupal\Core\Template\Attribute;
+use Drupal\Component\Utility\Xss;
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
@@ -82,9 +83,15 @@ function acro_starter_preprocess_node(&$variables) {
 
   // Image Gallery
   if ($variables['node']->getType() === 'image_gallery') {
-    $variables['gallery_body'] = $variables['node']->field_gallery_body->value;
+    //$variables['gallery_body'] = Xss::filter($variables['node']->field_gallery_body->value);
+    //$variables['gallery_body'] = $variables['node']->field_gallery_body->value;
     $variables['gallery_image'] = $variables['node']->field_gallery_image->entity->url();
     $variables['gallery_image_alt'] = $variables['node']->field_gallery_image->alt;
     $variables['gallery_image_caption'] = $variables['node']->field_gallery_image->title;
+  }
+
+  // Contact Information - Google Map
+  if ($variables['node']->getType() === 'contact_information') {
+    $variables['google_map_embed_code'] = Xss::filter($variables['node']->google_map_embed_code->value);
   }
 }

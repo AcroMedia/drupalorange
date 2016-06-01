@@ -64,37 +64,14 @@
  */
 #}
 
-{{ content.field_gallery_body }}
+{{ content.body }}
 
-{% if gallery_image %}
-<div class="image-gallery">
-  <div class="image-gallery__slider">
-    <ul class="slides clearfix">
-      <li>
-        <div class="image-gallery__main-image-wrapper">
-          {% if gallery_image_caption %}
-          <div class="image-gallery__caption">
-            <p>{{ gallery_image_caption }}</p>
-          </div>
-          {% endif %}
-          <div class="image-gallery__main-image">
-            <img src="{{ gallery_image }}" alt="{{ gallery_image_alt }}">
-          </div>
-        </div>
-      </li>
-    </ul>
+<div class="row">
+  <div class="col-sm-6">
+    {{ content.field_contact_information }}
+  </div>
+  <div class="col-sm-6">
+    {{ content.field_google_map }}
   </div>
 </div>
 
-<div class="image-gallery-nav">
-  <div class="image-gallery-nav__slider">
-    <ul class="slides clearfix">
-      <li>
-        <div class="image-gallery-nav__thumb">
-          <a><img src="{{ gallery_image }}" alt="{{ gallery_image_alt }}"></a>
-        </div>
-      </li>
-     </ul>
-  </div>
-</div>
-{% endif %}
