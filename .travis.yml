@@ -5,8 +5,8 @@ php:
 
 
 install:
-	cd wwwroot
-	composer install
+ - cd wwwroot
+ - composer install
 
 script:
-	 wwwroot/vendor/phpunit/phpunit
+ - wwwroot/vendor/phpunit/phpunit
