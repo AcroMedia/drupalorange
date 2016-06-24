@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.homepage_rich_media_banner
+  module:
+    - text
+id: node.homepage_rich_media_banner.body
+field_name: body
+entity_type: node
+bundle: homepage_rich_media_banner
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: blog_thumbnail
+label: 'Blog Thumbnail'
+effects:
+  a2602924-dbe5-4c96-ab66-978e69686407:
+    uuid: a2602924-dbe5-4c96-ab66-978e69686407
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 263
+      height: 115

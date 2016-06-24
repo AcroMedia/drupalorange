@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: blog
+label: Blog
+effects:
+  ede91d0c-a16c-4678-b413-32a5c458bfd9:
+    uuid: ede91d0c-a16c-4678-b413-32a5c458bfd9
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 827
+      height: 360

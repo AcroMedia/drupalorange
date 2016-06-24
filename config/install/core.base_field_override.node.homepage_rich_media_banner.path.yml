@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.homepage_rich_media_banner
+  module:
+    - path
+id: node.homepage_rich_media_banner.path
+field_name: path
+entity_type: node
+bundle: homepage_rich_media_banner
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

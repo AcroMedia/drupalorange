@@ -1,0 +1,80 @@
+name: Orange
+type: profile
+description: 'Acro Media Ecom Install.'
+core: 8.x
+
+distribution:
+  name: Orange
+
+dependencies:
+  - automated_cron
+  - block
+  - block_content
+  - breakpoint
+  - color
+  - config
+  - config_translation
+  - contact
+  - content_translation
+  - contextual
+  - comment
+  - datetime
+  - dblog
+  - dynamic_page_cache
+  - editor
+  - field
+  - field_ui
+  - file
+  - filter
+  - help
+  - history
+  - image
+  - language
+  - link
+  - locale
+  - menu_link_content
+  - menu_ui
+  - metatag
+  - node
+  - options
+  - page_cache
+  - path
+  - quickedit
+  - rdf
+  - responsive_image
+  - search
+  - shortcut
+  - syslog
+  - system
+  - taxonomy
+  - telephone
+  - text
+  - toolbar
+  - user
+  - views
+  - views_ui
+  - ckeditor
+
+  #contrib
+  - admin_toolbar
+  - admin_toolbar_tools
+  - contact_storage
+  - ctools
+  - devel
+  - google_analytics
+  - honeypot
+  - imce
+  - metatag
+  - pathauto
+  - simplesitemap
+  - taxonomy_menu
+  - token
+  - userprotect
+
+  #custom
+  - acro_live_css
+
+themes:
+  - seven
+  - orange_starter
+  - orange_framework

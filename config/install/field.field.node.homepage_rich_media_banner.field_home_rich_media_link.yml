@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_home_rich_media_link
+    - node.type.homepage_rich_media_banner
+  module:
+    - link
+id: node.homepage_rich_media_banner.field_home_rich_media_link
+field_name: field_home_rich_media_link
+entity_type: node
+bundle: homepage_rich_media_banner
+label: Link
+description: 'The link you want to be used for the banner.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

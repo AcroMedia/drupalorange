@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies: {  }
+id: administrator
+label: Administrator
+weight: 2
+is_admin: null
+permissions:
+  - 'access contextual links'
+  - 'administer image styles'
+  - 'view own unpublished content'
