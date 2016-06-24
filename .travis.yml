@@ -7,6 +7,9 @@ php:
 install:
  - cd wwwroot
  - composer install
+ - ls
+ - pwd
 
 script:
+ - pwd
  - ./vendor/phpunit/phpunit/phpunit -c core/
