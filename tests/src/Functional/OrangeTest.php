@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\orange\FunctionalTests;
+namespace Drupal\Tests\orange\Functional;
 
 use Drupal\Tests\BrowserTestBase;
 
@@ -9,17 +9,16 @@ use Drupal\Tests\BrowserTestBase;
  *
  * @group orange
  */
-class OrangeTest extends BrowserTestBase
-{
+class OrangeTest extends BrowserTestBase {
 
     protected $profile = 'orange';
 
     /**
      * Tests pages exist
      */
-    public function testOrangePages()
-    {
+    public function testOrangePages() {
         $this->drupalGet('livecss');
+        $this->assertSession()->statusCodeEquals(200);
     }
 
 }
