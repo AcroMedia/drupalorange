@@ -6,17 +6,20 @@
 $c-site-bg: #fff;
 
 $c-primary: #ff9900;
+$c-primary-hover: darken($c-primary, 5%);
 $c-secondary: #304772;
+$c-secondary-hover: darken($c-secondary, 5%);
 $c-tertiary: #7e8aa2;
+$c-tertiary-hover: darken($c-tertiary, 5%);
+
+$c-link: #0594D8;
+$c-link-hover: darken($c-link, 10%);
 
 $c-accent-1: #ccc;
 $c-accent-2: #ccc;
 $c-accent-3: #ccc;
 
 $c-body: #666;
-
-$c-link: #0594D8;
-$c-link-hover: darken($c-link, 10%);
 
 $gray-base:              #151515 !default;
 $gray-darker:            #353535;

@@ -1,7 +1,5 @@
 {{ attach_library('acro_live_css/acro-live-css') }}
 
-<p>{{ 'This is a general site style guide.'|t }}</p>
-
 <div class="row">
   <div class="col-md-9">
 
@@ -11,27 +9,20 @@
 
       <div class="live-css-variables">
         <ul class="list-inline">
-          <li class="live-css-v-primary"><i></i><strong>{{ 'Primary'|t }}:</strong> $c-primary</li>
-          <li class="live-css-v-secondary"><i></i><strong>{{ 'Secondary'|t }}:</strong> $c-secondary</li>
-          <li class="live-css-v-tertiary"><i></i><strong>{{ 'Tertiary'|t }}:</strong> $c-tertiary</li>
-        </ul>
-
-        <ul class="list-inline">
-          <li class="live-css-v-accent-1"><i></i><strong>{{ 'Accent 1'|t }}:</strong> $c-accent-1</li>
-          <li class="live-css-v-accent-2"><i></i><strong>{{ 'Accent 2'|t }}:</strong> $c-accent-2</li>
-          <li class="live-css-v-accent-3"><i></i><strong>{{ 'Accent 3'|t }}:</strong> $c-accent-3</li>
-          <li class="live-css-v-body"><i></i><strong>{{ 'Body Text'|t }}:</strong> $c-body</li>
-          <li class="live-css-v-link"><i></i><strong>{{ 'Link'|t }}:</strong> $c-link</li>
-          <li class="live-css-v-link-hover"><i></i><strong>{{ 'Link Hover'|t }}:</strong> $c-link-hover</li>
-        </ul>
-
-        <ul class="list-inline">
-          <li class="live-css-v-gray-base"><i></i><strong>{{ 'Gray Base'|t }}:</strong> $gray-base</li>
-          <li class="live-css-v-gray-darker"><i></i><strong>{{ 'Gray Darker'|t }}:</strong> $gray-darker</li>
-          <li class="live-css-v-gray-dark"><i></i><strong>{{ 'Gray Dark'|t }}:</strong> $gray-dark</li>
-          <li class="live-css-v-gray"><i></i><strong>{{ 'Gray'|t }}:</strong> $gray</li>
-          <li class="live-css-v-gray-light"><i></i><strong>{{ 'Gray Light'|t }}:</strong> $gray-light</li>
-          <li class="live-css-v-gray-lighter"><i></i><strong>{{ 'Gray Lighter'|t }}:</strong> $gray-lighter</li>
+          <li class="live-css-v-primary"><i></i><strong>{{ 'Primary'|t }}</strong><span class="live-css--code-snippet">$c-primary<br>$c-primary-hover</span></li>
+          <li class="live-css-v-secondary"><i></i><strong>{{ 'Secondary'|t }}</strong><span class="live-css--code-snippet">$c-secondary<br>$c-secondary-hover</span></li>
+          <li class="live-css-v-tertiary"><i></i><strong>{{ 'Tertiary'|t }}</strong><span class="live-css--code-snippet">$c-tertiary<br>$c-tertiary</span></li>
+          <li class="live-css-v-link"><i></i><strong>{{ 'Link'|t }}</strong><span class="live-css--code-snippet">$c-link<br>$c-link-hover</span></li>
+          <li class="live-css-v-accent-1"><i></i><strong>{{ 'Accent 1'|t }}</strong><span class="live-css--code-snippet">$c-accent-1</span></li>
+          <li class="live-css-v-accent-2"><i></i><strong>{{ 'Accent 2'|t }}</strong><span class="live-css--code-snippet">$c-accent-2</span></li>
+          <li class="live-css-v-accent-3"><i></i><strong>{{ 'Accent 3'|t }}</strong><span class="live-css--code-snippet">$c-accent-3</span></li>
+          <li class="live-css-v-body"><i></i><strong>{{ 'Body Text'|t }}</strong><span class="live-css--code-snippet">$c-body</span></li>
+          <li class="live-css-v-gray-base"><i></i><strong>{{ 'Gray Base'|t }}</strong><span class="live-css--code-snippet">$gray-base</span></li>
+          <li class="live-css-v-gray-darker"><i></i><strong>{{ 'Gray Darker'|t }}</strong><span class="live-css--code-snippet">$gray-darker</span></li>
+          <li class="live-css-v-gray-dark"><i></i><strong>{{ 'Gray Dark'|t }}</strong><span class="live-css--code-snippet">$gray-dark</span></li>
+          <li class="live-css-v-gray"><i></i><strong>{{ 'Gray'|t }}</strong><span class="live-css--code-snippet">$gray</span></li>
+          <li class="live-css-v-gray-light"><i></i><strong>{{ 'Gray Light'|t }}</strong><span class="live-css--code-snippet">$gray-light</span></li>
+          <li class="live-css-v-gray-lighter"><i></i><strong>{{ 'Gray Lighter'|t }}</strong><span class="live-css--code-snippet">$gray-lighter</span></li>
         </ul>
       </div>
     </div>
@@ -39,11 +30,11 @@
     <div class="live-css-section">
       <h2 id="fonts" class="sub-header">{{ 'Fonts'|t }}</h2>
 
-      <ul class="clearfix">
-        <li class="live-css-v-f-primary"><strong>{{ 'Primary'|t }} ($f-primary):</strong> Lorem ipsum dolor sit amet</li>
-        <li class="live-css-v-f-secondary"><strong>{{ 'Secondary'|t }} ($f-secondary):</strong> Lorem ipsum dolor sit amet</li>
-        <li class="live-css-v-f-body"><strong>{{ 'Body'|t }} ($f-body):</strong> Lorem ipsum dolor sit amet</li>
-      </ul>
+      <p class="live-css-v-f-primary"><strong>{{ 'Primary'|t }}</strong>: Lorem ipsum dolor sit amet <span class="live-css--code-snippet">$f-primary</span></p>
+
+      <p class="live-css-v-f-secondary"><strong>{{ 'Secondary'|t }}</strong>: Lorem ipsum dolor sit amet <span class="live-css--code-snippet">$f-secondary</span></p>
+
+      <p class="live-css-v-f-body"><strong>{{ 'Body'|t }}</strong>: Lorem ipsum dolor sit amet <span class="live-css--code-snippet">$f-body</span></p>
     </div>
 
     <div class="live-css-section">
@@ -51,47 +42,58 @@
       <p>The border radius variable is applied to buttons, form fields, pagination, content tabs, links, cards, and modals.</p>
       <div class="live-css-variables">
         <ul class="list-inline">
-          <li class="live-css-v-o-border-radius"><i></i><strong>{{ 'Border Radius'|t }}:</strong> $border-radius</li>
+          <li class="live-css-v-o-border-radius"><i></i><strong>{{ 'Border Radius'|t }}:</strong><span class="live-css--code-snippet">$border-radius</span></li>
         </ul>
       </div>
     </div>
 
+    <section id="typography" class="cd-typography">
+      <h2>Typography</h2>
+
+      <div class="cd-box">
+        <h1>Heading, <span></span></h1>
+        <p>Aa - <span></span>. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis voluptate distinctio reprehenderit, autem deleniti ad <a href="#0">voluptatum eaque</a>. Optio ea aperiam nisi distinctio nemo repellat, voluptate fugiat. Quidem neque illum, blanditiis!</p>
+      </div>
+    </section>
+
     <div class="live-css-section">
-      <h1 id="typography" class="h-live-css-section">{{ 'Typography'|t }}</h1>
+      <div class="typography">
+        <h1 id="typography" class="h-live-css-section">{{ 'Typography'|t }}</h1>
 
-      <h2 id="headings" class="sub-header">{{ 'Headings'|t }}</h2>
+        <h2 id="headings" class="sub-header">{{ 'Headings'|t }}</h2>
 
-      <h1>{{ 'Sample Heading (h1)'|t }}</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales diam ac arcu blandit venenatis.
-      </p>
+        <h1>H1 - <span></span></h1>
+        <p>
+          Aa - <span></span>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales diam ac arcu blandit venenatis.
+        </p>
 
-      <h2>{{ 'Sample Heading (h2)'|t }}</h2>
-      <p>
-        Lorem ipsum dolor sit amet, <a href="#">{{ 'Sample inline link'|t }}</a>, Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </p>
+        <h2>h2 - <span></span></h2>
+        <p>
+          Aa - <span></span>. Lorem ipsum dolor sit amet, <a href="#">{{ 'Sample inline link'|t }}</a>, Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
 
-      <h3>{{ 'Sample Heading (h3)'|t }}</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </p>
+        <h3>h3 - <span></span></h3>
+        <p>
+          Aa - <span></span>.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
 
-      <h4>{{ 'Sample Heading (h4)'|t }}</h4>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </p>
+        <h4>{{ 'Sample Heading (h4)'|t }}</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
 
-      <h5>{{ 'Sample Heading (h5)'|t }}</h5>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </p>
+        <h5>{{ 'Sample Heading (h5)'|t }}</h5>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
 
-      <h6>{{ 'Sample Heading (h6)'|t }}</h6>
+        <h6>{{ 'Sample Heading (h6)'|t }}</h6>
+      </div>
     </div>
 
     <div class="live-css-section">
       <h2 id="paragraphs" class="sub-header">{{ 'Paragraphs'|t }}</h2>
-      <p class="lead">Lead paragraph - class name "lead", consectetur adipiscing elit. Pellentesque sodales diam ac arcu blandit venenatis. Fusce efficitur dolor elit, in dictum dui consectetur vel.</p>
+      <p class="lead"><span class="live-css--code-snippet">lead</span> Lead paragraph - class name "lead", consectetur adipiscing elit. Pellentesque sodales diam ac arcu blandit venenatis. Fusce efficitur dolor elit, in dictum dui consectetur vel.</p>
 
       <p><img class="img-right" src="{{ module_path }}/gfx/img_sample_content.jpg" alt="" />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales diam ac arcu blandit venenatis. Fusce efficitur dolor elit, in dictum dui consectetur vel. Praesent in risus non nunc feugiat consequat nec quis enim. Suspendisse rhoncus turpis in libero posuere molestie. Vestibulum viverra metus a mauris dapibus euismod.</p>
 
@@ -124,7 +126,7 @@
     <div class="live-css-section">
       <h1 id="tables" class="h-live-css-section">{{ 'Tables'|t }}</h1>
 
-      <h2 id="basic-tables" class="sub-header">{{ 'Basic Table'|t }}</h2>
+      <h2 id="basic-tables" class="sub-header">{{ 'Basic Table'|t }} <span class="live-css--code-snippet">table</span></h2>
       <table class="table">
         <thead>
         <tr>
@@ -158,7 +160,7 @@
     </div>
 
     <div class="live-css-section">
-      <h2 id="striped-tables" class="sub-header">{{ 'Striped Table'|t }}</h2>
+      <h2 id="striped-tables" class="sub-header">{{ 'Striped Table'|t }} <span class="live-css--code-snippet">table table-striped</span></h2>
 
       <table class="table table-striped">
         <thead>
@@ -193,7 +195,7 @@
     </div>
 
     <div class="live-css-section">
-      <h2 id="bordered-tables" class="sub-header">{{ 'Bordered Table'|t }}</h2>
+      <h2 id="bordered-tables" class="sub-header">{{ 'Bordered Table'|t }} <span class="live-css--code-snippet">table table-bordered</span></h2>
 
       <table class="table table-bordered">
         <thead>
@@ -229,14 +231,18 @@
 
     <div class="live-css-section">
       <h1 id="buttons" class="h-live-css-section">{{ 'Buttons'|t }}</h1>
-      <p>
-        <button type="button" class="btn btn-primary btn-lg">Large button</button>
-        <button type="button" class="btn btn-default btn-lg">Large button</button>
-      </p>
-      <p>
-        <button type="button" class="btn btn-primary">Default button</button>
-        <button type="button" class="btn btn-default">Default button</button>
-      </p>
+      <ul class="list-inline">
+        <li><button type="button" class="btn btn-primary btn-lg">Large Primary button</button>
+          <br><br><span class="live-css--code-snippet">btn btn-primary btn-lg</span></li>
+        <li><button type="button" class="btn btn-default btn-lg">Large Default button</button>
+          <br><br><span class="live-css--code-snippet">btn btn-default btn-lg</span></li>
+      </ul>
+      <ul class="list-inline">
+        <li><button type="button" class="btn btn-primary">Primary button</button>
+          <br><br><span class="live-css--code-snippet">btn btn-primary</span></li>
+        <li><button type="button" class="btn btn-default">Default button</button>
+          <br><br><span class="live-css--code-snippet">btn btn-default</span></li>
+      </ul>
     </div>
 
     <div class="live-css-section">
