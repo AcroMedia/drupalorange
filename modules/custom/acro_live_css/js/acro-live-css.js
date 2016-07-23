@@ -17,4 +17,15 @@
     });
   }
 
+  //TYPOGRAPHY
+  $('.typography').each(function() {
+    var fontFamily = $(this).css('font-family');
+    $('.print-font-family').html(fontFamily);
+  });
+
+  $('.typography').each(function() {
+    var fontSize = $(this).css('font-size');
+    $('.print-font-size').html(fontSize);
+  });
+
 })(jQuery, Drupal);

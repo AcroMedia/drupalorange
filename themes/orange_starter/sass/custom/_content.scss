@@ -151,6 +151,10 @@
 a.card:hover {
   -webkit-box-shadow: 0 4px 0 0 #ededed;
   box-shadow: 0 4px 4px 4px #ededed;
+
+  .card__text-wrapper{
+    color: $c-body;
+  }
 }
 
 /**
@@ -229,16 +233,18 @@ a.card:hover {
  */
 @media(min-width: 768px) {
   .modal.in .modal-dialog {
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    -o-transform: translateX(-50%) translateY(-50%);
-    -ms-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
   }
 
   .modal-dialog {
     position: absolute;
     top: 50%;
-    left: 50%;
-    margin: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
   }
 }
