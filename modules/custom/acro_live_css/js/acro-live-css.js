@@ -18,14 +18,15 @@
   }
 
   //TYPOGRAPHY
-  $('.typography').each(function() {
+  //Append font-family to any element with class .print-font-family
+  $('.print-font-family').each(function() {
     var fontFamily = $(this).css('font-family');
-    $('.print-font-family').html(fontFamily);
+    $(this).append(' - ' + fontFamily);
   });
-
-  $('.typography').each(function() {
+  //Append font-size to any element with class .print-font-size
+  $('.print-font-size').each(function() {
     var fontSize = $(this).css('font-size');
-    $('.print-font-size').html(fontSize);
+    $(this).append(' - ' + fontSize);
   });
 
 })(jQuery, Drupal);
