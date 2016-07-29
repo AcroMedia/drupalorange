@@ -1,0 +1,7 @@
+{
+  "name": "drupal/commerce_bootstrap",
+  "type": "drupal-theme",
+  "description": "A starting theme for Drupal 8 Commerce 2.x based on Bootstrap as a base theme.",
+  "homepage": "https://www.drupal.org/sandbox/cbildstein/2766559",
+  "license": "GPL-2.0+"
+}
