@@ -34,16 +34,20 @@
     {% if menu_level == 0 %}
       <ul{{ attributes.addClass('menu') }}>
     {% else %}
-      <ul{{ attributes.addClass('menu__dropdown').removeClass('menu__dropdown-parent') }}>
+      <ul{{ attributes.addClass('menu__dropdown test').removeClass('menu__dropdown-parent') }}>
     {% endif %}
     {% for item in items %}
       {% if item.below %}
       <li{{ attributes.addClass('menu__dropdown-parent').removeClass('menu') }}>
-        <a href="{{ item.url }}">{{ item.title }} <span class="fa fa-angle-down hidden-xs" aria-hidden="true"></span></a>
+        <a href="{{ item.url }}">{{ item.title }} <span class="fa fa-angle-down" aria-hidden="true"></span></a>
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
       </li>
       {% else %}
-      <li>
+        {% set item_classes = [
+          'menu-item',
+          item.title,
+        ] %}
+        <li{{ item.attributes.addClass(item_classes) }}>
         {{ link(item.title, item.url) }}
       </li>
       {% endif %}
