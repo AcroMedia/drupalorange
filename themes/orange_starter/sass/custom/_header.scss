@@ -24,6 +24,42 @@
     //Top Navigation
     .header__top-navigation {
       float: right;
+
+      @media(max-width: 767px) {
+        .menu {
+          margin: 0 15px 0 0;
+        }
+
+        .menu > li > a {
+          padding: 10px 10px;
+          font-size: 20px;
+        }
+
+        //Contact Us and My Account Icons
+        .menu__item--contact-us a,
+        .menu__item--my-account a {
+          visibility: hidden;
+          word-spacing: -999px;
+          letter-spacing: -999px;
+        }
+
+        .menu__item--contact-us a::before,
+        .menu__item--my-account a::before {
+          font-family: FontAwesome;
+          color: #fff;
+          visibility: visible;
+          word-spacing: normal;
+          letter-spacing: normal;
+        }
+       
+        .menu__item--contact-us a::before {
+          content: "\f27a";
+        }
+
+        .menu__item--my-account a::before {
+          content: "\f007";
+        }
+      }
     }
   }
 
@@ -39,6 +75,12 @@
     .header__bottom-navigation {
       .menu__dropdown {
         background-color: $gray-base;
+      }
+
+      @media(max-width:767px) {
+        .menu__item--home {
+          display: none;
+        }
       }
     }
 
