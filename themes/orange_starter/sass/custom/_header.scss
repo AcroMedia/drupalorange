@@ -51,7 +51,7 @@
           word-spacing: normal;
           letter-spacing: normal;
         }
-       
+
         .menu__item--contact-us a::before {
           content: "\f27a";
         }
@@ -59,12 +59,17 @@
         .menu__item--my-account a::before {
           content: "\f007";
         }
+
+        .menu__item--logout {
+          display: none;
+        }
       }
     }
   }
 
   //Bottom
   .header__bottom {
+    position: relative;
     background-color: $gray-base;
 
     //Main Navigation
@@ -78,6 +83,16 @@
       }
 
       @media(max-width:767px) {
+        .menu {
+          //offset the menu items padding
+          margin: 0 -6px;
+        }
+
+        .menu > li > a {
+          padding: 15px 6px;
+          font-size: 15px;
+        }
+
         .menu__item--home {
           display: none;
         }

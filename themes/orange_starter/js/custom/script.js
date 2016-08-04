@@ -45,4 +45,10 @@
       $(this).addClass('img-left');
   });
 
+  $('#show-search').click(function() {
+    $('#header-search').toggle('slow', function() {
+      // Animation complete.
+    });
+  });
+
 })(jQuery, Drupal);
