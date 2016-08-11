@@ -17,6 +17,14 @@
 {% endif %}
 
 <header class="header">
+
+  {% if page.site_search %}
+    <!-- Mobile Search Bar -->
+    <div id="header-search" style="display:none;">
+      {{ page.site_search }}
+    </div>
+  {% endif %}
+
   <div class="header__top container">
 
     <div class="header__top-logo">
@@ -30,12 +38,10 @@
       <a class="header__top-mobile-toggle visible-xs-block" href="#" title="{{ 'Menu'|t }}"><span aria-hidden="true" class="glyphicon glyphicon-menu-hamburger"></span></a>
     {% endif %}
 
-    <div class="header__top-search">
-      <div id="header-search" style="display:none;">
-        {{ page.site_search }}
-      </div>
-      <span id="show-search" class="fa fa-search" aria-hidden="true"></span>
-    </div>
+    {% if page.site_search %}
+      <!-- Mobile Search Button -->
+      <span id="show-search" class="visible-xs fa fa-search" aria-hidden="true"></span>
+    {% endif %}
 
     {% if page.header_nav %}
       <!-- Header Navigation -->
@@ -58,7 +64,7 @@
 
       {% if page.site_search %}
         <!-- Site Search -->
-        <div class="header__bottom-search">
+        <div class="header__bottom-search hidden-xs">
           {{ page.site_search }}
         </div>
         <!-- / Site Search -->

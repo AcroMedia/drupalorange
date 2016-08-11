@@ -46,7 +46,7 @@
   });
 
   $('#show-search').click(function() {
-    $('#header-search').toggle('slow', function() {
+    $('#header-search').toggle('fast', function() {
       // Animation complete.
     });
   });

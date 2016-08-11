@@ -5,6 +5,26 @@
 .header {
   background: $gray-darker;
 
+  //Mobile Search Bar
+  #header-search {
+    .form-optional {
+      display: none;
+    }
+
+    input[type="search"] {
+      float: left;
+      width: calc(100% - 71px);
+      height: auto;
+      border-radius: 0;
+      font-size: 15px;
+    }
+
+    input[type="submit"] {
+      border-radius: 0;
+      font-size: 15px;
+    }
+  }
+
   //Top
   .header__top {
 
@@ -21,13 +41,26 @@
       }
     }
 
+    //Top Search
+    #show-search {
+      float: right;
+      padding: 15px;
+      margin-right: 10px;
+      color: #fff;
+      cursor: pointer;
+
+      &:hover, &:focus {
+        color: $c-link-hover;
+      }
+    }
+
     //Top Navigation
     .header__top-navigation {
       float: right;
 
       @media(max-width: 767px) {
         .menu {
-          margin: 0 15px 0 0;
+          margin: 0 0 0 0;
         }
 
         .menu > li > a {
@@ -41,6 +74,10 @@
           visibility: hidden;
           word-spacing: -999px;
           letter-spacing: -999px;
+
+          &:hover::before, &:focus::before {
+            color: $c-link-hover;
+          }
         }
 
         .menu__item--contact-us a::before,
@@ -85,16 +122,12 @@
       @media(max-width:767px) {
         .menu {
           //offset the menu items padding
-          margin: 0 -6px;
+          margin: 0 -10px;
         }
 
         .menu > li > a {
-          padding: 15px 6px;
+          padding: 15px 10px;
           font-size: 15px;
-        }
-
-        .menu__item--home {
-          display: none;
         }
       }
     }
